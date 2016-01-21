@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Targets>
+  <Target Name="C:\Users\neemathu\documents\visual studio 2013\Projects\LogicalCoupling1\LogicalCoupling1\bin\Debug\LogicalCoupling1.exe">
+   <Modules>
+    <Module Name="logicalcoupling1.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'LogicalCoupling1.exe' with a strong name key.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="LogicalCoupling1">
+       <Types>
+        <Type Name="Program" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#aTypicalCommitThreshold" Kind="Field" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning">Field 'Program.aTypicalCommitThreshold' is declared as 'static readonly' but is initialized with a constant value '50'. Mark this field as 'const' instead.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CalculateLogicalDependency(System.Collections.Generic.Dictionary`2&lt;System.String,System.Int32&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="305">Method 'Program.CalculateLogicalDependency(Dictionary&lt;string, int&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "--------------------".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="297">Method 'Program.CalculateLogicalDependency(Dictionary&lt;string, int&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "FileName, |  Support | Confidence".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="302">Method 'Program.CalculateLogicalDependency(Dictionary&lt;string, int&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "|  , | ".</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="302">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Program.CalculateLogicalDependency(Dictionary&lt;string, int&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="302">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Program.CalculateLogicalDependency(Dictionary&lt;string, int&gt;)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CalculateTfIdfScore(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="209">'Program.CalculateTfIdfScore(string)' has a cyclomatic complexity of 44. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+            <Message Id="result" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="237">'Program.CalculateTfIdfScore(string)' declares a variable, 'result', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="result1" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="245">'Program.CalculateTfIdfScore(string)' declares a variable, 'result1', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="result1Union" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="249">'Program.CalculateTfIdfScore(string)' declares a variable, 'result1Union', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="result2" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="253">'Program.CalculateTfIdfScore(string)' declares a variable, 'result2', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="result3" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="257">'Program.CalculateTfIdfScore(string)' declares a variable, 'result3', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="result4" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="262">'Program.CalculateTfIdfScore(string)' declares a variable, 'result4', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="result5" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="266">'Program.CalculateTfIdfScore(string)' declares a variable, 'result5', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="result6" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="270">'Program.CalculateTfIdfScore(string)' declares a variable, 'result6', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="resultUnion" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="241">'Program.CalculateTfIdfScore(string)' declares a variable, 'resultUnion', of type 'Dictionary&lt;string, Dictionary&lt;string, double&gt;&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCommitDiff(NGit.Repository,NGit.Api.Git,NGit.Revwalk.RevCommit,System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="198">In method 'Program.GetCommitDiff(Repository, Git, RevCommit, string)', call System.IDisposable.Dispose on object 'out' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="entries" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="200">'Program.GetCommitDiff(Repository, Git, RevCommit, string)' declares a variable, 'entries', of type 'IList&lt;DiffEntry&gt;', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#isContainFile(NGit.Revwalk.RevCommit,System.Collections.Generic.List`1&lt;System.String&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="rev" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="309">Parameter 'rev' of 'Program.isContainFile(RevCommit, List&lt;string&gt;)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsFileExtentionAllowed(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="328">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'Program.IsFileExtentionAllowed(string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.EndsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="329">Because the behavior of 'string.EndsWith(string)' could vary based on the current user's locale settings, replace this call in 'Program.IsFileExtentionAllowed(string)' with a call to 'string.EndsWith(string, StringComparison)'. If the result of 'string.EndsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="329">Because the behavior of 'string.EndsWith(string)' could vary based on the current user's locale settings, replace this call in 'Program.IsFileExtentionAllowed(string)' with a call to 'string.EndsWith(string, StringComparison)'. If the result of 'string.EndsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="329">Because the behavior of 'string.EndsWith(string)' could vary based on the current user's locale settings, replace this call in 'Program.IsFileExtentionAllowed(string)' with a call to 'string.EndsWith(string, StringComparison)'. If the result of 'string.EndsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="329">Because the behavior of 'string.EndsWith(string)' could vary based on the current user's locale settings, replace this call in 'Program.IsFileExtentionAllowed(string)' with a call to 'string.EndsWith(string, StringComparison)'. If the result of 'string.EndsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="329">Because the behavior of 'string.EndsWith(string)' could vary based on the current user's locale settings, replace this call in 'Program.IsFileExtentionAllowed(string)' with a call to 'string.EndsWith(string, StringComparison)'. If the result of 'string.EndsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="329">Because the behavior of 'string.EndsWith(string)' could vary based on the current user's locale settings, replace this call in 'Program.IsFileExtentionAllowed(string)' with a call to 'string.EndsWith(string, StringComparison)'. If the result of 'string.EndsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Main(System.String[])" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="191">Method 'Program.Main(string[])' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "----------Done----------".</Issue>
+            </Message>
+            <Message Id="dt" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="82">'Program.Main(string[])' declares a variable, 'dt', of type 'DateTime', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="rw" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="45">'Program.Main(string[])' declares a variable, 'rw', of type 'RevWalk', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="args" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="29">Parameter 'args' of 'Program.Main(string[])' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+            <Message Id="System.String.LastIndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="133">Because the behavior of 'string.LastIndexOf(string)' could vary based on the current user's locale settings, replace this call in 'Program.Main(string[])' with a call to 'string.LastIndexOf(string, StringComparison)'. If the result of 'string.LastIndexOf(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="133">Because the behavior of 'string.LastIndexOf(string)' could vary based on the current user's locale settings, replace this call in 'Program.Main(string[])' with a call to 'string.LastIndexOf(string, StringComparison)'. If the result of 'string.LastIndexOf(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RemoveStopWords(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2016-01-20 11:33:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="c:\Users\neemathu\Documents\Visual Studio 2013\Projects\LogicalCoupling1\LogicalCoupling1" File="Program.cs" Line="354">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'Program.RemoveStopWords(string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502">
+   <Name>Avoid excessive complexity</Name>
+   <Description>Method implementations that are exceedingly complex increase the challenge of understanding and maintaining code.</Description>
+   <Resolution Name="Default">{0} has a cyclomatic complexity of {1}. Rewrite or refactor the method to reduce complexity to {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182212.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remove unused locals</Name>
+   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
+   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+   <Name>Specify CultureInfo</Name>
+   <Description>If an overload exists that takes a CultureInfo argument, it should always be called in favor of an overload that does not. The CultureInfo type contains culture-specific information required for performing numeric and string operations, such as casing, formatting, and string comparisons. In scenarios where conversion and parsing behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182189.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+   <Name>Specify StringComparison</Name>
+   <Description>If an overload exists that takes a StringComparison argument, it should always be called in favor of an overload that does not.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386080.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="UseLiteralsWhereAppropriate" Category="Microsoft.Performance" CheckId="CA1802">
+   <Name>Use literals where appropriate</Name>
+   <Description>Prefer literals over InitOnly fields if values do not have to be calculated at runtime.</Description>
+   <Resolution Name="Default">Field {0} is declared as 'static readonly' but is initialized with a constant value '{1}'. Mark this field as 'const' instead.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182280.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

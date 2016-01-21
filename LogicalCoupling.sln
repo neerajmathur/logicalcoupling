@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicalCoupling", "LogicalCoupling1\LogicalCoupling.csproj", "{7458DFE9-C391-4B5F-A10C-2240D98E50CD}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angular.js", "http://localhost:3871", "{4AF80D0C-888D-4C83-9FBE-75696AD5714D}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3871"
+		Debug.AspNetCompiler.PhysicalPath = "C:\Users\neemathu\Documents\GitHub\angular.js\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3871\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3871"
+		Release.AspNetCompiler.PhysicalPath = "C:\Users\neemathu\Documents\GitHub\angular.js\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3871\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "C:\Users\neemathu\Documents\GitHub\angular.js\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE9D9426-939C-44C2-8D44-A2DDCAFBD6A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupChangeSets", "GroupChangeSets\GroupChangeSets.csproj", "{F82B6D01-8723-4391-A11F-BB16E355058F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectLogicalDependency", "DetectLogicalDependency\DetectLogicalDependency.csproj", "{E02CBFE5-B287-452C-BE77-5ACF6D33BAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7458DFE9-C391-4B5F-A10C-2240D98E50CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7458DFE9-C391-4B5F-A10C-2240D98E50CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7458DFE9-C391-4B5F-A10C-2240D98E50CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7458DFE9-C391-4B5F-A10C-2240D98E50CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF80D0C-888D-4C83-9FBE-75696AD5714D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF80D0C-888D-4C83-9FBE-75696AD5714D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF80D0C-888D-4C83-9FBE-75696AD5714D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF80D0C-888D-4C83-9FBE-75696AD5714D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F82B6D01-8723-4391-A11F-BB16E355058F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82B6D01-8723-4391-A11F-BB16E355058F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82B6D01-8723-4391-A11F-BB16E355058F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82B6D01-8723-4391-A11F-BB16E355058F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02CBFE5-B287-452C-BE77-5ACF6D33BAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02CBFE5-B287-452C-BE77-5ACF6D33BAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02CBFE5-B287-452C-BE77-5ACF6D33BAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02CBFE5-B287-452C-BE77-5ACF6D33BAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1674 @@
+FILE: src/Presentation/Nop.Web/Infrastructure/Cache/ModelCacheEventConsumer.cs; SUPPORT: 48; CONFIDENCE:0; SMIndex:670; KEYWORDS:  48, all 3, ALSO 2, and 3, BESTSELLERS 3, BlogSettings 1, breadcrumb 1, BREADCRUMB 6, c 7, cache 1, Cache 2, cacheManager 33, Caching 1, cart 1, Catalog 1, CatalogSettings 1, categories 6, CATEGORIES 1, category 14, Category 8, CATEGORY 20, CategoryBreadcrumbEnabled 2, CategoryMenuModel 2, CategoryNavigationModel 2, CHILD 5, constructor 1, ContainerManager 1, Core 2, current 4, Current 1, d 7, DEFAULTPICTURE 3, depends 1, DETAILS 1, displayed 2, Domain 2, e 5, EngineContext 1, f 8, featured 1, FEATURED 2, GetChildCategoryIds 3, has 1, HAS 5, have 2, home 2, HOMEPAGE 4, HOMEPAGECATEGORIES 2, ICacheManager 1, id 6, IDENTIFIERS 5, IDS 5, indicating 3, Infrastructure 2, inject 1, isAssociatedProduct 1, KEY 43, Localization 1, manager 1, manufacturer 8, Manufacturer 2, MANUFACTURER 10, ManufacturerNavigationModel 1, manufacturers 1, MANUFACTURERS 4, ManufacturersBlockItemsToDisplay 1, Media 1, MENU 3, model 3, MODEL 28, ModelCacheEventConsumer 43, NAVIGATION 11, no 1, NUMBER 1, NumberOfBestsellersOnHomepage 2, NumberOfProductTags 1, of 4, OF 1, Orders 1, page 2, picture 6, PICTURE 3, pictures 1, PICTURES 1, POPULAR 4, PopularProductTagsModel 2, Presentation 48, product 21, Product 8, PRODUCT 17, ProductBreadcrumbModel 3, ProductManufacturers 2, products 6, PRODUCTS 6, ProductsAlsoPurchasedNumber 1, ProductSpecificationModel 1, PRODUCTTAG 5, ProductTagModel 1, ProductVariant 1, PURCHASED 2, RELATED 1, Resolve 1, SEARCH 1, Services 1, ShowCategoryProductNumber 1, ShowCategoryProductNumberIncludingSubcategories 1, size 2, SpecificationAttribute 1, SpecificationAttributeOption 1, SPECS 1, store 1, subcategories 2, SUBCATEGORIES 3, summary 1, tags 1, template 1, TEMPLATE 2, the 2, TODO 1, TOP 1, TopCategoryMenuSubcategoryLevelsToDisplay 2, TOPIC 1, Topics 1, TopMenuModel 2, variant 1, variants 3, vendor 1, Vendor 1, VendorNavigationModel 1, vendors 1, Vendors 1, VendorSettings 1, we 2, Web 48, whether 6, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/CategoryExtensions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:36; KEYWORDS:  2, ACL 1, aclService 2, allCategories 1, ArgumentNullException 1, Authorize 1, breadcrumb 1, c 2, categories 1, category 2, Category 1, categoryService 1, deleted 1, Deleted 1, GetCategoryBreadCrumb 2, GetCategoryById 1, Id 1, IList 1, List 2, mapping 1, name 1, Name 1, not 1, ParentCategoryId 1, published 1, Published 1, Reverse 1, Store 1, storeMappingService 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/SearchModel.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:76; KEYWORDS:  5, adv 1, advanced 1, AvailableCategories 1, AvailableManufacturers 1, Breadcrumb 1, c 1, CatalogPagingFilteringModel 1, Category 1, CategoryModel 1, cid 1, Cid 3, Core 1, d 1, e 1, isc 1, Isc 2, List 2, mid 1, Mid 2, mode 1, No 1, NoResults 1, PagingFilteringContext 2, pf 1, Pf 2, Presentation 5, ProductModel 1, Products 2, pt 1, Pt 2, q 1, Q 2, search 2, Search 2, SearchInDescriptions 1, SearchModel 3, SearchPagingFilteringModel 2, SearchTerm 1, SelectListItem 2, sid 1, Sid 2, to 2, Warning 2, Web 5, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/ProductController.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:140; KEYWORDS:  7, and 1, ArgumentNullException 1, c 1, cache 1, Cache 3, cacheKey 1, cacheManager 2, Caching 1, Captcha 1, Catalog 3, Collections 1, Common 1, Controllers 7, Core 1, CurrentStore 1, customerRolesIds 1, Customers 1, d 1, Diagnostics 1, Directory 1, Domain 1, Events 1, Extensions 1, f 1, forceRedirectionAfterAddingToCart 1, Format 2, Forums 1, Framework 1, Generic 1, GetLocalized 2, GetSeName 2, Globalization 1, has 1, HAS 1, HasValue 1, Helpers 1, Id 3, IEnumerable 1, IncludeInTopMenu 1, indicates 1, indicating 1, Infrastructure 3, KEY 2, Linq 1, List 1, load 1, Localization 1, Logging 1, Media 3, model 1, MODEL 1, ModelCacheEventConsumer 2, Models 3, Mvc 1, Name 2, no 1, NonAction 1, Orders 1, preparePictureModel 1, preparePriceModel 1, PrepareProductOverviewModels 1, prepareSpecificationAttributes 1, Presentation 7, Product 2, ProductOverviewModel 1, products 1, productThumbPictureSize 1, region 1, result 1, s 1, Security 1, SeName 2, Seo 1, ServiceModel 1, Services 1, storeContext 1, Syndication 1, System 1, that 1, the 1, them 1, ToList 1, ToModel 1, UI 1, Utilities 1, Vendors 1, We 1, Web 7, whether 1, workContext 1, WorkingLanguage 1, x 2, yet 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/CategorySimpleModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:25; KEYWORDS:  3, Catalog 1, CategorySimpleModel 2, e 1, Framework 1, IncludeInTopMenu 1, List 2, Models 1, Mvc 1, Name 1, NumberOfProducts 1, of 1, Presentation 3, SubCategories 2, System 1, Web 3, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/CatalogSettings.cs; SUPPORT: 46; CONFIDENCE:0; SMIndex:302; KEYWORDS:  46, added 2, all 1, AllowAnonymousUsersToEmailAFriend 1, AllowAnonymousUsersToReviewProduct 1, allowed 1, AllowProductSorting 1, AllowProductViewModeChanging 2, at 3, attributes 1, before 1, breadcrumb 1, c 6, Catalog 3, CatalogSettings 8, categories 2, category 4, CategoryBreadcrumbEnabled 1, CompareProductsEnabled 2, Core 4, customer 2, d 6, db 1, DefaultProductRatingValue 1, DefaultViewMode 1, display 2, DisplayTaxShippingInfoProductBoxes 1, DisplayTaxShippingInfoProductDetailsPage 1, DisplayTierPricesWithDiscounts 1, Domain 3, e 4, each 1, email 1, EmailAFriendEnabled 1, EnableDynamicPriceUpdate 2, ensure 1, f 6, fd 1, featured 1, file 1, FileUploadAllowedExtensions 2, FileUploadMaximumSizeBytes 1, friend 1, Gets 1, have 1, hide 1, HidePricesForNonRegistered 3, how 2, ignore 2, IgnoreFeaturedProducts 1, IgnoreTierPrices 2, include 1, IncludeFeaturedProductsInNormalLists 1, IncludeFullDescriptionInCompareProducts 1, IncludeShortDescriptionInCompareProducts 1, indicating 1, least 1, levels 2, List 2, load 1, LoadAllSideCategoryMenuSubcategories 1, manufacturer 1, manufacturers 1, ManufacturersBlockItemsToDisplay 1, many 2, menu 1, mode 2, No 5, number 1, NumberOfBestsellersOnHomepage 1, NumberOfProductTags 2, of 3, one 1, or 3, page 3, PageShareCode 1, price 2, prices 4, product 9, ProductReviewsMustBeApproved 1, products 15, ProductsAlsoPurchasedEnabled 1, ProductsAlsoPurchasedNumber 1, ProductsByTagAllowCustomersToSelectPageSize 1, ProductsByTagPageSize 2, ProductsByTagPageSizeOptions 1, ProductSearchAutoCompleteEnabled 1, ProductSearchAutoCompleteNumberOfProducts 1, ProductSearchTermMinimumLength 3, rating 1, RecentlyAddedProductsEnabled 1, RecentlyAddedProductsNumber 1, RecentlyViewedProductsEnabled 1, RecentlyViewedProductsNumber 1, search 1, SearchPageAllowCustomersToSelectPageSize 1, SearchPagePageSizeOptions 1, SearchPageProductsPerPage 2, shipping 1, should 2, ShowBestsellersOnHomepage 1, ShowCategoryProductNumber 1, ShowCategoryProductNumberIncludingSubcategories 1, ShowFreeShippingNotification 1, ShowGtin 2, ShowManufacturerPartNumber 2, ShowProductImagesInSearchAutoComplete 1, ShowProductsFromSubcategories 1, ShowProductSku 1, ShowShareButton 1, size 2, sorting 1, specs 1, subcategories 2, summary 2, tag 1, tags 2, tax 1, term 2, that 1, the 7, tier 2, to 8, top 1, TopCategoryMenuSubcategoryLevelsToDisplay 2, use 2, UseSmallProductBoxOnHomePage 2, view 2, viewed 1, we 2, whether 1, wishlist 1, WishlistEnabled 2, with 1, 
+
+
+FILE: src/Libraries/Nop.Services/Installation/CodeFirstInstallationService.cs; SUPPORT: 27; CONFIDENCE:0; SMIndex:167; KEYWORDS:  27, AllowCartItemEditing 1, AllowCustomersToContactVendors 1, AllowCustomersToSelectPageSize 2, an 1, and 2, associated 1, AssociatedProductPictureSize 1, at 1, available 1, c 2, cache 1, category 1, Collections 1, Common 1, Core 2, d 4, dd 1, DeliveryDate 1, desktop 1, device 1, DisplayTaxShippingInfoProductBoxes 1, DisplayTaxShippingInfoProductDetailsPage 1, Domain 1, e 4, EnableDynamicPriceUpdate 1, f 8, find 1, FirstOrDefault 2, GenerateProductMetaDescription 1, Generic 1, has 2, Id 5, IncludeInTopMenu 1, it 1, Linq 1, List 1, LoadAllSideCategoryMenuSubcategories 2, method 1, mobile 1, model 2, Name 4, never 1, not 1, of 1, one 1, only 1, PageSize 2, PageSizeOptions 2, ParentGroupedProductId 1, ParentProductId 2, possible 1, prepare 1, Price 1, PriceAdjustment 1, product 5, Product 3, ProductCount 1, ProductDetailsPictureSize 1, products 4, ProductTags 1, ProductThumbPictureSizeOnProductDetailsPage 1, Q 1, s 1, SearchPageAllowCustomersToSelectPageSize 1, SearchPagePageSizeOptions 1, SearchPageProductsPerPage 1, SeName 1, Services 2, should 1, ShowFreeShippingNotification 1, ShowGtin 1, ShowManufacturerPartNumber 1, ShowProductSku 1, ShowVendorOnProductDetailsPage 1, Store 1, StoreName 1, System 1, tag 1, that 2, the 1, to 1, TopCategoryMenuSubcategoryLevelsToDisplay 2, use 1, Vendors 1, VendorsBlockItemsToDisplay 1, VendorSettings 1, version 1, View 1, ViewPath 1, VisibleIndividually 2, we 1, We 1, Web 2, x 2, 
+
+
+FILE: src/Plugins/Nop.Plugin.Misc.FacebookShop/Controllers/MiscFacebookShopController.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:165; KEYWORDS:  7, ActionResult 1, AddRange 2, AlternateText 1, associatedProducts 1, c 2, cacheKey 1, cacheManager 3, CatalogController 2, CatalogPagingFilteringModel 1, catalogSettings 4, category 3, Category 1, CATEGORY 2, categoryModel 2, CategoryModel 1, categoryService 2, command 1, Controllers 7, Count 1, CurrentStore 5, customerRolesIds 3, d 2, f 1, FirstOrDefault 1, Format 3, FullSizeImageUrl 1, GetAllCategoriesByParentCategoryId 2, GetAssociatedProducts 1, GetLocalized 1, GetPictureById 1, GetPictureUrl 1, GetResource 1, Grouped 1, Id 4, IList 2, ImageAlternateTextFormat 1, ImageLinkTitleFormat 1, ImageUrl 1, IncludeInTopMenu 1, KEY 2, level 2, levelsToLoad 2, List 2, loadSubCategories 2, loadSubCategoriesForIds 2, localizationService 1, Media 1, model 4, MODEL 2, ModelCacheEventConsumer 2, Name 1, NonAction 2, PageNumber 1, PageSize 1, PageSizeOptions 1, pageSizes 1, parentGroupedProductId 1, picture 1, PictureId 1, PictureModel 1, pictureService 1, pictureSize 1, PrepareCategorySimpleModels 3, product 1, productService 1, Q 1, region 1, RemoveEmptyEntries 1, result 2, rootCategoryId 2, Search 1, SearchModel 1, SearchPageProductsPerPage 1, SearchPagingFilteringModel 1, SearchProducts 1, Split 1, storeContext 5, storeId 1, StringSplitOptions 1, subCategories 2, SubCategories 2, subCatModel 1, subCatName 1, temp 1, Title 1, ToList 3, TopCategoryMenuSubcategoryLevelsToDisplay 3, Trim 1, TryParse 1, validateIncludeInTopMenu 2, ValidateInput 1, visibleIndividuallyOnly 1, workContext 2, WorkingLanguage 2, x 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/SettingController.cs; SUPPORT: 20; CONFIDENCE:0; SMIndex:185; KEYWORDS:  20, ActionResult 1, AllowCartItemEditing 1, AllowCustomersToContactVendors 1, AllowCustomersToSelectPageSize 2, AssociatedProductPictureSize 1, c 5, Captcha 1, captchaSettings 2, catalogSettings 7, clear 1, Controllers 20, Core 1, d 2, DisplayTaxShippingInfoProductBoxes 1, DisplayTaxShippingInfoProductDetailsPage 1, Domain 1, Enabled 1, EnableDynamicPriceUpdate 1, f 1, Framework 1, GenerateProductMetaDescription 1, GetResource 1, load 1, Localization 1, localizationService 1, mediaSettings 1, model 15, Mvc 1, not 2, PageSize 2, PageSizeOptions 2, Presentation 20, ProductDetailsPictureSize 1, ProductThumbPictureSizeOnProductDetailsPage 1, RemoveEmptyEntries 1, SearchPageAllowCustomersToSelectPageSize 1, SearchPagePageSizeOptions 1, SearchPageProductsPerPage 1, seoSettings 1, SeoSettings 1, Services 1, shoppingCartSettings 1, ShowFreeShippingNotification 1, ShowGtin 1, ShowManufacturerPartNumber 1, ShowOnEmailProductToFriendPage 1, ShowOnProductReviewPage 1, ShowProductSku 1, ShowVendorOnProductDetailsPage 1, Split 1, storeInformationSettings 1, StoreName 1, Stores 1, StringSplitOptions 1, Tax 1, TODO 1, ToList 1, TopCategoryMenuSubcategoryLevelsToDisplay 2, UI 1, Vendor 1, Vendors 1, VendorsBlockItemsToDisplay 1, vendorSettings 3, VendorSettings 1, View 1, Web 20, workContext 1, x 8, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Infrastructure/AutoMapperStartupTask.cs; SUPPORT: 31; CONFIDENCE:0; SMIndex:175; KEYWORDS:  31, AllowCustomersToContactVendors 1, AllowCustomersToSelectPageSize 2, AssociatedProductPictureSize 1, AutoCompleteSearchThumbPictureSize 1, BlogSettings 1, c 4, Category 1, CategoryModel 1, Core 1, CreatedOn 1, CreatedOnUtc 1, d 8, DefaultProductRatingValue 1, DefaultViewMode 1, Deleted 1, delivery 1, DeliveryDate 1, DisplayTaxShippingInfoProductBoxes 1, DisplayTaxShippingInfoProductDetailsPage 1, DisplayTierPricesWithDiscounts 1, Domain 1, e 3, EnableDynamicPriceUpdate 1, f 5, FileUploadAllowedExtensions 1, GetSeName 2, HasTierPrices 1, IncludeFeaturedProductsInNormalLists 2, LoadAllSideCategoryMenuSubcategories 1, PageSize 2, PageSizeOptions 2, ParentGroupedProductId 1, ParentProductId 1, Presentation 31, Product 2, ProductDetailsPictureSize 1, products 2, ProductTags 1, ProductThumbPictureSizeOnProductDetailsPage 1, SearchPageAllowCustomersToSelectPageSize 1, SearchPagePageSizeOptions 1, SearchPageProductsPerPage 1, SeName 2, Services 1, ShoppingCartSettings 1, ShowFreeShippingNotification 1, ShowGtin 1, ShowManufacturerPartNumber 1, ShowProductSku 1, ShowVendorOnProductDetailsPage 1, TODO 1, TopCategoryMenuSubcategoryLevelsToDisplay 2, UseSmallProductBoxOnHomePage 1, VendorModel 1, Vendors 2, VendorsBlockItemsToDisplay 1, VendorSettings 1, Web 31, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Settings/CatalogSettingsModel.cs; SUPPORT: 24; CONFIDENCE:0; SMIndex:121; KEYWORDS:  24, at 1, Catalog 1, d 3, DisplayTaxShippingInfoProductBoxes 1, DisplayTaxShippingInfoProductDetailsPage 1, e 2, EnableDynamicPriceUpdate 2, f 1, HidePricesForNonRegistered 1, IgnoreFeaturedProducts 1, IgnoreTierPrices 2, IncludeFullDescriptionInCompareProducts 1, IncludeShortDescriptionInCompareProducts 1, ManufacturersBlockItemsToDisplay 1, Models 1, No 3, NumberOfBestsellersOnHomepage 1, NumberOfProductTags 2, of 1, Presentation 24, ProductsAlsoPurchasedEnabled 1, ProductsAlsoPurchasedNumber 1, ProductsByTagAllowCustomersToSelectPageSize 1, ProductsByTagPageSize 2, ProductsByTagPageSizeOptions 1, ProductSearchAutoCompleteEnabled 1, ProductSearchAutoCompleteNumberOfProducts 1, SearchPageAllowCustomersToSelectPageSize 1, SearchPagePageSizeOptions 1, SearchPageProductsPerPage 2, ShowBestsellersOnHomepage 1, ShowFreeShippingNotification 1, ShowGtin 2, ShowManufacturerPartNumber 1, ShowProductImagesInSearchAutoComplete 1, ShowProductsFromSubcategories 1, ShowShareButton 1, TopCategoryMenuSubcategoryLevelsToDisplay 2, Web 24, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Vendors/VendorSettings.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:38; KEYWORDS:  3, AllowCustomersToContactVendors 1, AllowCustomersToSelectPageSize 2, c 2, Core 1, customer 2, details 1, Domain 1, f 2, mode 1, or 1, page 2, PageSize 2, PageSizeOptions 2, product 1, ShowVendorOnProductDetailsPage 1, size 2, the 1, to 2, vendor 2, Vendor 1, vendors 1, Vendors 2, VendorsBlockItemsToDisplay 1, VendorSettings 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Settings/VendorSettingsModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:23; KEYWORDS:  3, AllowCustomersToContactVendors 1, AllowCustomersToSelectPageSize 2, f 1, mode 1, Models 1, No 1, PageSize 2, PageSizeOptions 2, Presentation 3, ShowVendorOnProductDetailsPage 1, Vendor 1, VendorsBlockItemsToDisplay 1, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/CommonController.cs; SUPPORT: 33; CONFIDENCE:0; SMIndex:403; KEYWORDS:  33, ActionResult 6, activity 1, ActivityLog 1, af 1, AllowCustomersToContactVendors 1, Authorize 1, c 2, cacheManager 1, Caching 1, catalogSettings 6, CatalogSettings 2, ChildActionOnly 1, Content 2, Controllers 33, Core 1, Count 1, CurrentCustomer 5, CurrentStore 7, customer 2, customerActivityService 1, customerRolesIds 1, customerService 2, customerSettings 1, CustomerSettings 1, d 12, e 2, Email 3, EnableShoppingCart 1, EnableWishlist 1, f 2, filterableSpecificationAttributeOptionIds 4, FirstName 1, Format 2, Framework 1, genericAttributeService 1, GetAttribute 1, GetFullName 3, GetLocalized 2, GetResource 1, Globalization 1, Home 1, HomePage 2, ICustomerService 2, Id 7, IGenericAttributeService 1, IList 4, InsertActivity 1, InvokeHttp 1, IPermissionService 2, it 1, KEY 1, LastName 1, LimitPerStore 1, Linq 1, localizationService 1, log 1, model 18, MODEL 1, ModelCacheEventConsumer 1, Models 1, Mvc 1, Name 3, No 1, NonAction 1, NopHttpsRequirement 1, page 1, pageSize 3, PartialView 2, permissionService 2, Position 5, Presentation 33, product 7, ProductOverviewModel 1, products 7, Products 4, productService 7, ProductSortingEnum 5, PublicStore 1, RedirectToAction 1, RedirectToRoute 2, region 1, result 1, SaveAttribute 1, SaveCustomerAttribute 1, sci 2, SearchProducts 7, Security 1, ShoppingCart 2, ShoppingCartItems 2, shoppingCartSettings 1, ShoppingCartSettings 1, ShoppingCartType 2, SslRequirement 1, StandardPermissionProvider 1, storeContext 4, storeId 2, StoreId 2, storeInformationSettings 2, StoreInformationSettings 1, StoreName 1, System 1, SystemCustomerAttributeNames 2, Title 1, to 6, TODO 1, ToList 5, URL 2, Utilities 1, vendor 1, vendorSettings 1, View 3, visibleIndividuallyOnly 1, Web 33, webHelper 1, WishlistEnabled 1, workContext 12, WorkingLanguage 1, x 5, 
+
+
+FILE: src/Presentation/Nop.Web/Infrastructure/RouteProvider.cs; SUPPORT: 25; CONFIDENCE:0; SMIndex:237; KEYWORDS:  25, AddProductToCart 1, AddProductToCompareList 1, AddProductVariantToCart 4, all 1, and 2, attributes 1, back 1, BackInStockSubscribePopup 1, c 4, cart 5, Catalog 3, category 1, Category 2, categoryId 2, ClearCompareList 1, Collections 1, CompareProducts 1, comparing 1, Controllers 21, d 8, Details 1, download 1, Download 1, e 7, email 3, endregion 1, f 9, file 1, friend 1, Generic 1, Infrastructure 1, Linq 1, manufacturer 1, Manufacturer 1, ManufacturerAll 1, manufacturerId 2, Mvc 1, p 1, Presentation 25, product 11, Product 4, ProductEmailAFriend 1, productId 8, products 1, ProductsByTag 2, productTagId 2, ProductTagsAll 1, productVariantId 1, RecentlyAddedProducts 1, RecentlyAddedProductsRss 1, RecentlyViewedProducts 1, RemoveProductFromCompareList 1, search 1, Search 1, SeName 5, ShoppingCart 1, stock 1, System 1, tags 1, to 4, type 1, variant 3, vendor 4, Vendor 1, VendorAll 1, vendorId 1, vendors 2, Web 25, wishlist 1, with 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/VendorModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:35; KEYWORDS:  3, AllowCustomersToContactVendors 1, c 1, Catalog 1, CatalogPagingFilteringModel 1, Description 2, f 1, IList 1, List 1, MetaDescription 2, MetaKeywords 1, MetaTitle 2, mode 1, Models 1, Name 2, No 1, PagingFilteringContext 1, Presentation 3, Products 1, SeName 3, VendorModel 2, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Common/ContactVendorModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, c 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Validators/Common/ContactVendorValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, c 1, Presentation 1, Web 1, x 1, 
+
+
+FILE: src/Tests/Nop.Web.MVC.Tests/Public/Infrastructure/RoutesTests.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:20; KEYWORDS:  4, ac 1, all 1, c 1, CatalogController 2, f 2, fd 1, Infrastructure 2, name 1, ProductTagsAll 1, Web 4, 
+
+
+FILE: src/Tests/Nop.Web.MVC.Tests/Public/Validators/Common/ContactVendorValidatorTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, d 1, model 1, Web 1, x 1, 
+
+
+FILE: src/Libraries/Nop.Data/DbContextExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Core 1, f 1, Infrastructure 1, Linq 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/PriceCalculationService.cs; SUPPORT: 14; CONFIDENCE:0; SMIndex:182; KEYWORDS:  14, all 1, ArgumentNullException 2, be 1, Cache 1, Calcualted 1, Catalog 3, catalogSettings 2, Category 1, categoryService 2, childProduct 1, childProducts 1, computation 1, Core 1, Count 2, CurrentStore 1, customer 2, d 2, discounts 1, Domain 1, e 1, evaluated 1, f 4, FilterByStore 1, FilterForCustomer 3, final 1, finalPrice 2, GenericComparer 1, GetFinalPrice 3, GetMinimalPriceProductVariant 2, GetProductCategoriesByProductId 1, GetProductVariantAttributeValuePriceAdjustment 1, GetProductVariantWithMinimalPrice 1, GetProductWithMinimalPrice 1, Gets 1, grouped 1, GroupedProduct 1, HasTierPrices 1, HasValue 1, Id 2, IgnoreTierPrices 2, IList 1, include 1, includeDiscounts 1, indicating 1, it 1, minimal 1, minPrice 2, minPriceProduct 1, name 1, not 2, only 1, or 1, param 1, price 5, Price 3, PriceAdjustment 1, prices 2, product 4, Product 4, productCategories 1, ProductId 2, products 2, ProductType 1, productVariant 4, ProductVariant 2, pvaValue 1, quantity 3, Quantity 6, region 2, RemoveDuplicatedQuantities 2, returned 1, returns 1, s 1, same 1, Services 1, simple 1, SimpleProduct 1, Sort 1, SortOrder 1, storeContext 1, summary 1, the 2, then 1, tier 2, tierPrice 2, tierPrices 2, TierPrices 3, tmp 1, to 1, ToList 5, tp 1, variant 3, variants 2, we 1, whether 1, will 1, with 3, workContext 2, Zero 5, 
+
+
+FILE: src/Libraries/Nop.Services/Common/AddressAttributeFormatter.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Catalog 1, Core 1, Domain 1, 
+
+
+FILE: src/Libraries/Nop.Services/ExportImport/ExportManager.cs; SUPPORT: 18; CONFIDENCE:0; SMIndex:84; KEYWORDS:  18, AllowCustomersToSelectPageSize 1, AllowedQuantities 1, AvailableForPreOrder 1, Catalog 2, category 2, Common 1, Core 2, Customers 1, CustomValue 1, d 3, DefaultValue 1, DeliveryDateId 1, DisableWishlistButton 1, Domain 2, e 2, f 4, Format 1, HasValue 1, Id 4, IncludeInTopMenu 1, IsNullOrEmpty 1, IsShipEnabled 1, manufacturer 1, Media 1, Orders 1, PageSize 1, PageSizeOptions 1, ParentGroupedProductId 1, ParentProductId 2, PreOrderAvailabilityStartDateTimeUtc 1, PriceAdjustment 1, product 5, ProductId 1, products 1, productVariant 1, Quantity 1, Services 2, storeInformationSettings 1, StoreName 1, tierPrice 1, tierPrices 1, ToString 2, Uri 1, ValidationFileAllowedExtensions 1, VisibleIndividually 2, 
+
+
+FILE: src/Libraries/Nop.Services/Localization/LocalizationExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Core 1, Domain 1, f 1, Linq 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Shipping/ShippingService.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:33; KEYWORDS:  5, cacheManager 1, cart 1, d 1, date 1, dd 1, delivery 1, deliveryDate 1, DeliveryDate 1, endregion 2, eventPublisher 1, f 2, Format 2, GetDeliveryDateById 1, IProductAttributeParser 1, IProductService 1, KEY 1, product 1, productAttributeParser 1, productService 1, pvaValue 1, region 1, Services 1, Shipping 1, shoppingCartSettings 1, ShoppingCartSettings 1, 
+
+
+FILE: src/Libraries/Nop.Services/Tax/TaxService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Catalog 1, Core 1, Domain 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/BaseAdminController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, Collections 1, Controllers 1, Core 1, Generic 1, Infrastructure 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/OrderController.cs; SUPPORT: 23; CONFIDENCE:0; SMIndex:324; KEYWORDS:  23, ActionResult 1, AddProductAttribute 2, AddRange 1, already 1, an 1, ArgumentNullException 1, attribute 3, AttributeControlType 3, attributes 1, BestSellersReport 7, c 4, catalogSettings 3, CatalogSettings 1, categoryService 1, cblAttributes 1, Checkboxes 1, ChildActionOnly 1, Collections 1, ColorSquares 1, ContentLength 1, ContentType 1, controlId 2, Controllers 23, Core 1, ctrlAttributes 1, d 2, ddlAttributes 1, download 1, Download 1, DownloadBinary 1, DownloadGuid 1, downloadService 1, DownloadUrl 1, DropdownList 1, e 4, endregion 1, enteredText 1, EntityId 2, Extension 1, f 4, file 1, fileMaxSize 1, Filename 1, FileName 1, Files 1, FileUpload 1, FileUploadMaximumSizeBytes 1, form 1, Format 1, Generic 1, GetAllManufacturers 1, GetDownloadBits 1, GetExtension 1, GetFileNameWithoutExtension 1, GetProductVariantById 2, GetResource 1, Guid 1, has 1, httpPostedFile 1, Id 5, IDownloadService 1, InsertDownload 1, IO 1, IsNew 1, IsNullOrEmpty 3, item 2, Linq 2, List 1, load 1, localizationService 2, manufacturers 1, manufacturerService 1, MaximumUploadedFileSize 1, model 7, Models 1, MultilineTextbox 2, Mvc 2, NewGuid 1, NonAction 1, not 6, only 1, orderReportService 7, pageSize 1, Parse 1, PartialView 1, Path 1, permissionService 1, Presentation 23, product 8, Product 4, productAttributeParser 2, productId 1, ProductId 2, products 6, productService 4, productVariant 3, ProductVariantId 2, quantity 1, RadioList 1, rblAttributes 1, ReadonlyCheckboxes 1, recordsToReturn 2, region 3, RemoveEmptyEntries 2, report 5, Request 1, save 1, selectedAttributeId 1, selectedAttributes 2, ShoppingCart 1, shoppingCartService 1, Split 2, StringSplitOptions 2, System 3, TextBox 2, that 1, to 1, ToList 3, ToString 2, Trim 1, txtAttribute 1, uploaded 1, UseDownloadUrl 1, Utilities 1, values 2, variant 1, variants 6, Web 23, workContext 3, x 4, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Messages/QueuedEmailModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, f 1, Models 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/BackInStockSubscriptionController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:20; KEYWORDS:  2, Catalog 2, Controllers 2, Core 2, Domain 2, Models 2, Mvc 2, Presentation 2, System 2, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/CheckoutController.cs; SUPPORT: 15; CONFIDENCE:0; SMIndex:170; KEYWORDS:  15, ac 1, ActionResult 2, c 1, cart 2, Catalog 1, ChildActionOnly 1, Common 1, Controllers 15, Core 2, Count 2, CurrentCustomer 7, CurrentStore 2, CustomerEnteredPrice 1, Customers 1, customerService 1, d 2, Domain 2, e 2, endregion 1, f 6, Framework 1, genericAttributeService 1, Home 1, HomePage 1, ICustomerService 1, Id 3, IGenericAttributeService 1, IList 2, IShoppingCartService 1, LimitPerStore 1, model 4, Models 1, Mvc 2, NonAction 2, one 1, PartialView 1, Presentation 15, Product 1, ProductVariant 1, RedirectToAction 1, RedirectToRoute 1, region 2, RemoveEmptyEntries 1, result 2, SaveAttribute 1, SaveCustomerAttribute 1, sci 2, ShoppingCart 2, ShoppingCartItems 2, shoppingCartService 4, ShoppingCartType 3, Split 1, storeContext 1, StoreId 3, StringSplitOptions 1, System 2, SystemCustomerAttributeNames 1, the 2, ToList 2, Utilities 2, View 1, Web 15, webHelper 1, workContext 7, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/CustomerController.cs; SUPPORT: 24; CONFIDENCE:0; SMIndex:277; KEYWORDS:  24, ActionResult 1, activity 1, ActivityLog 1, AddModelError 1, already 1, are 1, ArgumentNullException 1, AttributeControlType 1, backInStockSubscriptionService 1, c 4, CAPTCHA 1, captchaSettings 1, captchaValid 1, CaptchaValidator 1, Catalog 2, Collections 3, Common 2, Controllers 24, Core 2, CreatedOnUtc 2, CurrentCustomer 5, CurrentStore 1, customer 2, customerActivityService 1, customerService 1, customerSettings 2, CustomerSettings 1, d 5, DateTime 1, DisplayCaptcha 1, Domain 2, downloadService 1, e 1, Enabled 1, Extensions 2, f 3, Format 1, Framework 1, Generic 3, genericAttributeService 1, GetAllSubscriptionsByCustomerId 1, GetLocalized 1, GetResource 2, GetSeName 1, HasValue 2, Home 1, HomePage 2, HttpPost 1, ICustomerService 1, Id 2, IGenericAttributeService 1, InsertActivity 1, IsNullOrEmpty 1, IsValid 1, item 1, Items 1, Linq 3, list 1, localizationService 3, localizationSettings 1, log 1, Media 1, MediaSettings 1, Messages 1, model 11, Models 3, ModelState 1, MultilineTextbox 1, Mvc 3, Name 3, NonAction 2, nothing 1, Orders 1, pictureService 1, pre 1, Presentation 24, product 1, Product 1, ProductId 1, ProductName 1, ProductSeName 1, productVariant 2, ProductVariant 1, PublicStore 1, Quantity 1, ReadonlyCheckboxes 1, RedirectToAction 2, RedirectToRoute 4, region 2, RemoveEmptyEntries 1, SaveAttribute 1, SaveCustomerAttribute 1, SeName 1, Seo 1, Services 2, Split 1, StringSplitOptions 1, subscription 1, System 3, SystemCustomerAttributeNames 2, Tax 2, TextBox 1, TODO 1, ToList 1, UNDONE 1, Utilities 2, validate 1, values 1, View 2, we 1, Web 24, workContext 6, workflowMessageService 2, WrongCaptcha 1, x 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Payments/PaymentServiceTests.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:12; KEYWORDS:  3, Catalog 1, Core 2, Domain 2, Orders 1, Services 1, shoppingCartSettings 1, ShoppingCartSettings 1, 
+
+
+FILE: src/Tests/Nop.Web.MVC.Tests/Public/Validators/Common/AddressValidatorTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/BoardsController.cs; SUPPORT: 9; CONFIDENCE:0; SMIndex:86; KEYWORDS:  9, Common 1, Controllers 9, Core 1, CurrentStore 2, Customers 1, Directory 1, Domain 1, e 3, f 3, feed 2, Format 2, Framework 1, GetLocalized 1, HomePage 1, Id 1, IEnumerable 1, List 1, Media 2, model 1, Models 2, Name 2, No 1, NonAction 1, NopHttpsRequirement 1, Presentation 9, RedirectToAction 1, RedirectToRoute 1, region 1, Security 1, Services 1, SslRequirement 1, storeContext 1, storeInformationSettings 1, StoreName 1, SyndicationFeed 2, Uri 2, Utilities 1, Web 9, webHelper 1, workContext 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/OrderController.cs; SUPPORT: 11; CONFIDENCE:0; SMIndex:154; KEYWORDS:  11, ActionResult 2, ArgumentNullException 2, c 1, Catalog 1, catalogSettings 3, CatalogSettings 2, Controllers 11, Core 3, CreatedOnUtc 1, CurrentCustomer 5, Customers 2, dateTimeHelper 2, DefaultAdminLanguageId 2, Domain 3, e 1, email 2, Extensions 3, f 4, Format 1, GetLocalized 1, GetSeName 1, Id 3, IDateTimeHelper 2, IsNullOrEmpty 1, Items 1, IWorkflowMessageService 2, Localization 2, localizationSettings 2, LocalizationSettings 2, Media 2, Messages 2, model 6, Name 2, NonAction 2, notify 2, Orders 3, owner 2, Presentation 11, price 1, product 2, Product 1, productAttributeParser 1, ProductId 1, ProductName 1, ProductSeName 1, ProductVariant 1, Quantity 1, region 2, Seo 1, Services 3, Sku 1, store 2, Tax 3, Utilities 2, Web 11, workContext 5, workflowMessageService 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/ReturnRequestController.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:52; KEYWORDS:  5, ActionResult 1, ArgumentNullException 1, c 1, Catalog 1, Controllers 5, Core 1, Domain 1, Format 1, GetLocalized 1, GetSeName 1, Home 1, HomePage 1, Id 1, IsNullOrEmpty 1, model 2, Mvc 1, Name 1, NonAction 1, Presentation 5, price 1, product 1, Product 1, ProductId 1, ProductName 1, ProductSeName 1, ProductVariant 1, Quantity 1, RedirectToAction 1, RedirectToRoute 1, region 1, System 1, Utilities 1, Web 5, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Boards/CustomerForumSubscriptionsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Collections 1, f 1, Generic 1, Models 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/CustomerBackInStockSubscriptionsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Catalog 1, Collections 1, Generic 1, Models 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Order/CustomerOrderListModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, Collections 1, Generic 1, Models 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Order/CustomerReturnRequestsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, Collections 1, Generic 1, Models 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Order/CustomerRewardPointsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Collections 1, f 1, Generic 1, Models 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Customers/CustomerMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, Common 1, Core 1, Customers 1, Domain 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/OrderReportService.cs; SUPPORT: 10; CONFIDENCE:0; SMIndex:89; KEYWORDS:  10, ArgumentException 1, BestSellersReport 6, c 2, Catalog 1, Core 1, Domain 1, endregion 1, EntityId 2, f 1, GetAlsoPurchasedProductsIds 1, GetProductById 1, GetProductsAlsoPurchasedById 3, groupBy 5, Id 3, load 4, p 1, pageSize 1, product 6, Product 1, productId 3, ProductId 1, products 7, productService 1, ProductVariantId 2, recordsToReturn 2, region 1, report 3, Services 1, specified 1, storeId 2, the 1, to 1, ToArray 1, ToList 2, variants 5, x 3, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Themes/ThemeableVirtualPathProviderViewEngine.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:13; KEYWORDS:  3, Core 1, Linq 1, Mvc 1, Presentation 3, System 1, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/TemplateController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Catalog 1, Controllers 1, Core 1, Domain 1, Mvc 1, Presentation 1, Services 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ProductWarehouseInventoryPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Catalog 1, Core 1, Domain 1, Linq 1, Media 1, System 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Shipping/WarehousePersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, Core 1, Domain 1, Linq 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Blogs/BlogExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, FindAll 1, ToList 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/CategoryService.cs; SUPPORT: 9; CONFIDENCE:0; SMIndex:100; KEYWORDS:  9, access 1, ACL 3, aclService 1, Authorize 1, c 3, cacheManager 4, categories 5, category 5, Category 2, CATEGORY 2, categoryId 3, control 1, CurrentCustomer 2, CurrentStore 1, d 1, Deleted 1, displayed 1, f 1, featured 2, Format 4, GetAllCategoriesByParentCategoryId 2, GetAllCategoriesDisplayedOnHomePage 3, GetTotalNumberOfFeaturedProducts 2, home 1, Id 3, IList 2, indicating 1, KEY 4, list 1, List 1, mapping 1, Name 1, of 2, page 1, parentCategoryId 2, ParentCategoryId 2, product 2, Product 1, productCategories 1, productId 1, products 2, Published 1, showHidden 2, Store 1, storeMappingService 1, ToList 3, whether 1, workContext 2, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ManufacturerService.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:55; KEYWORDS:  6, access 1, ACL 1, Active 1, c 1, cacheManager 2, control 1, cr 1, CurrentCustomer 1, CustomerRoles 1, eventPublisher 1, Events 1, f 1, featured 2, Format 2, GetAllManufacturers 1, GetTotalNumberOfFeaturedProducts 2, Id 1, IEventPublisher 1, KEY 2, list 1, manufacturer 3, manufacturerId 2, manufacturers 1, MANUFACTURERS 1, mapping 1, of 2, pageSize 1, product 2, Product 1, productId 1, products 2, Published 1, Services 1, Store 1, Stores 1, ToList 1, workContext 2, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ProductAttributeService.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:11; KEYWORDS:  3, cacheManager 1, Format 1, KEY 1, mapping 1, product 1, Product 1, productId 1, variant 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ProductService.cs; SUPPORT: 30; CONFIDENCE:0; SMIndex:390; KEYWORDS:  30, ACL 2, all 1, associated 1, c 3, cache 1, cacheManager 4, cart 1, Catalog 2, catalogSettings 1, categories 1, category 1, Category 1, categoryId 2, categoryIds 7, control 1, Core 2, Count 2, Cross 1, CurrentCustomer 2, CurrentStore 1, Customers 2, d 6, DefaultAdminLanguageId 2, e 4, email 2, endregion 4, EntityId 2, f 2, featured 4, featuredProducts 7, filterableSpecificationAttributeOptionIds 6, filteredSpecs 3, Format 2, GetAssociatedProducts 1, GetCategoryProductNumber 1, GetCrosssellProductsByShoppingCart 1, GetProductVariantsByProductIds 1, GetTierPricesByProductVariantId 1, GetTotalNumberOfRelatedProducts 2, grouped 1, HasTierPrices 1, HasValue 1, id 1, Id 8, IList 6, indicating 1, individually 1, IWorkflowMessageService 3, KEY 3, keywords 4, languageId 4, list 1, List 7, Localization 2, localizationSettings 2, LocalizationSettings 2, manufacturer 1, manufacturerId 7, mapping 1, MaxValue 1, Messages 2, name 1, NameAsc 1, not 3, notification 2, of 2, p 2, pageIndex 4, pageSize 4, PageSize 1, param 1, parentGroupedProductId 2, ParentGroupedProductId 1, parentProductId 4, ParentProductId 2, Position 3, price 2, priceMax 4, priceMin 3, product 19, Product 8, productId 3, ProductId 2, products 12, Products 1, ProductSortingEnum 7, productTagId 3, ProductTags 1, productTagService 1, productVariant 1, productVariantId 1, productVariants 1, published 1, pvaValue 1, Quantity 1, region 2, related 2, rp 1, s 3, sci 1, search 1, searchDescriptions 2, SearchProducts 11, searchProductTags 2, searchSku 1, sell 1, Services 2, showHidden 2, store 1, Store 2, storeId 7, subcategories 2, tag 1, That 1, the 9, tierPrice 1, TierPrices 1, to 9, TODO 1, ToList 7, UNDONE 3, variant 4, variants 3, visible 1, VisibleIndividually 1, visibleIndividuallyOnly 3, we 7, whether 1, why 1, with 1, workContext 3, workflowMessageService 3, x 1, 
+
+
+FILE: src/Libraries/Nop.Services/Common/AddressService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, cacheManager 1, Format 1, KEY 1, 
+
+
+FILE: src/Libraries/Nop.Services/Customers/CustomerAttributeService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, cacheManager 1, Format 1, KEY 1, 
+
+
+FILE: src/Libraries/Nop.Services/Customers/CustomerReportService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, ToList 1, x 1, 
+
+
+FILE: src/Libraries/Nop.Services/Directory/MeasureService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, cacheManager 1, Format 1, KEY 1, 
+
+
+FILE: src/Libraries/Nop.Services/Localization/LanguageService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, cacheManager 1, Format 1, KEY 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/CheckoutAttributeService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, cacheManager 1, Format 1, KEY 1, 
+
+
+FILE: src/Libraries/Nop.Services/Stores/StoreService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:7; KEYWORDS:  2, cacheManager 1, e 1, Format 1, KEY 1, Name 1, 
+
+
+FILE: src/Libraries/Nop.Services/Tax/TaxCategoryService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, cacheManager 1, Format 1, KEY 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Tax.CountryStateZip/CountryStateZipTaxProvider.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, cacheManager 1, CurrentStore 1, Id 1, KEY 1, MODEL 1, ModelCacheEventConsumer 1, storeContext 1, ToList 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ActivityLogController.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:31; KEYWORDS:  4, Controllers 4, f 1, Framework 1, Id 1, Localization 1, Logging 1, Mvc 1, Name 1, Presentation 4, RemoveEmptyEntries 1, Security 1, Services 1, Split 1, StringSplitOptions 1, TODO 1, UNDONE 1, Web 4, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/CategoryController.cs; SUPPORT: 20; CONFIDENCE:0; SMIndex:273; KEYWORDS:  20, ACL 2, aclService 2, ActionResult 1, AllowCustomersToSelectPageSize 1, ArgumentException 1, ArgumentNullException 1, Authorize 1, c 7, catalogSettings 3, category 4, Category 2, categoryIds 1, CategoryModel 2, categoryService 3, categoryTemplateService 1, command 5, Controllers 20, Count 1, d 3, Deleted 1, e 2, Empty 5, f 2, filterableSpecificationAttributeOptionIds 4, found 1, GetAllCategoryTemplates 1, GetAllManufacturers 1, GetCategoryBreadCrumb 1, GetCategoryById 1, GetLocalized 1, ICategoryService 1, ICategoryTemplateService 1, id 1, Id 9, IList 4, ILocalizationService 1, IManufacturerService 1, IncludeInTopMenu 1, IProductService 1, keywords 1, List 6, localizationService 1, ManageCatalog 1, ManageCategories 1, manufacturerId 1, manufacturers 1, manufacturerService 3, model 14, Name 3, No 1, NonAction 2, pageIndex 1, pageSize 1, PageSize 6, PageSizeOptions 1, ParentCategoryId 1, permissionService 2, Position 5, Presentation 20, ProductModel 1, products 5, Products 2, productService 7, ProductSortingEnum 5, Published 2, region 1, SearchProducts 5, SeName 1, specified 1, StandardPermissionProvider 1, Store 1, storeMappingService 1, template 1, the 1, ToList 1, TotalCount 2, Utilities 1, View 2, Web 20, with 1, workContext 8, WorkingLanguage 5, x 5, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/CheckoutAttributeController.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:34; KEYWORDS:  4, ArgumentNullException 1, Authorize 1, Controllers 4, Count 1, d 1, e 1, Format 1, GetLocalized 1, Id 1, ManageCatalog 1, Name 2, NonAction 1, permissionService 1, Presentation 4, region 1, StandardPermissionProvider 1, Utilities 1, Web 4, x 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/CommonController.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:43; KEYWORDS:  4, c 2, Common 1, Controllers 4, Core 1, Count 2, CurrentStore 1, Customers 1, d 2, Domain 1, e 1, Format 1, GetStoreLocation 1, IPermissionService 1, ISearchTermService 1, Keyword 1, permissionService 1, Presentation 4, searchTermService 1, shippingService 1, storeContext 1, storeInformationSettings 1, TODO 1, Web 4, webHelper 1, workContext 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/CustomerAttributeController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:15; KEYWORDS:  2, Controllers 2, Count 1, Id 1, Name 1, NonAction 1, Presentation 2, region 1, Utilities 1, Web 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/DiscountController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:23; KEYWORDS:  3, ArgumentNullException 1, Controllers 3, e 1, Id 1, NonAction 1, Presentation 3, product 1, products 1, region 1, to 1, Utilities 1, variants 1, Web 3, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/GiftCardController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:12; KEYWORDS:  2, Controllers 2, Id 1, Presentation 2, ToList 1, Web 2, x 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/LogController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Controllers 1, Id 1, Presentation 1, Web 1, workContext 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ManufacturerController.cs; SUPPORT: 14; CONFIDENCE:0; SMIndex:204; KEYWORDS:  14, ACL 2, aclService 1, AllowCustomersToSelectPageSize 1, ArgumentNullException 1, Authorize 1, c 3, catalogSettings 1, categoryIds 1, categoryService 2, command 5, Controllers 14, cr 1, d 1, e 2, Empty 5, f 1, filterableSpecificationAttributeOptionIds 4, GetAllManufacturers 1, GetAllManufacturerTemplates 1, ICategoryService 1, Id 8, IList 4, ILocalizationService 1, IManufacturerService 1, IManufacturerTemplateService 1, IProductService 1, IWorkContext 1, keywords 1, List 5, localizationService 1, ManageCatalog 1, ManageManufacturers 1, manufacturer 3, manufacturerId 1, manufacturers 1, manufacturerService 3, manufacturerTemplateService 1, model 10, Name 1, NonAction 1, pageIndex 1, pageSize 1, PageSize 6, PageSizeOptions 1, permissionService 2, Position 5, Presentation 14, ProductModel 1, products 5, Products 2, productService 6, ProductSortingEnum 5, Published 1, region 1, SearchProducts 5, StandardPermissionProvider 1, storeMappingService 1, template 1, ToList 1, TotalCount 2, Utilities 1, View 1, Web 14, workContext 8, WorkingLanguage 5, x 3, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/OnlineCustomerController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:20; KEYWORDS:  2, Common 1, Controllers 2, Core 1, Customers 1, d 1, Directory 1, Domain 1, e 1, Helpers 1, Id 1, Models 1, Presentation 2, Services 1, Web 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/PollController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:23; KEYWORDS:  2, Common 1, Controllers 2, Core 1, Count 1, d 1, Domain 1, Helpers 1, Id 1, Linq 1, Localization 1, Models 1, Mvc 1, Name 1, Presentation 2, Services 1, System 1, Web 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ProductController.cs; SUPPORT: 34; CONFIDENCE:0; SMIndex:509; KEYWORDS:  34, ac 1, ACL 2, aclService 2, ActionResult 3, already 1, ArgumentException 1, ArgumentNullException 1, associatedProduct 2, associatedProducts 1, attribute 1, AttributeControlType 1, Authorize 1, c 4, catalogSettings 1, Category 1, categoryIds 1, categoryService 3, command 6, Controllers 34, count 1, Count 2, currencyService 1, customerActivityService 1, CustomValue 1, d 6, dateTimeHelper 1, DefaultValue 1, delivery 1, deliveryDate 1, DeliveryDate 1, e 3, Empty 6, endregion 1, f 6, fa 1, filterableSpecificationAttributeOptionIds 4, Format 1, found 3, Framework 1, GetAllManufacturers 1, GetAllProductTags 3, GetAllProductTemplates 1, GetCategoryBreadCrumb 1, GetCategoryById 1, GetChildCategoryIds 1, GetLocalized 2, GetProductById 3, GetProductCount 1, GetProductTagById 1, GetResource 1, IAclService 1, ICategoryService 1, ICurrencyService 1, ICustomerActivityService 1, id 3, Id 15, IDateTimeHelper 1, IList 4, ILocalizationService 1, IManufacturerService 1, IPermissionService 1, IProductService 1, IProductTagService 1, IProductTemplateService 1, IShippingService 1, IsNullOrEmpty 1, IStoreMappingService 1, IWorkContext 1, keywords 1, List 7, localizationService 3, ManageCatalog 1, ManageProducts 1, manufacturerId 1, manufacturers 1, manufacturerService 2, MaxValue 5, model 20, MultilineTextbox 1, Mvc 1, Name 8, No 3, NonAction 1, order 1, OrderByDescending 3, Orders 1, pageIndex 1, pageSize 1, PageSize 5, parentCategoryId 1, parentGroupedProductId 1, ParentGroupedProductId 1, parentProductId 1, ParentProductId 1, permissionService 2, Position 5, Presentation 34, PriceAdjustment 1, product 14, Product 3, ProductCount 4, productId 1, ProductModel 1, products 6, Products 3, productService 11, ProductSortingEnum 6, productTag 3, ProductTagModel 3, ProductTags 3, productTagService 6, productTemplateService 1, psa 1, Published 1, ReadonlyCheckboxes 1, RedirectToAction 1, region 1, RemoveEmptyEntries 1, result 1, SearchProducts 7, Security 1, Selected 1, SelectListItem 1, Seo 1, Services 2, Shipping 1, shippingService 1, ShortDescription 1, SpecificationAttribute 1, SpecificationAttributeName 1, SpecificationAttributeOption 1, specified 2, Split 1, StandardPermissionProvider 1, store 1, storeMappingService 2, Stores 1, StringSplitOptions 1, tag 3, tags 3, Take 1, Tax 2, template 1, Text 1, TextBox 1, the 2, ToList 6, ToString 1, TotalCount 2, Utilities 1, ValidationFileAllowedExtensions 2, values 1, variant 3, Vendors 1, View 1, VisibleIndividually 1, we 1, Web 34, with 2, workContext 9, WorkingLanguage 6, x 12, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ShoppingCartController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:25; KEYWORDS:  3, Controllers 3, d 2, Id 3, Presentation 3, ProductVariant 2, Store 2, StoreId 2, ToList 1, Web 3, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/PollController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:31; KEYWORDS:  3, cacheManager 1, Content 1, Controllers 3, Count 1, Format 1, Id 2, KEY 1, model 2, MODEL 1, ModelCacheEventConsumer 1, NonAction 1, PartialView 1, Presentation 3, region 1, ToList 1, Utilities 1, Web 3, workContext 1, WorkingLanguage 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Extensions/ControllerExtensions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:37; KEYWORDS:  2, Cache 1, cacheManager 1, Caching 1, Catalog 1, Common 1, Controllers 1, Core 1, Customers 1, Directory 1, Domain 1, Extensions 1, Format 1, GetLocalized 1, Id 1, Infrastructure 1, KEY 1, Localization 1, Media 1, model 1, MODEL 1, ModelCacheEventConsumer 1, Models 1, Name 1, Presentation 2, Security 1, Seo 1, Services 1, Tax 1, ToList 1, Web 2, workContext 1, WorkingLanguage 1, x 1, 
+
+
+FILE: src/Libraries/Nop.Core/CommonHelper.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Blogs/BlogExtensions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:5; KEYWORDS:  2, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductExtensions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:17; KEYWORDS:  2, Catalog 1, Core 1, Count 1, Domain 1, Linq 1, MinimalPriceProductVariant 1, Price 1, product 1, Product 1, ProductVariants 1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, System 1, ToList 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/Order.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Stores/StoreExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Libraries/Nop.Core/Html/HtmlHelper.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:5; KEYWORDS:  2, f 1, IsNullOrEmpty 1, Split 1, 
+
+
+FILE: src/Libraries/Nop.Core/Plugins/PluginFileParser.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Libraries/Nop.Core/WebHelper.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:26; KEYWORDS:  7, c 2, CurrentStore 1, e 1, Empty 1, first 1, ModifyQueryString 1, not 1, query 1, Split 2, Text 1, the 1, to 1, ToString 1, Web 3, workContext 1, 
+
+
+FILE: src/Libraries/Nop.Data/DataReaderExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Libraries/Nop.Services/Common/PdfService.cs; SUPPORT: 9; CONFIDENCE:0; SMIndex:40; KEYWORDS:  9, associated 1, associatedProduct 2, attributes 1, c 2, currencyService 1, CurrentStore 1, f 1, Format 1, GetAssociatedProducts 1, Id 2, IsNullOrEmpty 1, Name 1, parentGroupedProductId 2, parentProductId 1, Price 1, product 2, products 1, productService 2, SearchProducts 2, storeInformationSettings 1, Web 1, webHelper 1, workContext 1, Zero 1, 
+
+
+FILE: src/Libraries/Nop.Services/ExportImport/ImportManager.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:37; KEYWORDS:  7, allowedQuantities 1, AllowedQuantities 1, AvailableForPreOrder 1, DateTime 1, DeliveryDateId 1, DisableWishlistButton 1, e 2, f 1, IsShipEnabled 1, parentGroupedProductId 1, ParentGroupedProductId 1, parentProductId 2, ParentProductId 2, PreOrderAvailabilityStartDateTimeUtc 1, price 2, product 4, productVariant 1, RemoveEmptyEntries 1, Services 1, Split 1, StringSplitOptions 1, VisibleIndividually 2, 
+
+
+FILE: src/Libraries/Nop.Services/Messages/QueuedMessagesSendTask.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.DiscountRules.HasAllProducts/Controllers/DiscountRulesHasAllProductsController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:9; KEYWORDS:  2, Authorize 1, Controllers 2, Id 1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.DiscountRules.HasOneProduct/Controllers/DiscountRulesHasOneProductController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:9; KEYWORDS:  2, Authorize 1, Controllers 2, Id 1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.ExternalAuth.Facebook/Core/FacebookProviderAuthorizer.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Feed.Froogle/Services/GoogleService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Shipping.AustraliaPost/AustraliaPostComputationMethod.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, Split 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/HtmlExtensions.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:18; KEYWORDS:  3, attribute 1, Content 1, DateTime 1, day 1, HasValue 1, month 1, Presentation 3, Split 1, ToString 1, Web 3, year 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Menu/XmlSiteMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Any 1, Presentation 1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/CustomerController.cs; SUPPORT: 12; CONFIDENCE:0; SMIndex:131; KEYWORDS:  12, already 1, and 1, are 1, ArgumentNullException 1, AttributeControlType 1, c 1, Catalog 1, Common 1, Controllers 12, Core 1, CurrentCustomer 3, CurrentStore 2, customer 3, Customers 1, customerService 1, d 2, dateTimeHelper 1, Directory 1, Domain 1, e 2, f 1, FirstName 1, Framework 1, genericAttributeService 1, GetAttribute 1, GetFullName 1, Home 1, ICustomerService 1, Id 5, IDateTimeHelper 1, IGenericAttributeService 1, IList 1, LastName 1, List 1, localizationService 1, model 3, Models 1, MultilineTextbox 1, Mvc 1, Name 1, NonAction 1, not 1, nothing 1, pre 1, Presentation 12, ProductVariant 2, ReadonlyCheckboxes 1, RedirectToAction 1, region 1, RemoveEmptyEntries 1, SaveAttribute 1, SaveCustomerAttribute 1, Split 1, Store 2, storeContext 2, StoreId 2, StringSplitOptions 1, SystemCustomerAttributeNames 2, TextBox 1, ToList 1, Utilities 1, values 1, Web 12, workContext 5, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/PaymentController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:23; KEYWORDS:  3, Controllers 3, f 1, Framework 1, Localization 1, model 1, Mvc 1, Presentation 3, RemoveEmptyEntries 1, Security 1, Services 1, Split 1, StringSplitOptions 1, UNDONE 1, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/SecurityController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Controllers 1, Presentation 1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ShippingController.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:50; KEYWORDS:  5, c 1, Controllers 5, date 1, delivery 1, deliveryDate 1, DeliveryDate 1, e 1, endregion 2, f 2, GetDeliveryDateById 1, GetLocalized 1, localizationService 1, model 3, Name 2, NonAction 1, permissionService 1, Presentation 5, region 2, RemoveEmptyEntries 1, Shipping 1, shippingService 1, Split 1, StringSplitOptions 1, ToList 1, UNDONE 1, Utilities 1, Web 5, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/BackwardCompatibility1XController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:39; KEYWORDS:  3, ActionResult 1, category 1, categoryId 1, categoryService 1, Controllers 3, d 1, f 1, GetCategoryById 1, GetManufacturerById 1, GetProductById 2, GetProductTagById 1, Home 1, HomePage 2, Id 1, manufacturer 1, manufacturerId 1, manufacturerService 1, Presentation 3, product 1, productId 1, productService 1, productTagId 1, productTagService 2, RedirectToAction 1, RedirectToRoute 1, Split 1, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/InstallController.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:32; KEYWORDS:  5, ActionResult 1, Controllers 5, Home 1, HomePage 1, model 2, Presentation 5, RedirectToAction 1, RedirectToRoute 1, RemoveEmptyEntries 1, Split 1, StringSplitOptions 1, TODO 1, Web 5, webHelper 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/ShoppingCartController.cs; SUPPORT: 49; CONFIDENCE:0; SMIndex:1258; KEYWORDS:  49, ActionName 1, ActionResult 11, activity 2, ActivityLog 2, added 3, AddModelError 4, AddProductAttribute 1, AddProductToCart 2, AddProductVariantToCart 5, AddRange 2, address 1, addtocart 1, AddToCart 6, addToCartWarnings 3, AddToShoppingCart 2, AddToWishlist 2, AJAX 4, AllKeys 1, AllowCartItemEditing 1, allowed 6, AllowedFileExtensions 1, allowedQuantities 2, AllowedQuantities 2, already 3, AlternateText 1, an 2, and 3, are 1, ArgumentNullException 3, attribute 7, AttributeControlType 7, attributes 3, AttributesXml 1, Authorize 1, be 3, been 1, c 5, cacheManager 2, CallForPrice 1, Captcha 1, CAPTCHA 2, captchaSettings 3, CaptchaSettings 2, captchaValid 2, CaptchaValidator 1, cards 1, cart 15, cartType 2, Catalog 3, CatalogController 5, catalogSettings 11, CatalogSettings 5, cblAttributes 1, check 1, Checkboxes 1, ChildActionOnly 1, Collections 1, ColorSquares 1, Common 3, CommonHelper 1, Constructors 1, Content 1, ContentLength 1, ContentType 1, controlId 4, Controllers 49, ConvertFromPrimaryStoreCurrency 1, Core 5, Count 5, ctrlAttributes 1, currencyService 1, current 1, CurrentCustomer 18, currently 4, CurrentStore 8, customer 5, Customer 2, customerActivityService 2, customerEnteredPrice 1, CustomerEnteredPrice 2, customerEnteredPriceConverted 2, CustomerEntersPrice 3, Customers 2, d 7, D 1, date 1, Datepicker 1, DateTime 1, day 1, ddlAttributes 1, DefaultValue 1, Deleted 2, desktop 3, Details 2, Directory 2, display 4, DisplayCaptcha 1, DisplayCartAfterAddingProduct 2, DisplayPrices 1, DisplayWishlistAfterAddingProduct 1, Domain 3, download 1, Download 1, DownloadBinary 1, DownloadGuid 1, downloadService 2, DownloadUrl 1, DropdownList 2, e 5, email 5, Email 3, EmailAFriend 3, Empty 1, Enabled 2, EnableShoppingCart 1, EnableWishlist 1, endregion 5, ensure 1, entered 1, EnteredQuantity 1, enteredText 1, existing 1, Extension 1, Extensions 1, f 9, failed 1, far 1, file 2, fileMaxSize 1, Filename 1, FileName 1, Files 1, FileUpload 2, FileUploadMaximumSizeBytes 1, FirstName 1, FirstOrDefault 3, form 8, Format 6, FormatPrice 1, FormatText 2, FormCollection 4, formKey 1, FormValueRequired 1, found 3, Framework 2, FriendEmail 3, FullProductName 2, Generic 1, GetAttribute 1, GetDownloadBits 1, GetExtension 1, GetFileNameWithoutExtension 1, GetFullName 1, GetLocalized 1, GetPicturesByProductId 1, GetPictureUrl 2, GetProductById 2, GetProductPrice 1, GetProductVariantAttributesByProductId 1, GetProductVariantAttributesByProductVariantId 1, GetProductVariantById 2, GetProductVariantsByProductId 1, GetResource 11, GetSeName 1, Gift 1, giftcard 1, giftCardMessage 1, got 1, guest 1, Guid 2, has 5, HasValue 1, have 2, HidePricesForNonRegistered 3, Home 4, HomePage 1, Html 2, HtmlHelper 2, HTTP 5, HttpPost 6, httpPostedFile 1, ia 1, Id 16, IDownloadService 2, IList 2, ImageAlternateTextFormat 1, ImageLinkTitleFormat 1, ImageUrl 2, indicating 1, InsertActivity 2, InsertDownload 1, InvariantCultureIgnoreCase 1, IO 1, IPermissionService 4, IsCurrentConnectionSecured 1, IsGiftCard 2, IsGuest 5, IShoppingCartService 1, IsNew 1, IsNullOrEmpty 6, IsRequired 2, IsValid 1, IsValidEmail 1, it 5, item 5, IWorkflowMessageService 2, KEY 2, LastContinueShoppingPage 2, LastName 1, Length 1, LimitPerStore 1, Linq 1, List 1, load 1, localizationService 11, log 2, logic 1, MaximumUploadedFileSize 1, Media 5, mediaSetting 5, mediaSettings 2, MediaSettings 5, message 3, Message 1, Messages 2, method 5, mobile 5, model 17, MODEL 2, ModelCacheEventConsumer 2, Models 2, ModelState 4, month 1, MultilineTextbox 2, Mvc 1, name 1, Name 2, NewGuid 1, No 2, NonAction 3, NopHttpsRequirement 1, not 3, nothing 1, notification 1, of 5, one 2, only 5, OnlyRegisteredUsers 3, Orders 2, page 2, param 1, ParentGroupedProductId 1, ParentProductId 1, Parse 2, ParseAllowedQuatities 2, Path 1, permissionService 4, PersonalMessage 2, picker 1, picture 1, PICTURE 1, PictureId 1, PictureModel 2, pictureService 3, pictureSize 1, POST 5, pre 1, Presentation 49, price 7, priceAdjustmentBase 3, priceCalculationService 1, priceFormatter 1, prices 1, product 14, Product 10, ProductAttributeId 1, productAttributeParser 2, productAttributeService 1, ProductHasBeenAddedToTheCart 1, productId 6, ProductId 2, ProductName 1, products 1, Products 2, ProductSeName 1, productService 7, ProductType 2, productVariant 7, ProductVariant 1, productVariantAttributes 1, productVariantId 2, ProductVariantId 1, productVariants 1, PublicStore 2, Published 2, pvaValueModel 1, qty 3, quantities 2, quantity 5, Quantity 2, RadioList 1, rblAttributes 1, ReadonlyCheckboxes 1, recipientEmail 1, RecipientEmail 1, recipientName 1, RecipientName 1, redirect 2, RedirectToAction 4, RedirectToRoute 2, redisplay 2, region 8, RemoveEmptyEntries 3, Request 1, Result 1, returns 1, revise 1, s 1, same 1, save 4, sci 3, Security 1, Selected 1, selectedAttributeId 1, selectedAttributes 4, selectedDate 1, SelectListItem 2, SeName 1, send 1, senderEmail 1, SenderEmail 1, senderName 1, SenderName 1, Seo 2, Services 4, shopping 3, ShoppingCart 6, ShoppingCartController 5, ShoppingCartItem 1, ShoppingCartItems 4, shoppingCartService 4, shoppingCartSettings 11, ShoppingCartSettings 5, ShoppingCartType 5, should 1, ShouldHaveValues 1, simple 2, SimpleProduct 2, Sku 1, something 1, specified 1, Split 3, SslRequirement 1, StandardPermissionProvider 1, storeContext 6, StoreId 4, StringComparison 1, StringSplitOptions 3, SuccessfullySent 1, SuccessNotification 1, System 2, SystemCustomerAttributeNames 3, Tax 2, taxRate 1, taxService 4, Text 1, TextBox 2, TextPrompt 1, that 1, the 8, then 1, Title 1, to 10, TODO 2, ToList 5, ToString 4, Trim 1, TryParse 1, txtAttribute 1, type 1, UI 1, UNDONE 1, update 1, updatecartitem 2, updatecartitemid 2, UpdatedShoppingCartItemId 1, uploaded 1, use 4, UseDownloadUrl 1, uses 5, Utilities 2, validate 2, ValidateInput 4, ValidationFileAllowedExtensions 2, values 1, Values 1, variant 3, version 5, View 6, VisibleIndividually 1, we 9, Web 49, webHelper 1, whether 2, Wishlist 2, WishlistEnabled 2, with 4, workContext 20, workflowMessageService 5, WorkingCurrency 1, WorkingLanguage 3, Wrong 1, WrongCaptcha 2, x 4, year 1, YourEmailAddress 6, Zero 4, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Blogs/BlogPagingFilteringModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, Presentation 2, region 1, Split 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/CatalogPagingFilteringModel.cs; SUPPORT: 8; CONFIDENCE:0; SMIndex:89; KEYWORDS:  8, AllowCustomersToSelectPageSize 1, AllowProductSorting 1, AllowProductViewModeChanging 1, alreadyFilteredSpecOptionIds 1, AvailableSortOptions 1, AvailableViewModes 1, c 2, cacheManager 2, Catalog 2, CatalogPagingFilteringModel 1, Categories 2, category 3, Category 1, categoryId 1, Core 1, d 1, Domain 1, f 2, filterableSpecificationAttributeOptionIds 1, Format 1, Framework 1, GetAlreadyFilteredSpecOptionIds 1, Id 1, IList 2, KEY 1, List 2, LoadSpecsFilters 2, Localization 1, model 3, ModelCacheEventConsumer 1, Models 1, Mvc 1, PageSizeOptions 1, PrepareSpecsFilters 1, Presentation 8, region 1, RemoveEmptyEntries 1, result 1, SelectListItem 1, Services 1, specificationAttributeService 2, Split 1, StringSplitOptions 1, the 1, ToList 1, UI 1, ViewMode 1, Web 8, webHelper 2, workContext 2, WorkingLanguage 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ProductsByTagModel.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:54; KEYWORDS:  6, AllowCustomersToSelectPageSize 2, AllowProductFiltering 2, AllowProductSorting 2, AllowProductViewModeChanging 2, AvailableSortOptions 2, AvailableViewModes 2, CatalogPagingFilteringModel 1, cb 1, d 2, List 2, mode 1, No 1, PageSizeOptions 2, PagingFilteringContext 2, PagingFilteringModel 2, Presentation 6, Products 1, ProductsByTagModel 3, SelectListItem 3, TagName 2, TagSeName 1, Web 6, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Topics/Topic.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:14; KEYWORDS:  3, Core 1, Domain 1, IncludeInTopMenu 1, it 1, menu 1, or 1, TODO 2, top 1, Topics 1, UNDONE 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Topics/TopicModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, IncludeInTopMenu 1, Presentation 1, Topics 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/TopMenuModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:33; KEYWORDS:  3, BlogEnabled 2, Catalog 3, Categories 2, d 1, f 1, ForumEnabled 2, Framework 1, Models 2, Mvc 1, Name 1, Presentation 3, RecentlyAddedProductsEnabled 2, SeName 1, System 1, Topics 1, TopMenuModel 2, TopMenuTopicModel 1, Web 3, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Topics/TopicPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, f 1, IncludeInTopMenu 1, Title 1, Topics 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/AffiliateController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:28; KEYWORDS:  3, Controllers 3, customer 1, FirstName 1, GetAttribute 1, GetFullName 1, LastName 1, localizationService 1, m 1, model 2, Name 1, NonAction 1, Presentation 3, region 1, SystemCustomerAttributeNames 1, Utilities 1, Web 3, workContext 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/BlogController.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:42; KEYWORDS:  4, ArgumentNullException 2, c 2, Controllers 4, ConvertToUserTime 1, Core 1, CreatedOnUtc 1, dateTimeHelper 1, DateTimeKind 1, e 1, f 2, FormatText 1, Html 1, HtmlHelper 1, Id 1, model 1, NonAction 2, Presentation 4, region 1, Title 1, TODO 1, ToString 1, Utc 1, Utilities 1, View 1, Web 4, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/CountryController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:15; KEYWORDS:  2, ArgumentNullException 1, c 1, Controllers 2, Name 1, NonAction 1, Presentation 2, region 1, ToList 1, Utilities 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/CurrencyController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, ArgumentNullException 1, Controllers 1, e 1, NonAction 1, Presentation 1, region 1, Utilities 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/JbimagesController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:18; KEYWORDS:  2, Controllers 2, Core 1, f 1, Framework 1, IList 1, List 1, Mvc 1, NonAction 1, Presentation 2, Security 1, Services 1, System 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/LanguageController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:23; KEYWORDS:  2, ArgumentNullException 1, c 1, Common 1, Controllers 2, Core 1, Directory 1, Domain 1, e 1, Localization 1, Models 1, Mvc 1, NonAction 1, Presentation 2, region 1, Services 1, System 1, Utilities 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/MessageTemplateController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:14; KEYWORDS:  2, ArgumentNullException 1, Controllers 2, GetLocalized 1, NonAction 1, Presentation 2, region 1, Utilities 1, Web 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/NewsController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, ArgumentNullException 1, Controllers 1, NonAction 1, Presentation 1, region 1, Utilities 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/PluginController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:15; KEYWORDS:  2, c 1, Controllers 2, e 1, model 1, NonAction 1, Presentation 2, region 1, TODO 1, Utilities 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ProductAttributeController.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:40; KEYWORDS:  4, ActionResult 1, attribute 1, Authorize 1, Controllers 4, d 1, Description 1, f 1, GetLocalized 1, HttpPost 1, Id 1, IsValid 1, ManageCatalog 1, model 1, ModelState 1, Name 1, NonAction 1, permissionService 1, Presentation 4, product 1, productAttributeService 1, region 1, save 1, StandardPermissionProvider 1, the 1, Utilities 1, Web 4, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ProductReviewController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:22; KEYWORDS:  3, Authorize 1, Controllers 3, d 1, ee 1, f 1, ManageCatalog 1, NonAction 1, permissionService 1, Presentation 3, region 1, StandardPermissionProvider 1, Utilities 1, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/RecurringPaymentController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:21; KEYWORDS:  2, Controllers 2, CurrentCustomer 1, d 1, e 1, f 1, localizationService 1, m 1, model 1, NonAction 1, Presentation 2, region 1, ToList 1, Utilities 1, Web 2, workContext 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ReturnRequestController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:70; KEYWORDS:  3, Catalog 2, Constructors 2, Controllers 3, Core 2, Customers 2, d 2, dateTimeHelper 2, DefaultAdminLanguageId 2, Domain 2, e 3, endregion 2, Helpers 2, Id 2, IDateTimeHelper 2, IWorkflowMessageService 2, Localization 2, localizationSettings 2, LocalizationSettings 2, Messages 2, model 2, NonAction 1, notify 2, Orders 2, owner 2, Presentation 3, region 1, Services 2, store 2, Tax 2, Utilities 1, Web 3, workContext 2, workflowMessageService 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ScheduleTaskController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Controllers 1, NonAction 1, Presentation 1, region 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/SpecificationAttributeController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:25; KEYWORDS:  3, Authorize 1, Controllers 3, d 1, e 2, GetLocalized 1, ManageCatalog 1, Name 1, NonAction 1, permissionService 1, Presentation 3, region 1, StandardPermissionProvider 1, Utilities 1, Web 3, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/StoreController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:18; KEYWORDS:  3, ActionResult 1, Controllers 3, f 1, GetLocalized 1, Name 1, NonAction 1, Presentation 3, Web 3, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/TopicController.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:51; KEYWORDS:  4, ArgumentNullException 1, Controllers 4, d 2, e 3, Format 2, g 2, GetLocalized 1, GetStoreLocation 2, getting 2, http 2, method 2, NonAction 1, Presentation 4, region 1, RouteUrl 2, SEOHelper 2, TODO 2, Url 2, URL 2, Utilities 1, Web 4, webHelper 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/VendorController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:45; KEYWORDS:  3, Active 1, AllowCustomersToSelectPageSize 1, c 1, Controllers 3, Core 1, customer 1, Description 1, Domain 1, e 1, GetLocalized 1, GetSeName 1, Id 1, Linq 1, MetaDescription 1, MetaKeywords 1, MetaTitle 1, model 1, Models 1, Mvc 1, Name 1, NonAction 1, PageSize 1, PageSizeOptions 1, Presentation 3, region 1, SeName 1, System 1, Utilities 1, vendor 1, vendorModel 1, VendorModel 1, Vendors 2, vendorSettings 1, Web 3, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/BlogController.cs; SUPPORT: 26; CONFIDENCE:0; SMIndex:512; KEYWORDS:  26, about 1, ac 1, ActionName 1, ActionResult 8, activity 1, ActivityLog 1, AddModelError 2, all 1, AllowViewingProfiles 2, ArgumentNullException 3, author 1, c 1, ca 1, cacheKey 1, cacheManager 2, CAPTCHA 1, captchaSettings 1, captchaValid 2, CaptchaValidator 1, channel 1, ChildActionOnly 3, command 2, Common 2, Content 1, Controllers 26, ConvertToUserTime 4, copyright 1, Copyright 1, Core 2, Count 1, Create 1, CreatedOnUtc 5, CurrentCustomer 2, CurrentStore 3, Customer 2, customerActivityService 2, customerContentService 1, CustomerId 2, customername 2, CustomerName 3, Customers 1, customerSettings 2, d 6, DateTime 2, dateTimeHelper 4, DateTimeKind 4, DefaultAdminLanguageId 3, description 3, DisplayCaptcha 1, Domain 1, Duration 3, e 6, email 2, Enabled 2, Encoding 1, endregion 1, Extensions 1, f 3, failed 2, far 2, feed 3, Feed 1, form 2, Format 6, FormatUserName 2, FormValueRequired 1, Framework 3, g 3, GetCurrentIpAddress 1, GetLocalized 1, GetResource 3, GetSeName 4, GetStoreLocation 5, getting 2, got 2, Helpers 1, here 2, Home 4, HomePage 1, http 3, HttpPost 1, ICacheManager 1, ICustomerActivityService 1, Id 8, Information 1, InsertActivity 1, InsertCustomerContent 1, IpAddress 1, IsApproved 1, IsGuest 2, IsValid 1, item 1, items 1, Items 1, KEY 1, link 3, List 2, localizationService 3, localizationSettings 4, LocalizationSettings 1, log 1, Media 3, mediaSettings 1, MediaSettings 1, Messages 1, method 2, model 7, MODEL 1, ModelCacheEventConsumer 1, Models 2, ModelState 2, Name 5, No 1, NonAction 3, NopHttpsRequirement 1, notify 1, Now 1, OrderByDescending 3, OutputCache 3, owner 1, PartialView 1, pr 1, Presentation 26, products 1, productUrl 2, pubDate 3, PublicStore 1, R 3, RedirectToAction 4, RedirectToRoute 1, redisplay 2, region 3, RouteUrl 3, rss 1, RssActionResult 1, sb 1, Security 1, SeName 3, Seo 2, SEOHelper 2, ServiceModel 1, Services 3, settings 1, something 2, sorting 3, SslRequirement 1, store 1, storeContext 2, storeInformationSettings 2, StoreName 2, StringBuilder 1, SuccessfullyAdded 1, Syndication 1, SyndicationFeed 3, SyndicationItem 1, System 1, tag 1, tags 3, Tags 1, Take 3, text 1, the 1, title 1, Title 1, TODO 4, ToList 3, ToString 2, UpdatedOnUtc 1, Uri 3, Url 3, URL 2, username 2, Utc 4, UtcNow 2, UTF 1, Utilities 2, validate 1, VaryByCustom 3, version 1, view 1, View 1, we 2, Web 26, webHelper 6, workContext 7, workflowMessageService 3, WorkingLanguage 5, WriteAttributeString 1, WriteCData 3, WriteElementString 1, WriteEndDocument 1, WriteEndElement 3, writer 3, WriteStartDocument 1, WriteStartElement 3, WrongCaptcha 1, x 4, xml 1, XmlWriter 1, XmlWriterSettings 1, Year 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/NewsController.cs; SUPPORT: 16; CONFIDENCE:0; SMIndex:360; KEYWORDS:  16, about 1, ActionName 1, ActionResult 5, activity 1, ActivityLog 1, AddModelError 2, AllowViewingProfiles 1, ArgumentNullException 2, author 1, CAPTCHA 2, captchaSettings 2, captchaValid 2, CaptchaValidator 1, channel 1, command 1, Common 2, Content 1, Controllers 16, ConvertToUserTime 3, copyright 1, Copyright 1, Core 1, Create 1, CreatedOnUtc 4, CurrentCustomer 2, CurrentStore 2, Customer 2, customerActivityService 1, customerContentService 1, CustomerId 2, customername 1, CustomerName 1, Customers 1, customerSettings 1, d 3, DateTime 2, dateTimeHelper 3, DateTimeKind 3, DefaultAdminLanguageId 2, description 3, DisplayCaptcha 1, Domain 1, e 7, email 1, Enabled 2, Encoding 1, failed 1, far 1, feed 3, Feed 1, form 1, Format 5, FormatUserName 1, FormValueRequired 1, Framework 3, g 2, GetCurrentIpAddress 1, GetLocalized 1, GetResource 3, GetSeName 4, GetStoreLocation 5, getting 2, got 1, Helpers 1, here 1, Home 3, HomePage 1, http 3, HttpPost 1, Id 6, Information 1, InsertActivity 1, InsertCustomerContent 1, IpAddress 1, IsApproved 1, IsGuest 3, IsValid 1, item 1, items 1, Items 1, link 3, List 1, localizationService 3, localizationSettings 2, log 1, Media 2, Messages 1, method 2, model 4, Models 2, ModelState 2, Name 2, No 1, NonAction 2, NopHttpsRequirement 1, notify 1, Now 1, owner 1, Presentation 16, products 1, productUrl 2, pubDate 3, PublicStore 1, Published 3, R 3, RedirectToAction 3, RedirectToRoute 1, redisplay 1, region 3, RouteUrl 3, rss 1, RssActionResult 1, sb 1, Security 1, SeName 3, Seo 2, SEOHelper 2, ServiceModel 1, Services 3, settings 1, something 1, SslRequirement 1, store 1, storeContext 1, storeInformationSettings 2, StoreName 2, StringBuilder 1, SuccessfullyAdded 1, Syndication 1, SyndicationFeed 3, SyndicationItem 1, System 1, text 1, title 1, TODO 3, ToString 1, UpdatedOnUtc 1, Uri 3, Url 3, URL 2, username 1, Utc 3, UtcNow 2, UTF 1, Utilities 2, validate 2, version 1, View 1, we 1, Web 16, webHelper 6, workContext 4, workflowMessageService 2, WriteAttributeString 1, WriteCData 3, WriteElementString 1, WriteEndDocument 1, WriteEndElement 3, writer 3, WriteStartDocument 1, WriteStartElement 3, WrongCaptcha 1, x 1, xml 1, XmlWriter 1, XmlWriterSettings 1, Year 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/TopicController.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:71; KEYWORDS:  7, ActionResult 3, ArgumentNullException 1, c 1, cache 1, cacheManager 1, ChildActionOnly 3, constructor 1, ContainerManager 1, Controllers 7, Current 1, d 1, Duration 3, endregion 1, EngineContext 1, Home 1, HomePage 1, ICacheManager 1, inject 1, manager 1, NonAction 2, OutputCache 3, Presentation 7, RedirectToAction 1, RedirectToRoute 1, region 2, Resolve 1, TODO 1, Utilities 2, VaryByCustom 3, Web 7, WorkingLanguage 3, 
+
+
+FILE: src/Plugins/Nop.Plugin.Shipping.CanadaPost/CanadaPostShipmentTracker.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Collections 1, Generic 1, Logging 1, Services 1, Shipping 1, System 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/EmailAccountController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:20; KEYWORDS:  2, c 2, Controllers 2, Core 1, CurrentStore 1, Linq 1, Messages 1, Models 1, Mvc 1, Name 1, Presentation 2, StoreName 1, System 1, Web 2, workContext 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ExternalAuthenticationController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, Controllers 1, Framework 1, Mvc 1, Presentation 1, Security 1, Services 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/NewsLetterSubscriptionController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, Controllers 1, Core 1, Domain 1, Helpers 1, Localization 1, Messages 1, Models 1, Presentation 1, Services 1, Stores 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/BasePublicController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:14; KEYWORDS:  1, Collections 1, Controllers 1, Core 1, Framework 1, Generic 1, Infrastructure 1, Logging 1, Mvc 1, Presentation 1, Security 1, Services 1, System 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ICategoryService.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:46; KEYWORDS:  5, c 1, categories 3, category 3, Category 2, categoryId 2, d 1, displayed 1, e 3, f 2, featured 2, GetAllCategoriesByParentCategoryId 1, GetAllCategoriesDisplayedOnHomePage 3, GetTotalNumberOfFeaturedProducts 2, home 1, IList 2, indicating 1, of 2, page 1, parentCategoryId 1, product 2, Product 1, products 2, showHidden 1, whether 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IProductService.cs; SUPPORT: 19; CONFIDENCE:0; SMIndex:201; KEYWORDS:  19, all 1, c 3, cart 1, categories 1, Category 1, categoryId 1, categoryIds 6, d 3, db 1, e 2, endregion 2, featured 4, featuredProducts 7, filterableSpecificationAttributeOptionIds 4, filteredSpecs 1, GetAssociatedProducts 1, GetCategoryProductNumber 1, GetCrosssellProductsByShoppingCart 1, GetProductVariantsByProductIds 1, GetRelatedProductsByProductId 1, GetTierPricesByProductVariantId 1, GetTotalNumberOfRelatedProducts 2, grouped 1, HasTierPrices 1, IList 6, indicating 1, individually 1, keywords 2, languageId 2, manufacturerId 6, MaxValue 1, name 1, not 1, of 2, pageIndex 2, pageSize 2, param 1, parentGroupedProductId 2, parentProductId 3, Position 1, price 2, priceMax 3, priceMin 3, product 13, Product 7, productId 2, products 12, Products 1, ProductSortingEnum 6, productTagId 1, productVariant 1, productVariantId 1, region 1, related 2, search 1, searchDescriptions 2, SearchProducts 6, searchProductTags 2, searchSku 1, showHidden 1, Store 1, storeId 6, the 3, tierPrice 1, to 8, variant 3, variants 2, visible 1, visibleIndividuallyOnly 2, we 3, whether 1, with 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Misc.FacebookShop/Models/SearchModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, c 1, CatalogPagingFilteringModel 1, d 1, List 1, No 1, PagingFilteringContext 1, Products 1, Q 1, SearchModel 1, SearchPagingFilteringModel 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/UI/Paging/Pager.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:17; KEYWORDS:  3, Contains 1, InvariantCultureIgnoreCase 1, IsNullOrEmpty 2, model 2, Presentation 3, StringComparison 1, to 1, Web 3, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductVariantAttribute.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:5; KEYWORDS:  2, DefaultValue 1, f 1, ValidationFileAllowedExtensions 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/CheckoutAttribute.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:5; KEYWORDS:  2, DefaultValue 1, f 1, ValidationFileAllowedExtensions 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/CopyProductService.cs; SUPPORT: 15; CONFIDENCE:0; SMIndex:73; KEYWORDS:  15, AllowedQuantities 1, associatedProduct 1, associatedProducts 1, AvailableForPreOrder 1, d 3, dd 2, DefaultValue 1, DeliveryDateId 1, DisableWishlistButton 1, download 1, Download 1, DownloadBinary 1, DownloadGuid 1, DownloadUrl 1, e 1, f 2, GetAssociatedProducts 1, Id 3, IsRequired 1, IsShipEnabled 1, parentGroupedProductId 1, ParentGroupedProductId 1, ParentProductId 2, PreOrderAvailabilityStartDateTimeUtc 1, PriceAdjustment 1, product 9, Product 2, productService 1, ProductTags 1, productTagService 1, ProductTemplateId 1, productVariant 1, Quantity 1, SearchProducts 1, Services 1, TextPrompt 1, tierPrice 1, UseDownloadUrl 1, ValidationFileAllowedExtensions 1, variant 1, VisibleIndividually 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Catalog/ProductModel.cs; SUPPORT: 13; CONFIDENCE:0; SMIndex:68; KEYWORDS:  13, ACL 1, AvailableForPreOrder 1, CustomValue 1, d 1, DateTime 1, DefaultValue 1, DeliveryDate 1, DeliveryDateId 1, e 2, f 1, List 1, mapping 1, one 1, PreOrderAvailabilityStartDateTimeUtc 1, Presentation 13, PriceAdjustment 1, product 2, Products 1, ProductTemplateId 1, ProductVariantModels 1, SpecificationAttributeOption 1, Store 1, the 1, ValidationFileAllowedExtensions 1, variant 1, variants 2, VisibleIndividually 1, Web 13, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Orders/CheckoutAttributeModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:11; KEYWORDS:  2, d 2, DefaultValue 1, f 1, Presentation 2, ValidationFileAllowedExtensions 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ProductDetailsModel.cs; SUPPORT: 22; CONFIDENCE:0; SMIndex:237; KEYWORDS:  22, ad 1, AddToCart 1, AllowedFileExtensions 2, AllowedQuantities 2, associated 1, AssociatedProducts 1, AttributeControlType 2, attributes 2, AvailableForPreOrder 2, BackInStockAlreadySubscribed 1, CallForPrice 1, cart 1, Catalog 1, ColorSquaresRgb 2, currency 2, CurrencyCode 2, customer 1, CustomerEnteredPrice 1, CustomerEnteredPriceRange 1, CustomerEntersPrice 1, d 3, DateTime 2, day 1, DefaultValue 1, DeliveryDate 1, Description 1, DisableBuyButton 1, DisableWishlistButton 2, display 1, DisplayBackInStockSubscription 1, DisplayTaxShippingInfo 1, DownloadSampleUrl 1, DynamicPriceUpdate 2, e 5, endregion 1, EnteredQuantity 1, EnterProductPrice 1, existing 1, f 6, file 1, FreeShippingNitificationEnabled 2, FreeShippingNotificationEnabled 1, FullSizePictureUrl 1, GiftCard 1, GiftCardType 1, Gtin 1, HasSampleDownload 3, have 1, HidePrices 2, info 1, IsCurrentCustomerRegistered 3, IsFreeShipping 1, IsGiftCard 1, IsPreSelected 1, IsRequired 1, IsShipEnabled 1, item 1, List 3, ManufacturerPartNumber 1, Message 1, Models 1, month 1, Name 2, of 1, OldPrice 1, order 1, PictureId 2, PictureModel 1, PictureUrl 2, pre 1, PreOrderAvailabilityStartDateTimeUtc 1, Presentation 22, price 1, Price 1, PriceAdjustment 1, PriceAdjustmentValue 2, PriceValue 1, PriceWithDiscount 1, PriceWithDiscountValue 1, product 1, ProductAttributeId 1, ProductDetailsModel 4, ProductId 1, ProductPrice 1, ProductPriceModel 1, products 1, Products 1, ProductVariantAttributeModel 1, ProductVariantAttributes 1, ProductVariantAttributeValueModel 1, ProductVariantId 1, ProductVariantModel 1, ProductVariantModels 1, ProductVariantPrice 1, Quantity 1, RecipientEmail 1, RecipientName 1, region 2, s 2, Selected 1, SelectedDay 1, SelectedMonth 1, SelectedYear 1, SelectListItem 2, SenderEmail 1, SenderName 1, shipping 1, shopping 1, ShowGtin 1, ShowManufacturerPartNumber 1, ShowSku 1, ShowVendor 1, simple 1, Sku 1, StockAvailability 3, StockAvailablity 1, tax 1, TextPrompt 1, TextValue 2, the 1, TierPriceModel 1, UpdatedShoppingCartItemId 1, uploaded 1, Values 1, variant 1, VendorBriefInfoModel 1, VendorModel 1, we 1, Web 22, year 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ProductVariantAttributePersistenceTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:6; KEYWORDS:  2, d 1, DefaultValue 1, ValidationFileAllowedExtensions 2, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Orders/CheckoutAttributePersistenceTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:6; KEYWORDS:  2, d 1, DefaultValue 1, ValidationFileAllowedExtensions 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Seo/SeoSettings.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, automatically 1, Core 1, Domain 1, GenerateProductMetaDescription 1, product 1, Seo 1, SeoSettings 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Settings/GeneralCommonSettingsModel.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:20; KEYWORDS:  5, f 1, GenerateProductMetaDescription 1, Models 2, Presentation 5, StoreName 1, Web 5, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/IOrderReportService.cs; SUPPORT: 8; CONFIDENCE:0; SMIndex:62; KEYWORDS:  8, BestSellersReport 6, c 1, d 1, GetAlsoPurchasedProductsIds 1, GetProductsAlsoPurchasedById 3, groupBy 5, IOrderReportService 1, load 4, pageSize 1, product 6, productId 3, products 7, recordsToReturn 2, report 3, storeId 2, the 2, to 1, variants 5, 
+
+
+FILE: src/Plugins/Nop.Plugin.Feed.Froogle/FroogleService.cs; SUPPORT: 12; CONFIDENCE:0; SMIndex:149; KEYWORDS:  12, about 1, ArgumentNullException 1, associatedProducts 1, breadCrumb 1, category 1, Category 1, categoryService 1, Count 1, CreatedOn 2, d 2, deleted 1, Deleted 1, e 5, feed 1, Feed 1, filterableSpecificationAttributeOptionIds 3, Format 4, Framework 1, g 3, GetAssociatedProducts 1, GetCategoryBreadCrumb 1, GetCategoryById 1, GetProductUrl 3, GetSeName 3, GetStoreLocation 3, getting 3, i 1, Id 7, IList 4, Information 1, link 3, List 1, MaxValue 2, Media 1, method 3, Name 1, not 1, p 3, ParentCategoryId 1, parentGroupedProductId 1, product 9, products 5, productService 5, ProductSortingEnum 2, productUrl 3, published 1, Published 1, Reverse 1, SearchProducts 5, Seo 1, SEOHelper 3, Services 1, storeId 2, storeInformationSettings 1, StoreName 1, TODO 3, URL 3, visibleIndividuallyOnly 2, Web 1, webHelper 3, workContext 1, writer 3, WriteStartElement 3, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/OrderProcessingService.cs; SUPPORT: 8; CONFIDENCE:0; SMIndex:68; KEYWORDS:  8, Active 1, ActivityLog 1, AddToCart 2, and 1, c 2, cart 2, Catalog 1, Common 1, Core 1, Count 1, CurrentStore 1, customerActivityService 1, Customers 1, d 2, Deleted 1, Directory 1, Domain 1, e 2, f 3, GetResource 1, GetVendorById 1, Id 4, InsertActivity 1, LimitPerStore 1, localizationService 1, Orders 1, PublicStore 1, sci 2, Services 2, ShoppingCart 2, ShoppingCartItems 2, shoppingCartService 2, ShoppingCartType 2, StoreId 2, TODO 2, ToList 2, vendor 1, vendorId 1, vendors 1, vendorService 1, workContext 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/ShoppingCartExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, cart 1, LimitPerStore 1, StoreId 1, x 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/ShoppingCartService.cs; SUPPORT: 14; CONFIDENCE:0; SMIndex:192; KEYWORDS:  14, ACL 2, aclService 2, AddRange 1, AddToCart 2, addToCartWarnings 2, allowedQuantities 1, AllowedQuantities 1, ArgumentNullException 2, attributes 3, AttributesXml 1, Authorize 4, c 1, cart 8, Catalog 1, catalogSettings 2, CatalogSettings 1, Count 3, currencyService 1, CurrentCustomer 1, CustomerEnteredPrice 1, CustomerEntersPrice 1, customerService 1, d 1, DateTime 1, Deleted 1, DisableBuyButton 1, DisableWishlistButton 1, EnableShoppingCart 1, EnableWishlist 1, endregion 1, entered 1, f 1, Format 1, GetProductVariantsByProductId 1, GetResource 1, IAclService 1, ICustomerService 1, Id 3, IPermissionService 2, IPriceFormatter 1, item 3, Length 1, LimitPerStore 1, localizationService 2, mapping 1, not 1, only 2, Orders 1, ParseAllowedQuatities 1, permissionService 2, possible 1, price 1, Price 1, priceFormatter 1, product 6, Product 3, productId 1, products 2, Products 1, productService 4, ProductType 1, productVariant 6, productVariantId 1, productVariants 1, published 1, Published 1, pvaValue 1, quantity 4, Quantity 1, region 2, sci 2, Security 1, Services 2, shopping 1, ShoppingCart 4, ShoppingCartItems 2, shoppingCartSettings 5, ShoppingCartSettings 2, ShoppingCartType 5, should 1, simple 1, SimpleProduct 1, StandardPermissionProvider 1, Store 1, storeId 1, StoreId 3, storeMappingService 1, to 4, ToList 2, update 1, variant 2, variants 2, we 2, WishlistEnabled 4, workContext 5, x 2, Zero 2, 
+
+
+FILE: src/Plugins/Nop.Plugin.Payments.PayPalDirect/PayPalDirectPaymentProcessor.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:18; KEYWORDS:  3, c 1, cart 1, e 1, f 1, Format 1, LimitPerStore 1, ShoppingCart 1, ShoppingCartItems 1, ShoppingCartType 1, StoreId 1, storeInformationSettings 1, StoreName 1, ToList 1, webHelper 1, x 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/AttributeControlType.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:15; KEYWORDS:  3, AttributeControlType 3, c 1, Color 1, ColorSquares 1, d 1, fb 1, file 1, FileUpload 1, ReadonlyCheckboxes 1, squares 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ProductAttributeParser.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:10; KEYWORDS:  2, already 1, AttributeControlType 1, e 1, of 1, product 1, ReadonlyCheckboxes 1, values 1, variant 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IPriceCalculationService.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:72; KEYWORDS:  6, all 1, be 1, Calcualted 1, Catalog 1, computation 1, customer 1, d 1, discounts 1, e 1, evaluated 1, final 1, GetMinimalPriceProductVariant 2, GetProductVariantAttributeValuePriceAdjustment 1, GetProductVariantWithMinimalPrice 1, GetProductWithMinimalPrice 1, Gets 1, grouped 1, IList 1, include 1, includeDiscounts 1, indicating 1, it 1, minimal 1, minPrice 3, name 1, not 2, or 1, param 1, price 3, product 4, Product 3, products 1, productVariant 1, ProductVariant 1, quantity 2, Quantity 2, returned 1, returns 1, s 1, same 1, simple 1, summary 1, the 1, then 1, variant 3, variants 2, whether 1, will 1, with 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Vendors/Vendor.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:13; KEYWORDS:  1, AllowCustomersToSelectPageSize 1, customer 1, Deleted 1, MetaDescription 1, MetaKeywords 1, MetaTitle 1, page 1, PageSize 1, PageSizeOptions 1, size 1, vendor 1, Vendors 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Vendors/VendorMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, MetaKeywords 1, MetaTitle 1, Name 1, PageSizeOptions 1, Vendors 1, 
+
+
+FILE: src/Libraries/Nop.Services/Vendors/VendorService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:14; KEYWORDS:  2, Active 1, Deleted 1, GetAllVendors 1, Name 1, pageIndex 1, pageSize 1, query 1, Services 1, size 1, Vendor 1, Vendors 2, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Controllers/AdminAuthorizeAttribute.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Controllers 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Seo/GenericPathRoute.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, c 1, Presentation 1, SeName 1, vendor 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/MappingExtensions.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:24; KEYWORDS:  3, aaa 1, Core 1, DeliveryDate 1, Domain 1, endregion 1, fe 1, model 3, Presentation 3, region 1, Services 1, VendorModel 1, Vendors 2, VendorSettings 1, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Vendors/VendorModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:16; KEYWORDS:  1, Active 1, AllowCustomersToSelectPageSize 1, c 1, Description 1, MetaDescription 1, MetaKeywords 1, MetaTitle 1, Name 1, PageSize 1, PageSizeOptions 1, Presentation 1, SeName 1, VendorModel 1, Vendors 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/BackwardCompatibility2XController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, Controllers 1, GetSeName 1, Presentation 1, SeName 1, vendor 1, Vendors 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Infrastructure/BackwardCompatibility2XRouteProvider.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Controllers 1, Presentation 1, SeName 1, vendor 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Infrastructure/GenericUrlRouteProvider.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, Controllers 1, Presentation 1, SeName 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Vendors/VendorPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, Active 1, AllowCustomersToSelectPageSize 1, Deleted 1, MetaDescription 1, MetaKeywords 1, MetaTitle 1, PageSize 1, PageSizeOptions 1, vendor 1, Vendors 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ProductOverviewModel.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:31; KEYWORDS:  4, AvailableForPreOrder 2, c 1, DateTime 1, DisableBuyButton 1, DisableWishlistButton 2, display 1, DisplayTaxShippingInfo 1, f 1, info 1, PreOrderAvailabilityStartDateTimeUtc 1, Presentation 4, ProductReviewOverviewModel 1, region 1, ReviewOverviewModel 1, shipping 1, SpecificationAttributeModels 1, tax 1, we 1, Web 4, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Common/FooterModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, f 1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ProductAttributeExtensions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:9; KEYWORDS:  2, attribute 2, AttributeControlType 2, d 1, FileUpload 1, values 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/ShoppingCart/ShoppingCartModel.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:26; KEYWORDS:  4, AllowedFileExtensions 1, AllowedQuantities 1, AttributeControlType 1, c 1, d 1, e 1, endregion 1, f 3, Presentation 4, region 1, SelectListItem 1, ShoppingCart 2, Web 4, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/CategoryNavigationModel.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:86; KEYWORDS:  7, at 1, Catalog 2, Categories 3, CategoryModel 3, CategoryNavigationModel 4, CategorySimpleModel 1, clone 2, Clone 2, Collections 1, CurrentCategoryId 3, d 1, DisplayNumberOfProducts 2, e 1, Framework 1, Generic 1, IsActive 3, Linq 1, List 3, ManufacturerNavigationModel 1, Models 2, Mvc 2, Name 6, not 2, NumberOfParentCategories 3, NumberOfProducts 3, of 2, Presentation 7, SeName 4, SubCategories 2, System 2, we 1, Web 7, 
+
+
+FILE: src/Libraries/Nop.Services/Vendors/IVendorService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, f 1, GetAllVendors 1, IVendorService 1, pageIndex 1, pageSize 1, Services 1, size 1, vendor 1, Vendor 1, Vendors 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/VendorNavigationModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:15; KEYWORDS:  1, Catalog 1, IList 1, List 1, mode 1, Models 1, Name 1, No 1, Presentation 1, SeName 1, TotalVendors 1, VendorBriefInfoModel 1, VendorNavigationModel 1, Vendors 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Common/SearchTerm.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, Common 1, Core 1, Count 1, Domain 1, f 1, Keyword 1, search 1, SearchTerm 1, statistics 1, StoreId 1, term 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Common/SearchTermReportLine.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, c 1, Common 1, Core 1, Count 1, Domain 1, Keyword 1, search 1, statistics 1, term 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Common/SearchTermMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, c 1, Common 1, Core 1, Domain 1, Id 1, SearchTerm 1, 
+
+
+FILE: src/Libraries/Nop.Services/Common/ISearchTermService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:14; KEYWORDS:  1, Common 1, Core 1, Domain 1, f 1, GetSearchTermByKeyword 1, InsertSearchTerm 1, ISearchTermService 1, search 1, searchTerm 1, SearchTerm 1, statistics 1, term 1, UpdateSearchTerm 1, 
+
+
+FILE: src/Libraries/Nop.Services/Common/SearchTermService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:21; KEYWORDS:  1, Common 1, Core 1, Count 1, Domain 1, event 1, eventPublisher 1, GetSearchTermByKeyword 1, Id 1, IEventPublisher 1, InsertSearchTerm 1, ISearchTermService 1, IsNullOrEmpty 1, Keyword 1, search 1, searchTerm 1, SearchTerm 1, statistics 1, StoreId 1, term 1, UpdateSearchTerm 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/DependencyRegistrar.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:33; KEYWORDS:  6, c 2, Current 1, d 1, e 1, Framework 1, IAclService 1, ICategoryTemplateService 1, IGenericAttributeService 1, IManufacturerTemplateService 1, IPermissionService 1, IProductTemplateService 2, ISearchTermService 1, Presentation 6, to 1, Web 6, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Common/SearchTermReportLineModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Common 1, Count 1, Keyword 1, Presentation 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Common/SearchTermPeristenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, Common 1, Core 1, Count 1, Domain 1, e 1, Keyword 1, searchTerm 1, SearchTerm 1, StoreId 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Stores/Store.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:3; KEYWORDS:  2, Name 1, 
+
+
+FILE: src/Libraries/Nop.Services/Messages/MessageTokenProvider.cs; SUPPORT: 9; CONFIDENCE:0; SMIndex:69; KEYWORDS:  9, c 1, Catalog 1, Common 1, Core 2, customer 1, Customer 1, Customers 1, d 2, Directory 1, e 2, Email 1, f 1, FirstName 1, Format 1, Framework 1, GetAttribute 1, GetFullName 1, GetLocalized 1, GetSeName 1, GetStoreLocation 1, getting 1, Id 1, Infrastructure 1, LastName 1, Media 1, Messages 1, method 1, Name 2, Orders 1, p 1, product 2, Product 1, productReview 1, productUrl 1, Seo 1, Services 2, StoreName 1, SystemCustomerAttributeNames 2, Tax 1, the 1, Title 1, TODO 2, UNDONE 1, URL 2, we 1, Web 3, webHelper 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Stores/StoreModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, Name 2, Presentation 2, Web 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/Category.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:38; KEYWORDS:  5, ACL 1, AllowCustomersToSelectPageSize 1, category 4, Category 2, CategoryTemplateId 1, customer 1, include 1, IncludeInTopMenu 1, indicating 1, menu 1, or 1, page 1, PageSize 1, PageSizeOptions 1, price 1, property 1, published 2, Published 2, ranges 1, size 1, template 1, the 2, to 1, top 1, we 1, whether 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Catalog/CategoryModel.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:32; KEYWORDS:  5, ACL 1, AllowCustomersToSelectPageSize 1, c 2, CategoryModel 1, CategoryTemplateId 1, d 1, e 2, f 1, IList 1, IncludeInTopMenu 1, List 1, mapping 1, PageSize 1, PageSizeOptions 1, Presentation 5, Store 1, Web 5, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/CategoryPersistenceTests.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:14; KEYWORDS:  4, AllowCustomersToSelectPageSize 1, c 1, Deleted 2, f 1, IncludeInTopMenu 1, PageSize 1, PageSizeOptions 1, Published 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/CategoryMenuModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Categories 1, CategoryMenuModel 1, CategorySimpleModel 1, IList 1, List 1, of 1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/Product.cs; SUPPORT: 12; CONFIDENCE:0; SMIndex:81; KEYWORDS:  12, ACL 1, associated 2, AvailableForPreOrder 1, c 2, cart 1, Count 1, d 1, date 1, DateTime 1, delivery 1, DeliveryDateId 1, f 5, has 1, List 1, No 1, one 1, order 1, ParentGroupedProductId 1, ParentProductId 2, pre 1, PreOrderAvailabilityStartDateTimeUtc 1, price 1, product 11, Product 5, products 3, ProductTags 2, ProductTemplateId 1, published 1, Published 1, tags 1, template 1, that 1, the 5, to 2, variant 1, variants 1, visible 1, VisibleIndividually 1, whether 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Shipping/DeliveryDate.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, date 1, delivery 1, DeliveryDate 1, Name 1, Shipping 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Shipping/DeliveryDateMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, dd 1, DeliveryDate 1, Name 1, Shipping 1, 
+
+
+FILE: src/Libraries/Nop.Services/Shipping/IShippingService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:12; KEYWORDS:  2, c 1, cart 1, date 1, delivery 1, deliveryDate 1, DeliveryDate 1, GetDeliveryDateById 1, IShippingService 1, Services 1, Shipping 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Shipping/DeliveryDateModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, Name 1, Presentation 1, Shipping 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Validators/Shipping/DeliveryDateValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, ILocalizationService 1, localizationService 1, Name 1, Presentation 1, Services 1, Shipping 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ProductPersistenceTests.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:25; KEYWORDS:  7, AvailableForPreOrder 1, d 2, DateTime 1, DeliveryDateId 1, DisableWishlistButton 1, IsShipEnabled 1, name 1, Name 1, ParentGroupedProductId 1, ParentProductId 1, PreOrderAvailabilityStartDateTimeUtc 1, product 2, Product 1, ProductCount 1, ProductTemplateId 1, VisibleIndividually 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Shipping/DeliveryDatePersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, deliveryDate 1, DeliveryDate 1, Name 1, Shipping 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Orders/OrderProcessingServiceTests.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:40; KEYWORDS:  7, c 1, catalogSettings 2, categoryService 1, CurrentStore 1, d 2, DeliveryDate 1, f 2, genericAttributeService 1, Id 1, IGenericAttributeService 1, ILocalizationService 1, IWebHelper 1, localizationService 1, Orders 2, price 1, priceFormatter 1, productAttributeParser 1, productService 1, Services 2, shippingService 1, storeContext 1, taxService 1, webHelper 1, workContext 4, x 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Orders/OrderTotalCalculationServiceTests.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:38; KEYWORDS:  6, c 1, catalogSettings 3, CatalogSettings 1, categoryService 1, d 2, DeliveryDate 1, eventPublisher 1, f 1, genericAttributeService 1, IEventPublisher 1, IGenericAttributeService 1, ILocalizationService 1, localizationService 1, Orders 2, productAttributeParser 1, productService 1, Services 2, shippingService 1, shoppingCartSettings 1, ShoppingCartSettings 1, storeContext 1, taxService 1, workContext 4, x 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Shipping/ShippingServiceTests.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:12; KEYWORDS:  3, DeliveryDate 1, IProductAttributeParser 1, productAttributeParser 1, productService 1, Services 1, Shipping 1, shippingService 1, shoppingCartSettings 1, ShoppingCartSettings 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/ShoppingCartSettings.cs; SUPPORT: 8; CONFIDENCE:0; SMIndex:52; KEYWORDS:  8, AllowCartItemEditing 1, cart 5, Core 2, CrossSellsNumber 1, d 1, DisplayCartAfterAddingProduct 1, DisplayWishlistAfterAddingProduct 1, Domain 2, e 1, email 1, f 1, No 2, Orders 1, page 2, product 2, shopping 1, ShoppingCartSettings 3, the 4, to 4, whether 1, wishlist 4, WishlistEnabled 3, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/BackInStockSubscriptionService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:18; KEYWORDS:  2, CreatedOnUtc 1, Customer 1, endregion 1, eventPublisher 1, FindSubscription 1, GetAllSubscriptionsByCustomerId 1, Id 1, IEventPublisher 1, IWorkContext 1, productVariant 1, ProductVariant 1, ProductVariantId 1, Store 1, subscription 1, variant 1, workContext 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/IShoppingCartService.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:57; KEYWORDS:  6, AddToCart 3, attributes 3, c 1, cart 4, customer 1, e 3, entered 1, f 3, item 2, price 1, product 4, Product 3, productId 1, products 1, productVariant 2, productVariantId 1, quantity 3, Services 1, shopping 1, ShoppingCartType 2, should 1, storeId 1, the 1, to 3, variant 2, variants 1, we 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Settings/ShoppingCartSettingsModel.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:27; KEYWORDS:  5, AllowCartItemEditing 1, c 2, DisplayCartAfterAddingProduct 1, DisplayWishlistAfterAddingProduct 1, e 1, Models 1, No 1, Presentation 5, ShoppingCart 3, Web 5, WishlistEnabled 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductVariantAttributeCombination.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, e 1, price 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductVariantAttributeCombinationMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, e 1, f 1, Product 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IProductAttributeService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, Product 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Catalog/AddProductVariantAttributeCombinationModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, f 1, Presentation 2, region 1, Web 2, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ProductVariantAttributeCombinationPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, e 1, f 1, Product 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/UI/PageHeadBuilder.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ProductExtensions.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:72; KEYWORDS:  5, allowed 1, AllowedQuantities 1, ArgumentNullException 2, c 2, Catalog 2, Collections 1, Core 2, d 2, Domain 2, f 3, FirstOrDefault 1, Format 1, FormatStockMessage 1, Generic 1, GetDefaultProductPicture 2, GetPicturesByProductId 1, GetResource 1, Id 4, IPictureService 1, Linq 1, localizationService 1, Media 2, name 1, of 1, param 1, ParseAllowedQuatities 1, picture 2, pictureService 3, product 3, Product 3, Products 1, productTagId 1, ProductTags 1, productVariant 2, ProductVariant 1, qty 1, quantity 1, returns 1, Services 2, summary 1, System 1, the 1, ToList 1, variant 1, with 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/AttributeValueType.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, f 1, product 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductVariantAttributeValue.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:14; KEYWORDS:  2, attribute 1, Color 1, ColorSquaresRgb 1, f 2, Name 1, PriceAdjustment 1, product 1, squares 1, type 1, used 1, with 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductVariantAttributeValueMap.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:7; KEYWORDS:  2, ColorSquaresRgb 1, d 1, Id 1, Name 1, PriceAdjustment 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ProductAttributeFormatter.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:46; KEYWORDS:  3, AttributeControlType 1, attributes 1, ConvertFromPrimaryStoreCurrency 1, currencyService 1, d 2, download 1, DownloadGuid 1, downloadService 1, Extension 1, f 1, file 1, Filename 1, FileUpload 1, Format 1, GetLocalized 1, GetProductPrice 1, GetProductVariantAttributeValuePriceAdjustment 1, GetResource 1, Guid 1, IDownloadService 1, IsNullOrEmpty 1, localizationService 1, Name 1, priceAdjustment 1, PriceAdjustment 1, priceAdjustmentBase 1, priceCalculationService 1, priceFormatter 1, product 1, productAttributeParser 1, productVariant 1, pvaValue 1, pvaValuePriceAdjustment 1, taxRate 1, taxService 1, ToString 1, values 1, workContext 3, WorkingCurrency 1, Zero 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ProductVariantAttributeValuePersistenceTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, ColorSquaresRgb 1, d 2, IsPreSelected 1, Name 1, PriceAdjustment 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Catalog/PriceCalculationServiceTests.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:19; KEYWORDS:  5, catalogSettings 1, categoryService 1, CurrentStore 1, d 1, Id 2, product 1, Product 1, storeContext 1, variant 1, workContext 3, x 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Catalog/ProductAttributeParserAndFormatterTests.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:12; KEYWORDS:  3, d 1, downloadService 1, GetResource 1, IDownloadService 1, localizationService 1, priceCalculationService 1, priceFormatter 1, taxService 1, workContext 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IManufacturerService.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:25; KEYWORDS:  3, e 1, f 1, featured 2, GetAllManufacturers 1, GetTotalNumberOfFeaturedProducts 2, manufacturer 3, manufacturerId 2, manufacturers 1, of 2, pageSize 1, product 2, Product 1, products 2, to 1, 
+
+
+FILE: src/Libraries/Nop.Services/Seo/SitemapGenerator.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:68; KEYWORDS:  7, c 1, categories 1, category 1, categoryService 1, CreatedOn 4, CurrentStore 2, d 2, e 2, filterableSpecificationAttributeOptionIds 2, Framework 1, GetAllCategoriesByParentCategoryId 1, GetAllManufacturers 1, Id 2, IList 2, manufacturer 1, manufacturers 1, manufacturerService 1, MaxValue 2, parentCategoryId 1, product 4, products 4, productService 4, ProductSortingEnum 4, SearchProducts 4, Seo 1, Services 1, storeContext 1, storeId 2, URL 1, use 2, visibleIndividuallyOnly 1, Web 1, webHelper 1, workContext 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.DiscountRules.HasAllProducts/HasAllProductsDiscountRequirementRule.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:15; KEYWORDS:  2, attributes 1, cart 1, CurrentStore 1, Id 2, quantity 1, sci 1, ShoppingCart 1, ShoppingCartItems 1, ShoppingCartType 1, StoreId 1, ToList 1, workContext 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.DiscountRules.HasAllProducts/Models/RequirementModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Plugins/Nop.Plugin.DiscountRules.HasOneProduct/HasOneProductDiscountRequirementRule.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:15; KEYWORDS:  2, attributes 1, cart 1, CurrentStore 1, Id 2, quantity 1, sci 1, ShoppingCart 1, ShoppingCartItems 1, ShoppingCartType 1, StoreId 1, ToList 1, workContext 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.DiscountRules.HasOneProduct/Models/RequirementModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Discounts/DiscountPersistenceTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:6; KEYWORDS:  2, and 1, f 1, Product 1, variant 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/BestsellersReportLine.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:16; KEYWORDS:  4, EntityId 2, line 2, product 2, ProductId 1, ProductVariantId 2, report 2, the 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Media/MediaSettings.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:17; KEYWORDS:  4, AssociatedProductPictureSize 1, AutoCompleteSearchThumbPictureSize 1, c 1, CategoryThumbPictureSize 1, d 1, DefaultPictureZoomEnabled 1, e 1, Media 3, ProductDetailsPictureSize 1, ProductThumbPictureSizeOnProductDetailsPage 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Settings/MediaSettingsModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:14; KEYWORDS:  2, AssociatedProductPictureSize 1, c 1, d 1, e 1, Media 2, Presentation 2, ProductThumbPictureSizeOnProductDetailsPage 2, Web 2, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IProductAttributeParser.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, e 1, f 1, of 1, product 1, variant 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Payments.PayPalStandard/PayPalStandardPaymentProcessor.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:9; KEYWORDS:  2, f 1, product 1, Product 1, s 1, variant 1, we 1, x 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Shipping.Fedex/FedexComputationMethod.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, product 1, Product 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Orders/ShipmentModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, of 1, Presentation 1, product 1, variant 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductVariantAttributeMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, AttributeControlType 1, Id 1, Product 1, ProductAttribute 1, ProductVariant 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IBackInStockSubscriptionService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:21; KEYWORDS:  2, all 1, BackInStockSubscription 1, Customer 2, e 1, f 1, FindSubscription 2, GetAllSubscriptionsByCustomerId 1, id 1, Product 1, productId 1, productVariantId 1, Store 1, subscription 2, subscriptions 1, variant 2, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/DownloadController.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:103; KEYWORDS:  5, ActionResult 2, allowed 1, are 1, available 1, c 1, Catalog 1, Content 1, ContentType 2, Controllers 5, Core 1, Customers 1, d 1, Domain 1, download 2, Download 3, DownloadBinary 2, downloadService 2, DownloadUrl 1, Extension 2, f 2, Filename 2, Format 1, GetProductById 1, GetProductVariantById 3, Guid 1, HasSampleDownload 2, have 3, Home 1, HomePage 2, Id 2, InvokeHttp 2, maximum 1, Media 1, more 1, not 1, of 1, order 1, Presentation 5, product 1, Product 2, productId 1, productService 4, productVariant 3, ProductVariant 1, productVariantId 3, RedirectToAction 1, RedirectToRoute 3, Sample 1, Services 1, ToString 2, UseDownloadUrl 2, variant 4, Web 5, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/BackInStockSubscribeModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:20; KEYWORDS:  2, AlreadySubscribed 1, BackInStockSubscribeModel 2, f 1, IsCurrentCustomerRegistered 2, Presentation 2, ProductId 1, ProductName 2, ProductSeName 2, ProductVariantId 2, SubscriptionAllowed 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/SearchPagingFilteringModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:24; KEYWORDS:  3, Breadcrumb 1, CategoryModel 1, Core 1, d 1, endregion 1, IPagedList 1, List 1, LoadPagedList 1, mode 1, PageNumber 1, PageSize 1, Presentation 3, region 2, SearchPagingFilteringModel 2, Web 3, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/TierPrice.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, d 1, e 1, f 1, variant 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/TierPriceExtensions.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:25; KEYWORDS:  3, Catalog 1, Core 1, Count 1, customer 1, Customers 1, Domain 1, f 1, FilterByStore 1, FilterForCustomer 2, Media 1, Quantity 1, RemoveDuplicatedQuantities 1, Services 1, tierPrice 3, TierPrices 1, ToList 2, with 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ProductVariantController.cs; SUPPORT: 8; CONFIDENCE:0; SMIndex:180; KEYWORDS:  8, AddProductAttribute 2, AddRange 1, an 1, ArgumentException 2, attribute 2, AttributeControlType 2, attributes 1, Authorize 1, backInStockSubscriptionService 1, catalogSettings 1, CatalogSettings 1, Color 1, ColorSquares 1, ColorSquaresRgb 1, ContentLength 1, ContentType 1, controlId 2, Controllers 8, ctrlAttributes 1, d 1, ddlAttributes 1, download 1, Download 1, DownloadBinary 1, DownloadGuid 1, downloadService 1, DownloadUrl 1, DropdownList 1, e 3, endregion 1, enteredText 1, Extension 1, f 1, file 1, fileMaxSize 1, Filename 1, FileName 1, Files 1, FileUpload 1, FileUploadMaximumSizeBytes 1, form 1, Format 1, found 2, GetDownloadBits 1, GetExtension 1, GetFileNameWithoutExtension 1, GetLocalized 1, GetResource 1, GetTierPricesByProductVariantId 1, Guid 1, HasTierPrices 1, httpPostedFile 1, IBackInStockSubscriptionService 1, id 2, Id 2, IDownloadService 1, InsertDownload 1, IO 1, IPermissionService 1, IsNew 1, IsNullOrEmpty 2, IsPreSelected 1, list 1, List 1, localizationService 1, ManageCatalog 1, ManageProducts 1, MaximumUploadedFileSize 1, model 3, MultilineTextbox 1, name 1, Name 3, NewGuid 1, No 2, Parse 1, Path 1, permissionService 2, Presentation 8, product 3, Product 1, productAttributeParser 2, productService 1, ProductTags 1, productTagService 1, productVariant 2, ProductVariantAttributeValueModel 1, productVariantId 2, ProductVariantModel 1, Quantity 1, RadioList 1, rblAttributes 1, region 1, Request 1, save 1, selectedAttributeId 1, selectedAttributes 2, ShoppingCart 1, shoppingCartService 1, specified 2, squares 1, StandardPermissionProvider 1, System 1, tag 1, TextBox 1, the 2, tier 1, tierPrice 1, tierPrices 1, TierPrices 2, ToString 2, Trim 1, txtAttribute 1, uploaded 1, UseDownloadUrl 1, values 1, variant 1, Web 8, with 3, x 4, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Catalog/ProductVariantModel.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:31; KEYWORDS:  6, AllowedQuantities 1, AvailableForPreOrder 1, c 1, ColorSquaresRgb 1, DisableBuyButton 1, DisableWishlistButton 2, f 1, Name 1, Presentation 6, ProductVariantModel 1, Quantity 1, TierPrices 1, Values 1, Web 6, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/TierPricePersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, e 1, Quantity 1, tierPrice 1, 
+
+
+FILE: src/Libraries/Nop.Core/BaseEntity.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, ae 1, 
+
+
+FILE: src/Libraries/Nop.Core/Configuration/NopConfig.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, d 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/ExternalAuthenticationController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, c 1, Controllers 1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/PagedList.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductTag.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:23; KEYWORDS:  3, c 1, count 1, d 2, List 1, mode 1, name 1, Name 2, product 3, Product 1, ProductCount 2, products 1, Products 1, tag 2, the 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, d 1, ProductTags 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IProductTagService.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:33; KEYWORDS:  4, all 3, c 1, d 1, f 1, GetAllProductTags 3, GetProductById 2, GetProductCount 1, GetProductTagById 1, IProductTagService 1, mode 1, name 2, product 2, Product 1, productTag 1, productTagId 2, tag 2, tags 3, the 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ProductTagService.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:53; KEYWORDS:  5, all 3, c 2, cacheManager 1, count 1, d 2, endregion 1, filter 1, GetAllProductTags 3, GetProductById 2, GetProductCount 1, GetProductTagById 1, Id 1, IProductTagService 1, mode 1, name 2, Name 1, OrderByDescending 2, product 2, Product 1, ProductCount 4, Products 1, productTag 1, productTagId 2, ProductTags 1, store 1, tag 2, tags 3, the 1, ToList 3, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ProductTagPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Name 1, ProductCount 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/BackInStockSubscription.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:16; KEYWORDS:  3, CreatedOnUtc 3, DateTime 3, ProductVariant 1, Store 3, variant 3, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Common/CommonSettings.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:5; KEYWORDS:  2, c 1, d 1, to 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Forums/PrivateMessage.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, CreatedOnUtc 2, DateTime 2, Store 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/ShoppingCartItem.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:11; KEYWORDS:  3, cart 1, f 1, store 1, Store 2, StoreId 1, variant 2, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/BackInStockSubscriptionMap.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:15; KEYWORDS:  3, Id 3, ProductVariant 3, ProductVariantId 1, Store 3, StoreId 2, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Forums/PrivateMessageMap.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, d 2, Store 2, StoreId 2, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Orders/ShoppingCartItemMap.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:15; KEYWORDS:  3, Customer 2, d 2, f 1, sci 1, ShoppingCartItems 1, Store 2, StoreId 3, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/CompareProductsService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:7; KEYWORDS:  2, compare 1, GetComparedProducts 1, List 1, Product 1, products 1, 
+
+
+FILE: src/Libraries/Nop.Services/Messages/WorkflowMessageService.cs; SUPPORT: 9; CONFIDENCE:0; SMIndex:65; KEYWORDS:  9, ArgumentNullException 1, c 1, Core 1, CurrentStore 4, customer 1, Customer 3, d 2, e 1, email 3, Email 1, endregion 2, f 3, FirstName 1, Format 1, GetAttribute 1, GetFullName 1, Id 3, LastName 1, Messages 2, Name 1, owner 2, PersonalMessage 1, productReview 1, Services 2, store 2, Store 3, storeContext 2, StoreId 2, subscription 3, SystemCustomerAttributeNames 1, user 1, workContext 2, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/PrivateMessagesController.cs; SUPPORT: 8; CONFIDENCE:0; SMIndex:77; KEYWORDS:  8, activity 1, ActivityLog 1, c 1, Controllers 8, CurrentCustomer 5, CurrentStore 2, customerActivityService 1, d 2, e 1, f 2, Framework 1, GetResource 1, HomePage 1, Id 2, InsertActivity 1, IsGuest 2, localizationService 1, log 1, Models 1, NopHttpsRequirement 1, Presentation 8, PublicStore 1, RedirectToAction 1, RedirectToRoute 2, Security 1, SslRequirement 1, Store 2, storeContext 2, StoreId 2, Web 8, workContext 5, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Boards/ForumBreadcrumbModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, Presentation 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/BackInStockSubscriptionPersistenceTests.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:12; KEYWORDS:  3, ProductVariant 3, Store 3, variant 3, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Customers/CustomerPersistenceTests.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:17; KEYWORDS:  5, CreatedOnUtc 2, DateTime 2, f 1, productVariant 1, ProductVariant 2, ShoppingCartItems 1, store 1, Store 2, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Orders/ShoppingCartItemPeristenceTests.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:14; KEYWORDS:  3, Customer 2, DateTime 2, ProductVariant 2, sci 1, Store 2, StoreId 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/HomeController.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:21; KEYWORDS:  3, c 1, Controllers 3, CurrentStore 1, e 2, Format 1, Presentation 3, storeContext 1, storeInformationSettings 1, TODO 1, Web 3, workContext 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Home/DashboardModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Customers/SystemCustomerRoleNames.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, f 1, 
+
+
+FILE: src/Libraries/Nop.Services/Security/IPermissionProvider.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, e 1, f 1, 
+
+
+FILE: src/Libraries/Nop.Services/Security/StandardPermissionProvider.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:19; KEYWORDS:  2, cart 1, d 1, DisplayPrices 1, EnableShoppingCart 1, EnableWishlist 1, f 1, Manage 1, ManageCatalog 1, ManageCategories 1, ManageManufacturers 1, ManageProducts 1, permission 1, Security 1, Services 1, StandardPermissionProvider 2, wishlist 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Blogs/BlogPost.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:5; KEYWORDS:  2, c 2, d 1, 
+
+
+FILE: src/Libraries/Nop.Services/Blogs/BlogService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:7; KEYWORDS:  2, cacheManager 1, eventPublisher 1, f 1, ICacheManager 1, IEventPublisher 1, 
+
+
+FILE: src/Libraries/Nop.Services/Blogs/IBlogService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, c 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Blogs/BlogPostModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, Presentation 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Blogs/BlogPostPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, f 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Customers/SystemCustomerAttributeNames.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:6; KEYWORDS:  2, LastContinueShoppingPage 2, SystemCustomerAttributeNames 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/StoreInformationSettings.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:6; KEYWORDS:  2, c 1, d 1, StoreName 1, TODO 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Stores/StoreMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, d 1, Name 1, 
+
+
+FILE: src/Libraries/Nop.Services/Common/KeepAliveTask.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, d 1, storeInformationSettings 1, 
+
+
+FILE: src/Libraries/Nop.Services/Messages/CampaignService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, c 1, CurrentStore 1, d 1, workContext 1, 
+
+
+FILE: src/Libraries/Nop.Services/Messages/IMessageTokenProvider.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:12; KEYWORDS:  2, c 2, Core 1, d 1, e 1, f 1, product 1, Product 1, productReview 1, Web 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Payments.AuthorizeNet/AuthorizeNetPaymentProcessor.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, c 1, Format 1, storeInformationSettings 1, StoreName 1, webHelper 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.SMS.Verizon/VerizonSMSProvider.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, CurrentStore 1, d 1, Name 1, StoreName 1, Web 1, workContext 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Widgets.GoogleAnalytics/Controllers/WidgetsGoogleAnalyticsController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, c 1, Controllers 1, CurrentStore 1, d 1, storeInformationSettings 1, workContext 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/WebWorkContext.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:15; KEYWORDS:  2, c 1, Common 1, Core 1, Customers 1, d 1, Directory 1, Domain 1, Framework 1, Presentation 2, Services 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Validators/Stores/StoreValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, c 1, Name 1, Presentation 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Stores/StorePersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, e 1, Name 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Customers/CustomerModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Orders/OrderListModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Orders/OrderModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, d 1, List 1, Presentation 2, Web 2, 
+
+
+FILE: src/Plugins/Nop.Plugin.Payments.GoogleCheckout/Controllers/PaymentGoogleCheckoutController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:15; KEYWORDS:  1, ActionResult 1, cart 1, ChildActionOnly 1, Controllers 1, CurrentCustomer 1, CurrentStore 1, Id 1, sci 1, ShoppingCart 1, ShoppingCartItems 1, ShoppingCartType 1, StoreId 1, ToList 1, workContext 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Payments.GoogleCheckout/GoogleCheckoutPaymentProcessor.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:31; KEYWORDS:  3, cart 1, CurrentCustomer 2, CurrentStore 1, customerService 1, e 1, f 1, Format 1, genericAttributeService 1, ICustomerService 1, Id 1, IGenericAttributeService 1, IsNullOrEmpty 1, Product 1, productVariant 1, SaveAttribute 1, SaveCustomerAttribute 1, sci 1, ShoppingCart 1, ShoppingCartItems 1, ShoppingCartType 1, StoreId 1, SystemCustomerAttributeNames 1, ToList 1, webHelper 1, workContext 3, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/BaseNopController.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:20; KEYWORDS:  2, c 1, Controllers 2, customer 1, f 1, InvokeHttp 1, message 1, model 1, notification 1, Presentation 2, SuccessNotification 1, the 2, to 1, View 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Global.asax.cs; SUPPORT: 7; CONFIDENCE:0; SMIndex:52; KEYWORDS:  7, c 1, Catalog 2, Category 2, categoryId 2, Controllers 1, Current 2, d 3, e 2, Empty 1, f 1, id 1, Mvc 1, name 1, Presentation 7, Product 3, productId 2, SeName 1, the 1, to 1, TODO 1, Web 7, WorkingLanguage 1, x 1, 
+
+
+FILE: src/Libraries/Nop.Services/Installation/InstallationService.cs; SUPPORT: 56; CONFIDENCE:0; SMIndex:270; KEYWORDS:  56, AddProductReview 1, addthis 2, AddToCompareList 1, AddToShoppingCart 1, AddToWishlist 1, AllowAnonymousUsersToEmailAFriend 1, AllowAnonymousUsersToReviewProduct 2, AllowCustomersToSelectPageSize 1, AllowProductSorting 1, AllowProductViewModeChanging 2, at 1, AttributeControlType 1, AutoCompleteSearchThumbPictureSize 1, c 12, CatalogSettings 3, category 3, Category 1, CategoryBreadcrumbEnabled 1, CategoryTemplateId 1, CategoryThumbPictureSize 1, check 1, Common 1, CompareProductsEnabled 2, ContentType 1, CreatedOnUtc 1, CrossSellsNumber 1, Current 1, Customers 1, customerService 1, d 7, DefaultPictureZoomEnabled 1, DefaultProductRatingValue 1, DefaultViewMode 1, DisplayCartAfterAddingProduct 1, DisplayTierPricesWithDiscounts 1, DisplayWishlistAfterAddingProduct 1, Download 1, DownloadBinary 1, DownloadGuid 1, downloadService 1, e 4, Email 2, EmailAFriendEnabled 1, EnableDynamicPriceUpdate 1, Extension 1, f 9, FileUploadMaximumSizeBytes 1, FirstOrDefault 2, genericAttributeService 1, grid 1, Guid 1, have 1, Helpers 1, HidePricesForNonRegistered 3, Home 1, http 2, ICustomerService 1, Id 5, IGenericAttributeService 1, IgnoreFeaturedProducts 1, IgnoreTierPrices 2, IncludeFeaturedProductsInNormalLists 1, IncludeFullDescriptionInCompareProducts 1, IncludeShortDescriptionInCompareProducts 1, InsertDownload 1, IPictureService 1, LocalizationSettings 2, manufacturer 2, Manufacturer 1, ManufacturersBlockItemsToDisplay 1, ManufacturerTemplateId 1, Media 1, model 1, Name 3, NewGuid 1, NumberOfBestsellersOnHomepage 1, NumberOfProductTags 2, one 1, OrderMinimumQuantity 1, PageShareCode 2, PageSize 2, PageSizeOptions 1, pictures 1, pictureService 2, prepare 1, product 6, Product 2, ProductReviewsMustBeApproved 1, ProductsAlsoPurchasedEnabled 1, ProductsAlsoPurchasedNumber 1, ProductsByTagAllowCustomersToSelectPageSize 1, ProductsByTagPageSize 1, ProductsByTagPageSizeOptions 1, ProductSearchAutoCompleteEnabled 2, ProductSearchTermMinimumLength 3, ProductTemplateId 1, ProductThumbPictureSizeOnProductDetailsPage 1, PublicStore 2, Published 2, RecentlyAddedProductsEnabled 2, RecentlyAddedProductsNumber 2, RecentlyViewedProductsEnabled 1, RecentlyViewedProductsNumber 1, region 1, save 1, SaveAttribute 1, SaveCustomerAttribute 1, SearchPageProductsPerPage 1, SeName 1, Services 7, ShowBestsellersOnHomepage 1, ShowCategoryProductNumber 1, ShowCategoryProductNumberIncludingSubcategories 2, ShowManufacturerPartNumber 1, ShowProductImagesInSearchAutoComplete 1, ShowProductsFromSubcategories 1, ShowProductSku 1, ShowShareButton 1, SystemCustomerAttributeNames 1, the 1, Title 1, TODO 3, ToList 1, UNDONE 1, UseSmallProductBoxOnHomePage 2, View 1, ViewCategory 1, ViewManufacturer 1, ViewPath 2, ViewProduct 1, we 1, Web 1, webHelper 1, WishlistEnabled 3, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductSpecificationAttribute.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, ac 1, CustomValue 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductSpecificationAttributeMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, CustomValue 1, psa 1, SpecificationAttribute 1, SpecificationAttributeOption 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Catalog/ProductSpecificationAttributeModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, CustomValue 1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/Manufacturer.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:18; KEYWORDS:  3, ACL 1, AllowCustomersToSelectPageSize 1, customer 1, manufacturer 2, ManufacturerTemplateId 1, or 1, page 1, PageSize 1, PageSizeOptions 1, price 1, ranges 1, size 1, template 1, the 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Catalog/ManufacturerModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:16; KEYWORDS:  3, ACL 1, AllowCustomersToSelectPageSize 1, c 2, ManufacturerTemplateId 1, PageSize 1, PageSizeOptions 1, Presentation 3, Web 3, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ManufacturerPersistenceTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:6; KEYWORDS:  2, AllowCustomersToSelectPageSize 1, PageSize 1, PageSizeOptions 1, Published 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Events/ProductSearchEvent.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, CategoryIds 1, event 1, Events 1, Framework 1, ManufacturerId 1, Presentation 1, ProductSearchEvent 1, SearchInDescriptions 1, SearchTerm 1, Web 1, WorkingLanguageId 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Security/AclRecord.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, ACL 1, EntityId 1, the 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Security/IAclSupported.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, ACL 1, the 1, to 1, whether 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Security/AclRecordMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, at 1, d 1, Id 1, 
+
+
+FILE: src/Libraries/Nop.Services/Security/AclService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:17; KEYWORDS:  1, access 1, ACL 1, at 1, Authorize 1, CurrentCustomer 1, EntityId 1, IAclService 1, Id 1, permission 1, product 1, the 1, to 1, ToArray 1, ToList 1, we 1, workContext 1, 
+
+
+FILE: src/Libraries/Nop.Services/Security/IAclService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, access 1, ACL 1, at 1, Authorize 1, IAclService 1, permission 1, the 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Security/AclRecordPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, and 1, EntityId 1, 
+
+
+FILE: src/Libraries/Nop.Services/Authentication/External/ExternalAuthorizer.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:27; KEYWORDS:  3, activity 1, ActivityLog 1, Common 1, Core 1, customerActivityService 1, Customers 1, customerService 1, d 1, Domain 1, genericAttributeService 1, GetResource 1, ICustomerService 1, IGenericAttributeService 1, InsertActivity 1, localizationService 1, log 1, Orders 1, PublicStore 1, SaveAttribute 1, SaveCustomerAttribute 1, Services 1, SystemCustomerAttributeNames 1, workContext 1, workflowMessageService 1, 
+
+
+FILE: src/Libraries/Nop.Services/Logging/CustomerActivityService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, activity 1, ActivityLog 1, customer 1, f 1, InsertActivity 1, log 1, 
+
+
+FILE: src/Libraries/Nop.Services/Logging/DefaultLogger.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, f 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Services/Logging/ICustomerActivityService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, activity 1, ActivityLog 1, customer 1, InsertActivity 1, log 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Logging/CustomerActivityServiceTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:5; KEYWORDS:  2, activity 1, ActivityLog 1, customerActivityService 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Orders/BestsellersReportModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, List 2, Presentation 2, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/SearchBoxModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:16; KEYWORDS:  2, AutoCompleteEnabled 2, d 2, No 1, Presentation 2, SearchBoxModel 2, SearchTermMinimumLength 2, ShowProductImagesInSearchAutoComplete 1, Web 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductVariant.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:30; KEYWORDS:  5, allowed 1, AllowedQuantities 1, AvailableForPreOrder 1, c 1, cart 1, configured 1, d 1, DisableBuyButton 1, DisableWishlistButton 2, e 1, f 1, HasTierPrices 1, price 1, prices 1, product 1, quantities 1, quantity 1, the 1, tier 1, TierPrices 1, to 1, variant 1, we 1, wishlist 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductVariantMap.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:6; KEYWORDS:  2, AllowedQuantities 1, d 1, e 1, ea 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/ShoppingCart/WishlistModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:12; KEYWORDS:  3, AllowedQuantities 1, e 1, Presentation 3, SelectListItem 1, Web 3, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ProductVariantPersistenceTests.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:16; KEYWORDS:  5, AllowedQuantities 1, AvailableForPreOrder 1, c 1, d 1, DisableBuyButton 2, DisableWishlistButton 2, f 1, HasTierPrices 1, OrderMinimumQuantity 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Catalog/ProductExtensionTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, allowed 1, AllowedQuantities 1, e 1, f 1, Length 1, ParseAllowedQuatities 1, quantities 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/PopularProductTagsModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:25; KEYWORDS:  2, d 1, e 1, endregion 1, List 1, mode 1, No 2, PopularProductTagsModel 2, Presentation 2, ProductCount 2, productTag 1, ProductTagModel 2, tag 2, Tags 2, TotalTags 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ManufacturerNavigationModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:20; KEYWORDS:  3, IsActive 1, List 1, ManufacturerBriefInfoModel 1, ManufacturerNavigationModel 2, Manufacturers 1, Name 3, Presentation 3, SeName 1, TotalManufacturers 1, Web 3, 
+
+
+FILE: src/Libraries/Nop.Services/Seo/SeoExtensions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:13; KEYWORDS:  2, c 1, e 1, GetLocalized 1, GetSeName 1, Id 1, Name 1, Seo 1, Services 1, tag 1, Web 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ProductTagModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:14; KEYWORDS:  2, mode 1, Name 2, No 1, Presentation 2, ProductCount 2, ProductTagModel 1, SeName 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Mvc/Routes/GuidConstraint.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/NewsletterController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, Controllers 1, f 1, Home 1, HomePage 1, model 1, Presentation 1, RedirectToAction 1, RedirectToRoute 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/ProfileController.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:50; KEYWORDS:  6, ActionResult 2, c 1, Common 1, Content 1, Controllers 6, Core 2, Customers 1, d 3, Directory 1, Domain 1, e 1, FormatUserName 1, HomePage 1, Media 1, No 1, NopHttpsRequirement 1, page 1, Presentation 6, RedirectToAction 1, RedirectToRoute 1, Services 1, SslRequirement 1, TODO 2, Web 6, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ProductModel.cs; SUPPORT: 20; CONFIDENCE:0; SMIndex:257; KEYWORDS:  20, AddToCart 2, AttributeControlType 4, AvailableForPreOrder 1, c 6, CallForPrice 3, Catalog 6, Collections 1, Core 2, CustomerEnteredPrice 1, CustomerEnteredPriceRange 1, CustomerEntersPrice 4, d 5, day 1, DefaultPictureModel 1, DefaultPictureZoomEnabled 2, Description 3, DisableBuyButton 2, DisableWishlistButton 2, DisplayBreadcrumb 1, DisplayProductAddedMessage 2, DisplayProductAddedToCartMessage 2, DisplayProductAddedToWishlistMessage 2, Domain 2, DownloadSampleUrl 1, DynamicPriceUpdate 1, endregion 6, EnteredQuantity 1, EnterProductPrice 1, f 4, ForceRedirectionAfterAddingToCart 1, Framework 2, Generic 1, GiftCard 1, GiftCardType 1, Gtin 1, HidePrices 1, IList 1, ImageUrl 2, IsGiftCard 2, IsPreSelected 2, IsRequired 1, Linq 2, List 2, ManufacturerPartNumber 2, Media 2, Message 1, Models 4, month 1, Mvc 2, Name 6, No 1, OldPrice 4, PictureModel 3, PictureModels 1, Presentation 20, Price 4, PriceAdjustment 2, PriceAdjustmentValue 1, PriceValue 1, PriceWithDiscount 2, PriceWithDiscountValue 1, ProductAttributeId 1, ProductId 1, ProductModel 8, ProductName 1, ProductPrice 5, ProductPriceModel 4, Products 1, ProductSeName 1, ProductSpecificationModel 1, ProductTemplateViewPath 1, ProductVariantAttributeModel 1, ProductVariantAttributes 1, ProductVariantAttributeValueModel 1, ProductVariantId 3, ProductVariantModel 2, ProductVariantModels 2, ProductVariantPrice 1, Quantity 2, RecipientEmail 1, RecipientName 1, region 7, SelectedDay 1, SelectedMonth 1, SelectedYear 1, SeName 1, SenderEmail 2, SenderName 2, ShowGtin 1, ShowManufacturerPartNumber 2, ShowSku 1, Sku 1, SpecificationAttributeModels 1, StockAvailablity 1, System 2, TextPrompt 1, TextValue 1, TierPriceModel 1, Values 2, Web 20, year 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/CompareProductsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, CompareProductsModel 1, IncludeFullDescriptionInCompareProducts 1, IncludeShortDescriptionInCompareProducts 1, List 1, Presentation 1, ProductModel 1, Products 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Common/GenericAttribute.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, c 1, Common 1, Core 1, d 1, Domain 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Customers/Customer.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:9; KEYWORDS:  3, c 1, Core 1, customer 2, Customers 1, Domain 1, 
+
+
+FILE: src/Libraries/Nop.Data/Extensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Core 1, e 1, Extensions 1, Framework 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Common/GenericAttributeMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Common 1, Core 1, d 1, Domain 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Common/GenericAttributeExtentions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, Common 1, Core 1, Customers 1, Domain 1, e 1, genericAttributeService 1, IGenericAttributeService 1, Infrastructure 1, Linq 1, Services 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Common/GenericAttributeService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, Cache 1, Collections 1, Common 1, Core 1, Domain 1, Generic 1, IGenericAttributeService 1, Linq 1, SaveAttribute 1, Services 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Common/IGenericAttributeService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, c 1, Collections 1, Common 1, Core 1, Domain 1, Generic 1, IGenericAttributeService 1, SaveAttribute 1, Services 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Customers/CustomerExtentions.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:23; KEYWORDS:  4, Common 1, Core 1, customer 3, Customers 1, Domain 1, e 2, firstName 1, FirstName 1, GetAttribute 1, GetFullName 1, Infrastructure 1, lastName 1, LastName 1, Services 1, SystemCustomerAttributeNames 1, user 1, 
+
+
+FILE: src/Libraries/Nop.Services/Customers/CustomerService.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:30; KEYWORDS:  5, c 2, Cache 1, Common 1, Core 1, customer 3, Customers 1, Domain 1, Email 2, Generic 1, genericAttributeService 1, Id 2, IGenericAttributeService 1, Infrastructure 1, Orders 1, SaveAttribute 1, SaveCustomerAttribute 1, Services 1, SystemCustomerAttributeNames 1, TODO 1, UNDONE 1, 
+
+
+FILE: src/Libraries/Nop.Services/Customers/ICustomerService.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:13; KEYWORDS:  3, c 1, customer 2, Customers 1, d 1, Email 2, ICustomerService 1, SaveCustomerAttribute 1, Services 1, 
+
+
+FILE: src/Libraries/Nop.Services/Forums/ForumService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:19; KEYWORDS:  1, Common 1, Core 1, Customers 1, customerService 1, Domain 1, e 1, Generic 1, genericAttributeService 1, ICustomerService 1, IGenericAttributeService 1, IWorkflowMessageService 1, SaveAttribute 1, SaveCustomerAttribute 1, Services 1, SystemCustomerAttributeNames 1, UI 1, workContext 1, workflowMessageService 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/OrderTotalCalculationService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:18; KEYWORDS:  2, c 1, Catalog 1, catalogSettings 1, Common 1, Core 1, Customers 1, Domain 1, e 1, Generic 1, genericAttributeService 1, IGenericAttributeService 1, Orders 1, Services 1, SystemCustomerAttributeNames 1, workContext 1, Zero 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/StoreLastVisitedPageAttribute.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:20; KEYWORDS:  1, Common 1, Core 1, CurrentCustomer 1, Customers 1, customerService 1, d 1, Domain 1, Framework 1, genericAttributeService 1, ICustomerService 1, IGenericAttributeService 1, Infrastructure 1, Presentation 1, SaveAttribute 1, SaveCustomerAttribute 1, Services 1, SystemCustomerAttributeNames 1, Web 1, workContext 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Themes/ThemeContext.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:19; KEYWORDS:  1, Common 1, Core 1, CurrentCustomer 1, Customers 1, customerService 1, Domain 1, e 1, Framework 1, genericAttributeService 1, ICustomerService 1, IGenericAttributeService 1, Presentation 1, SaveAttribute 1, SaveCustomerAttribute 1, Services 1, SystemCustomerAttributeNames 1, Web 1, workContext 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Common/GenericAttributePersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, Common 1, Core 1, Domain 1, Framework 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Customers/CustomerRegistrationServiceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:13; KEYWORDS:  1, Common 1, Core 1, Customers 1, customerService 1, Domain 1, genericAttributeService 1, ICustomerService 1, IGenericAttributeService 1, Linq 1, Security 1, Services 1, System 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Catalog/ProductTagModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, Name 1, No 1, Presentation 1, ProductCount 1, ProductTagModel 1, ProductTags 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Validators/Catalog/ProductTagValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, c 1, Name 1, No 1, Presentation 1, ProductTagModel 1, ProductTags 1, Web 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/UI/Captcha/CaptchaSettings.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:14; KEYWORDS:  2, Captcha 1, CaptchaSettings 1, e 1, Enabled 1, Framework 1, Presentation 2, ShowOnEmailProductToFriendPage 1, ShowOnProductReviewPage 1, UI 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Blogs/AddBlogCommentModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, d 1, DisplayCaptcha 1, Presentation 2, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ProductReviewModel.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:39; KEYWORDS:  5, AllowAnonymousUsersToReviewProduct 1, AllowCustomerReviews 1, AllowViewingProfiles 1, CanCurrentCustomerLeaveReview 2, CustomerId 1, CustomerIsRegistered 1, CustomerName 1, d 1, DisplayCaptcha 1, Helpfulness 1, HelpfulNoTotal 1, HelpfulYesTotal 1, Presentation 5, ProductReviewHelpfulnessModel 1, ProductReviewId 1, ProductReviewModel 1, Rating 2, Result 1, Reviews 2, Title 1, TotalReviews 1, Web 5, WrittenOnStr 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/News/AddNewsCommentModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, DisplayCaptcha 1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/SpecificationAttributeService.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:57; KEYWORDS:  5, at 1, before 1, cacheManager 2, catalogSettings 1, category 1, categoryId 1, d 1, ensure 1, f 1, fd 1, GetLocalized 1, HasValue 1, have 1, http 1, Id 3, IList 1, invoking 1, items 1, least 1, List 1, MaxValue 1, Name 1, one 1, Position 1, product 2, Product 1, productId 1, ProductId 1, products 1, productService 1, ProductSortingEnum 1, psa 1, result 2, SearchProducts 1, slow 1, that 1, the 1, ToList 2, we 1, workContext 4, WorkingLanguage 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Security/NopHttpsRequirementAttribute.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Framework 1, Presentation 1, Security 1, SslRequirement 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Security/SslRequirement.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Framework 1, No 1, Presentation 1, Security 1, SslRequirement 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/HomeController.cs; SUPPORT: 8; CONFIDENCE:0; SMIndex:104; KEYWORDS:  8, ActionResult 3, authenticationService 2, BaseNopController 1, c 2, Catalog 1, catalogSettings 4, CatalogSettings 2, ChildActionOnly 2, CompareProductsEnabled 1, Controller 1, Controllers 8, Core 2, CurrentCustomer 1, customer 1, Customers 1, d 4, Domain 1, email 1, Email 1, Extensions 1, Framework 1, GetAuthenticatedUser 1, GetResource 1, IAuthenticationService 2, id 1, Localization 1, localizationService 1, model 4, Models 1, ModelState 1, Mvc 1, No 1, NopHttpsRequirement 1, PartialView 3, Presentation 8, RecentlyAddedProductsEnabled 1, RecentlyViewedProductsEnabled 1, Security 1, Services 2, shoppingCartSettings 2, ShoppingCartSettings 1, SslRequirement 1, System 2, TODO 1, ToList 1, user 1, View 2, Web 8, WishlistEnabled 2, workContext 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/SpecificationAttributeOptionFilter.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:2; KEYWORDS:  2, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ISpecificationAttributeService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, category 1, IList 1, product 1, Product 1, workContext 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Media/Download.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Download 1, DownloadGuid 1, DownloadUrl 1, Guid 1, System 1, UseDownloadUrl 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IProductAttributeFormatter.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, attributes 1, bd 1, productVariant 1, 
+
+
+FILE: src/Libraries/Nop.Services/Media/DownloadService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, download 1, Download 1, DownloadGuid 1, f 1, Guid 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Media/IDownloadService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, d 1, download 1, Download 1, Guid 1, IDownloadService 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/CheckoutAttributeExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, attribute 1, AttributeControlType 1, FileUpload 1, values 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/CheckoutAttributeFormatter.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:22; KEYWORDS:  2, AttributeControlType 1, attributes 1, d 1, download 1, DownloadGuid 1, downloadService 1, Extension 1, file 1, Filename 1, FileUpload 1, Format 1, GetLocalized 1, Guid 1, IDownloadService 1, IsNullOrEmpty 1, Name 1, ToString 1, values 1, workContext 2, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/ICheckoutAttributeFormatter.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, attributes 1, f 1, values 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/DownloadController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:18; KEYWORDS:  1, Controllers 1, d 1, download 1, Download 1, DownloadBinary 1, DownloadGuid 1, downloadService 1, DownloadUrl 1, GetDownloadBits 1, Guid 1, httpPostedFile 1, InsertDownload 1, IsNew 1, NewGuid 1, Presentation 1, UseDownloadUrl 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Media/DownloadPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:15; KEYWORDS:  1, bd 1, ContentType 1, download 1, Download 1, DownloadBinary 1, DownloadGuid 1, DownloadUrl 1, f 1, file 1, Guid 1, NewGuid 1, save 1, System 1, UseDownloadUrl 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Orders/CheckoutAttributeParserAndFormatterTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:5; KEYWORDS:  2, downloadService 1, IDownloadService 1, workContext 1, 
+
+
+FILE: src/Libraries/Nop.Services/Media/PictureService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Id 1, Media 1, picture 1, Product 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Services/Localization/LocalizationExtentions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:4; KEYWORDS:  2, GetLocalized 1, workContext 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/BaseNopController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, Controllers 1, customer 1, f 1, message 1, model 1, notification 1, Presentation 1, SuccessNotification 1, the 1, to 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ProductEmailAFriendModel.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:35; KEYWORDS:  4, Catalog 1, DisplayCaptcha 1, e 1, EmailAFriend 2, FriendEmail 2, Models 1, PersonalMessage 1, Presentation 4, ProductEmailAFriendEnabled 2, ProductEmailAFriendModel 3, ProductId 1, ProductName 1, Products 2, ProductSeName 2, Result 1, SuccessfullySent 1, Web 4, YourEmailAddress 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Customer/LoginModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, DisplayCaptcha 1, Models 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/ShoppingCart/WishlistEmailAFriendModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:17; KEYWORDS:  3, Core 1, DisplayCaptcha 1, f 2, FriendEmail 1, Models 1, PersonalMessage 1, Presentation 3, Web 3, YourEmailAddress 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Catalog/TierPriceExtensionTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Quantity 1, RemoveDuplicatedQuantities 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Localization/LocalizedRoute.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:7; KEYWORDS:  2, c 1, Presentation 2, Web 2, 
+
+
+FILE: src/Libraries/Nop.Core/Infrastructure/DependencyManagement/ContainerManager.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, ContainerManager 1, e 1, Resolve 1, 
+
+
+FILE: src/Presentation/Nop.Web/Infrastructure/DependencyRegistrar.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, cache 1, CatalogController 1, Controllers 1, ICacheManager 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/CategoryModel.cs; SUPPORT: 10; CONFIDENCE:0; SMIndex:131; KEYWORDS:  10, AllowCustomersToSelectPageSize 2, AllowedSortOptions 3, AllowProductFiltering 4, AllowProductSorting 2, AllowProductViewModeChanging 2, at 1, AvailableSortOptions 2, AvailableViewModes 2, c 1, Catalog 4, CatalogPagingFilteringModel 1, CategoryBreadcrumb 2, CategoryModel 4, Collections 1, d 3, DisplayCategoryBreadcrumb 2, e 2, endregion 2, f 3, FeaturedProducts 2, Framework 2, Generic 1, IList 2, ImageUrl 1, Linq 1, List 4, Media 1, Models 3, Mvc 1, Name 2, of 1, PageSizeOptions 2, PagingFilteringContext 7, PagingFilteringModel 4, PictureModel 1, Presentation 10, ProductModel 2, Products 4, region 3, SelectListItem 4, SeName 2, SubCategories 3, SubCategoryModel 4, System 1, Web 10, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ManufacturerModel.cs; SUPPORT: 5; CONFIDENCE:0; SMIndex:50; KEYWORDS:  5, AllowCustomersToSelectPageSize 2, AllowProductFiltering 2, AllowProductSorting 2, AllowProductViewModeChanging 2, AvailableSortOptions 2, AvailableViewModes 2, Catalog 1, CatalogPagingFilteringModel 1, e 1, FeaturedProducts 1, Framework 1, IList 1, List 2, ManufacturerModel 1, Media 1, mode 1, Models 1, Name 1, PageSizeOptions 2, PagingFilteringContext 2, PagingFilteringModel 1, PictureModel 1, Presentation 5, Products 1, SelectListItem 3, Web 5, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Common/InfoBlockModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:9; KEYWORDS:  2, d 1, e 1, No 1, Presentation 2, Web 2, 
+
+
+FILE: src/Libraries/Nop.Services/Discounts/DiscountService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, cacheManager 1, e 1, Format 1, id 1, Id 1, KEY 1, List 1, ProductId 1, the 1, with 1, 
+
+
+FILE: src/Libraries/Nop.Services/Discounts/IDiscountService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, ProductId 1, with 1, 
+
+
+FILE: src/Libraries/Nop.Core/Events/EventPublisher.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Core 1, TODO 1, x 1, 
+
+
+FILE: src/Libraries/Nop.Core/Events/ISubscriptionService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Core 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Core/Events/SubscriptionService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Core 1, Infrastructure 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Core/Infrastructure/DependencyManagement/ContainerConfigurer.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, Core 1, Infrastructure 1, Mvc 1, System 1, x 1, 
+
+
+FILE: src/Libraries/Nop.Services/Security/IPermissionService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, Authorize 1, Collections 1, Core 1, d 1, Domain 1, Generic 1, IPermissionService 1, Security 1, Services 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Services/Security/PermissionService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Authorize 1, CurrentCustomer 1, d 1, Security 1, Services 1, workContext 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Common/HeaderLinksModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, e 1, Models 1, Presentation 1, Web 1, WishlistEnabled 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/CategoryMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, c 1, PageSizeOptions 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ManufacturerMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, PageSizeOptions 1, 
+
+
+FILE: src/Libraries/Nop.Services/Authentication/External/AuthorizeState.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Home 1, TODO 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Customers/CustomerServiceTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:2; KEYWORDS:  2, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Tax/TaxServiceTests.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:4; KEYWORDS:  2, ignore 1, taxService 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductVariantExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, productVariant 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Blogs/BlogPostMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, d 1, 
+
+
+FILE: src/Tests/Nop.Core.Tests/Domain/Blogs/BlogPostTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, d 1, 
+
+
+FILE: src/Tests/Nop.Core.Tests/Domain/Catalog/ProductVariantTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, c 1, productVariant 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/CategoryTemplate.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, category 1, template 1, ViewPath 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ManufacturerTemplate.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, manufacturer 1, template 1, ViewPath 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/CategoryTemplateMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, c 1, ViewPath 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ManufacturerTemplateMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, ViewPath 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/CategoryTemplateService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, c 1, category 1, GetAllCategoryTemplates 1, GetCategoryTemplateById 1, ICategoryTemplateService 1, template 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ICategoryTemplateService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, category 1, GetAllCategoryTemplates 1, GetCategoryTemplateById 1, ICategoryTemplateService 1, template 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IManufacturerTemplateService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, GetAllManufacturerTemplates 1, GetManufacturerTemplateById 1, IManufacturerTemplateService 1, manufacturer 1, template 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ManufacturerTemplateService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, GetAllManufacturerTemplates 1, GetManufacturerTemplateById 1, IManufacturerTemplateService 1, manufacturer 1, template 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/HomePageBestsellersModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, HomePageBestsellersModel 1, Presentation 1, Products 1, UseSmallProductBox 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/HomePageProductsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, HomePageProductsModel 1, Presentation 1, Products 1, UseSmallProductBox 1, Web 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.ExternalAuth.Facebook/Controllers/ExternalAuthFacebookController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Controllers 1, RedirectToRoute 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.ExternalAuth.OpenId/Controllers/ExternalAuthOpenIdController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Controllers 1, RedirectToRoute 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.ExternalAuth.Twitter/Controllers/ExternalAuthTwitterController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Controllers 1, RedirectToRoute 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Catalog/PriceFormatterTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Catalog/ProductServiceTests.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:27; KEYWORDS:  3, Catalog 2, e 2, f 2, IWorkflowMessageService 2, Localization 2, localizationSettings 2, LocalizationSettings 2, Messages 2, productService 2, Services 2, Tax 2, workflowMessageService 2, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Configuration/ConfigFileSettingServiceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Configuration/ConfigurationProviderTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Customers/CustomerExtensionTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Directory/CurrencyServiceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Directory/MeasureServiceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Discounts/DiscountServiceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/ExportImport/ExportManagerTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Helpers/DateTimeHelperTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Localization/LanguageServiceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/Security/EncryptionServiceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductTemplate.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, product 1, template 1, the 1, ViewPath 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductTemplateMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, at 1, Id 1, ViewPath 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IProductTemplateService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, GetAllProductTemplates 1, GetProductTemplateById 1, IProductTemplateService 1, product 1, template 1, the 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ProductTemplateService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, GetAllProductTemplates 1, GetProductTemplateById 1, IProductTemplateService 1, product 1, template 1, the 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Catalog/ProductTemplatePersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, c 1, product 1, save 1, ViewPath 1, 
+
+
+FILE: src/Presentation/Nop.Web/Extensions/MappingExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:17; KEYWORDS:  1, AutoMapper 1, Category 1, CategoryModel 1, f 1, GetLocalized 1, GetSeName 1, Id 1, Map 1, Mapper 1, model 1, Name 1, Presentation 1, SeName 1, Title 1, Web 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/UI/Paging/BasePageableModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Presentation 1, region 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/UI/Paging/IPageableModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Extensions/PagerHtmlExtension.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, model 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/News/NewsPagingFilteringModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Presentation 1, region 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Customers/SystemCustomerNames.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:2; KEYWORDS:  2, 
+
+
+FILE: src/Libraries/Nop.Core/IWebHelper.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:8; KEYWORDS:  4, c 1, f 1, IWebHelper 1, ModifyQueryString 1, 
+
+
+FILE: src/Libraries/Nop.Services/WorkContext.cs; SUPPORT: 6; CONFIDENCE:0; SMIndex:13; KEYWORDS:  6, CurrentCustomer 1, customer 3, d 1, Deleted 1, Services 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Payments.PayPalDirect/PaypalHelper.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Payments.PayPalStandard/PaypalHelper.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Tests/Nop.Web.MVC.Tests/Admin/Controllers/CategoryControllerTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Controllers 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Blogs/BlogSettings.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:8; KEYWORDS:  3, e 1, No 1, tags 2, the 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Feed.Become/BecomeService.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:26; KEYWORDS:  3, currencyService 1, e 1, Format 1, Framework 1, g 1, GetProductUrl 1, GetSeName 1, GetStoreLocation 1, getting 1, Id 1, Media 1, method 1, p 1, product 1, productService 1, productUrl 1, Seo 1, SEOHelper 1, Services 1, TODO 1, URL 1, Web 1, webHelper 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Shipping.CanadaPost/CanadaPostComputationMethod.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:3; KEYWORDS:  2, workContext 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Settings/BlogSettingsModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:7; KEYWORDS:  2, No 1, Presentation 2, Web 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/GiftCard.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, product 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/OrderProductVariant.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, e 1, product 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/OrderSettings.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:3; KEYWORDS:  2, c 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Orders/GiftCardMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, d 1, e 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/GiftCardService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, CreatedOnUtc 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/IGiftCardService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, d 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/RssActionResult.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:10; KEYWORDS:  2, e 2, Presentation 2, Web 2, writer 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Settings/OrderSettingsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Validators/Settings/OrderSettingsValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Presentation 1, Web 1, x 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/Orders/OrderProductVariantPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:1; KEYWORDS:  1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Customer/CustomerInfoModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:8; KEYWORDS:  2, c 1, Customer 1, Presentation 2, Web 2, 
+
+
+FILE: src/Libraries/Nop.Core/Plugins/PluginFinder.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, c 1, f 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Orders/OrderMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, c 1, f 1, TODO 1, UNDONE 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Extensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, Presentation 1, TODO 1, UNDONE 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/UI/DataListExtensions.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:23; KEYWORDS:  3, attributes 1, c 1, Collections 1, d 2, e 2, Generic 1, Linq 1, Mvc 1, Presentation 3, System 1, TODO 1, UNDONE 2, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/LiveChatController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Controllers 1, f 1, model 1, Presentation 1, UNDONE 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Services.Tests/ServiceTest.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, f 1, 
+
+
+FILE: src/Libraries/Nop.Services/FormsAuthenticationService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, customerService 1, customerSettings 1, f 1, TODO 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Customer/RegisterModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, e 1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Common/PdfSettings.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, to 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Directory/ExchangeRate.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, e 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Security/SecuritySettings.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, TODO 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/UI/PageTitleBuilder.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, c 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Settings/CustomerUserSettingsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, e 1, Presentation 1, Web 1, 
+
+
+FILE: src/Plugins/Nop.Plugin.Feed.PriceGrabber/PriceGrabberService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:26; KEYWORDS:  2, c 2, e 2, Format 1, Framework 1, g 1, GetProductUrl 1, GetSeName 1, GetStoreLocation 1, getting 1, Id 1, Media 1, method 1, p 1, product 1, productUrl 1, Seo 1, SEOHelper 1, Services 1, TODO 1, URL 1, Web 1, webHelper 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/SeoExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, c 1, e 1, Framework 1, Presentation 1, Seo 1, Services 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Infrastructure/AutoMapperStartupTask.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:48; KEYWORDS:  3, c 1, Catalog 1, category 2, Category 2, CategoryModel 2, Common 1, Core 1, d 1, Domain 1, Extensions 2, Framework 1, GetLocalized 1, GetSeName 1, Localization 1, manufacturer 1, Manufacturer 1, ManufacturerModel 1, Mapper 2, Models 1, Name 2, Presentation 3, product 2, Product 2, ProductModel 1, SeName 1, Seo 1, Services 2, SubCategoryModel 2, Web 3, x 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/Orders/BestsellersReportLineModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Presentation 1, ProductVariantId 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/UserController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, ActionResult 1, Controllers 1, d 1, Presentation 1, TODO 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Validators/Catalog/ProductVariantValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, c 1, localizationService 1, Presentation 1, TODO 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/AddToCompareListModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:13; KEYWORDS:  2, AddToCompareListModel 2, CompareProductsEnabled 2, d 1, Presentation 2, ProductId 2, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/PagingFilteringModel.cs; SUPPORT: 4; CONFIDENCE:0; SMIndex:74; KEYWORDS:  4, at 1, Catalog 1, Categories 1, category 3, Category 1, categoryId 1, Count 1, e 2, Empty 1, GetAlreadyFilteredSpecOptionIds 1, GetSelectedPriceRange 2, HasValue 1, Id 1, IList 1, IPriceFormatter 1, ISpecificationAttributeService 1, IWebHelper 1, LoadPagedList 1, LoadPriceRangeFilters 2, LoadSpecsFilters 1, model 2, Models 1, of 1, PageNumber 1, PageSize 1, PagingFilteringModel 1, Presentation 4, price 1, priceFormatter 3, PriceRangeFilter 1, PriceRanges 2, Product 1, ranges 1, result 1, selectedPriceRange 2, sorting 1, specificationAttributeService 1, SpecificationFilter 1, specs 1, Specs 2, To 2, ToList 2, ViewMode 1, Web 4, webHelper 3, workContext 1, x 3, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Extensions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:10; KEYWORDS:  2, c 1, model 1, Presentation 2, Product 1, ToModel 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Extensions/ModelExtensions.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:55; KEYWORDS:  3, at 1, AutoMapper 2, Catalog 2, category 2, Category 2, CategoryModel 2, Collections 1, Common 1, Core 1, d 1, Domain 1, endregion 1, Extensions 1, Generic 1, Home 1, Linq 1, Localization 1, manufacturer 1, Manufacturer 1, ManufacturerModel 1, Map 2, Mapper 2, model 3, Models 1, of 1, Presentation 3, product 3, Product 3, ProductModel 1, region 1, System 1, ToModel 3, Web 3, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductTagMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, Id 1, mode 1, Name 1, No 1, Product 1, Products 1, ProductTags 1, 
+
+
+FILE: src/Libraries/Nop.Data/NopObjectContext.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, f 1, ProductReviews 1, ProductTags 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/DependencyRegistar.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:9; KEYWORDS:  2, c 1, IProductTagService 1, IRecentlyViewedProductsService 1, Presentation 2, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/ProductModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, Presentation 1, Products 1, ProductTags 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/ProductTagModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, d 1, mode 1, Name 1, No 1, Presentation 1, ProductCount 1, ProductTagModel 1, ProductTags 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Blogs/BlogPostTagListModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, d 1, f 1, List 1, mode 1, No 1, Presentation 1, tag 1, Tags 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Blogs/BlogPostTagModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:6; KEYWORDS:  1, f 1, Name 1, No 1, Presentation 1, Web 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/ProductPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, f 1, Name 1, product 1, Product 1, ProductCount 1, ProductTags 1, with 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/ProductTagPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, mode 1, Name 1, No 1, Product 1, ProductCount 1, products 1, Products 1, productTag 1, Text 1, with 1, 
+
+
+FILE: src/Libraries/Nop.Services/Messages/IWorkflowMessageService.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:23; KEYWORDS:  3, Core 1, d 2, e 2, email 3, endregion 2, IWorkflowMessageService 2, Messages 2, owner 2, Services 2, store 2, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/BlogCommentModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/BlogPostModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, f 1, Presentation 1, Title 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Blogs/BlogCommentModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, CustomerName 1, d 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Blogs/BlogPostListModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, c 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Blogs/BlogPostModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, c 1, d 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Validators/Blogs/BlogPostValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, c 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/ForumController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, c 1, Controllers 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Models/BlogSettingsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Common/MenuModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, c 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Home/ContactUsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Validators/Catalog/ProductEmailAFriendValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, EmailAFriend 1, FriendEmail 1, GetResource 1, localizationService 1, Presentation 1, Products 1, Web 1, YourEmailAddress 1, 
+
+
+FILE: src/Presentation/Nop.Web/Validators/Home/ContactUsValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, GetResource 1, localizationService 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Validators/ShoppingCart/WishlistEmailAFriendValidator.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, EmailAFriend 1, FriendEmail 1, GetResource 1, localizationService 1, Presentation 1, Web 1, YourEmailAddress 1, 
+
+
+FILE: src/Libraries/Nop.Services/Messages/MessageTokenProviderService.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:14; KEYWORDS:  3, d 2, email 1, f 2, Id 2, Messages 2, Services 2, 
+
+
+FILE: src/Libraries/Nop.Services/Messages/IMessageTokenProviderService.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:6; KEYWORDS:  2, Messages 2, Services 2, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/ICompareProductsService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, compare 1, GetComparedProducts 1, ICompareProductsService 1, List 1, Product 1, products 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Catalog/ProductSpecificationModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:16; KEYWORDS:  2, f 2, No 1, Presentation 2, ProductSpecificationModel 2, SpecificationAttributeId 1, SpecificationAttributeName 2, SpecificationAttributeOption 2, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Home/InfoBlockModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:11; KEYWORDS:  2, CompareProductsEnabled 1, Home 2, Presentation 2, RecentlyAddedProductsEnabled 1, RecentlyViewedProductsEnabled 1, Web 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductReview.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Core 1, helpfulness 1, product 1, ProductReview 1, ProductReviewHelpfulness 1, ProductReviewHelpfulnessEntries 1, review 1, the 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/ProductReviewHelpfulness.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, Core 1, helpfulness 1, product 1, ProductReview 1, ProductReviewHelpfulness 1, ProductReviewId 1, review 1, the 1, WasHelpful 1, 
+
+
+FILE: src/Libraries/Nop.Data/Mapping/Catalog/ProductReviewHelpfulnessMap.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, c 1, Core 1, Id 1, No 1, pr 1, prh 1, ProductReview 1, ProductReviewHelpfulness 1, ProductReviewHelpfulnessEntries 1, ProductReviewId 1, 
+
+
+FILE: src/Tests/Nop.Data.Tests/CustomerContentPersistenceTests.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:20; KEYWORDS:  1, Count 1, CreatedOnUtc 1, DateTime 1, g 1, helpfulness 1, IpAddress 1, IsApproved 1, product 1, productReview 1, ProductReview 1, ProductReviewHelpfulness 1, ProductReviewHelpfulnessEntries 1, Rating 1, review 1, ReviewText 1, Title 1, UpdatedOnUtc 1, WasHelpful 1, with 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/IRecentlyViewedProductsService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, AddProductToRecentlyViewedList 1, GetRecentlyViewedProducts 1, IRecentlyViewedProductsService 1, product 1, Product 1, products 1, recently 1, viewed 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Services/Catalog/RecentlyViewedProductsService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:19; KEYWORDS:  1, AddProductToRecentlyViewedList 1, catalogSettings 1, CatalogSettings 1, endregion 1, GetRecentlyViewedProducts 1, IRecentlyViewedProductsService 1, List 1, MaxValue 1, product 1, Product 1, products 1, productService 1, recently 1, RecentlyViewedProducts 1, RecentlyViewedProductsEnabled 1, RecentlyViewedProductsNumber 1, viewed 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Home/MenuModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, Home 1, Presentation 1, RecentlyAddedProductsEnabled 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/IOrderService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, product 1, 
+
+
+FILE: src/Libraries/Nop.Services/Orders/OrderService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, c 1, product 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Customer/CustomeReturnRequestsModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Items 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Order/SubmitReturnRequestModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, Items 1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Orders/OrderStatus.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, c 1, d 1, 
+
+
+FILE: src/Presentation/Nop.Web/Administration/Controllers/TaxController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:10; KEYWORDS:  1, c 1, Controllers 1, endregion 1, f 1, model 1, Name 1, Presentation 1, ToList 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Controllers/CountryController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Constructors 1, Controllers 1, endregion 1, Name 1, Presentation 1, region 1, ToList 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/ShoppingCart/EstimateShippingModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, c 1, endregion 1, Media 1, Name 1, Presentation 1, region 1, ShoppingCart 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Home/HeaderModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, No 1, Presentation 1, Web 1, WishlistEnabled 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Home/LanguageSelectorModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, d 1, f 1, Presentation 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/Media/PictureModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, AlternateText 1, Framework 1, FullSizeImageUrl 1, ImageUrl 1, Media 1, mode 1, Models 1, PictureModel 1, Presentation 1, Title 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Extensions/SeoExtensions.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:59; KEYWORDS:  2, ArgumentNullException 1, at 1, c 1, Catalog 1, category 1, Category 1, Collections 1, Common 1, Core 1, Current 1, d 2, Domain 1, e 1, Empty 1, endregion 1, Extensions 1, Fields 1, Generic 1, GetLocalized 2, Gets 1, GetSeName 2, GetSettingValueBoolean 1, Home 1, i 1, Linq 1, Localization 1, m 1, manufacturer 1, Manufacturer 1, Models 1, name 1, Name 2, number 1, of 1, param 1, Presentation 2, product 1, Product 2, region 2, returns 1, SeName 2, Services 1, summary 1, System 1, TODO 1, Web 2, x 2, 
+
+
+FILE: src/Libraries/Nop.Core/Domain/Catalog/PriceRange.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:3; KEYWORDS:  1, price 1, To 1, 
+
+
+FILE: src/Libraries/Nop.Services/Directory/CurrencyService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, c 1, ConvertToPrimaryStoreCurrency 1, Id 1, 
+
+
+FILE: src/Libraries/Nop.Services/Directory/ICurrencyService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, ConvertToPrimaryStoreCurrency 1, 
+
+
+FILE: src/Presentation/Nop.Web/Models/PagingFilteringModel.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:56; KEYWORDS:  3, at 1, c 3, Catalog 1, Categories 1, Collections 1, Constructors 1, Core 2, d 2, Domain 1, endregion 2, Framework 1, Generic 1, IList 2, List 1, Methods 1, Models 2, of 1, PageNumber 2, PageSize 2, PagingFilteringModel 2, Position 2, Presentation 3, PriceMax 1, PriceMin 2, Product 1, ProductSorting 2, ProductSortingEnum 2, region 1, sorting 1, Specs 1, summary 1, System 1, TotalCount 1, ViewMode 1, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web/Extensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:15; KEYWORDS:  1, c 1, category 1, Category 1, CategoryModel 1, Empty 1, Home 1, m 1, Presentation 1, product 1, Product 1, region 1, ToModel 1, Web 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web/Infrastructure/AutoMappterStartupTask.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:27; KEYWORDS:  2, Catalog 1, category 2, Category 1, CategoryModel 1, Core 1, Directory 1, Domain 1, Linq 1, Mapper 1, Models 1, Presentation 2, product 1, Product 2, ProductModel 1, Services 1, SubCategoryModel 1, System 1, Tax 1, Web 2, x 2, 
+
+
+FILE: src/Libraries/Nop.Core/GenericComparer.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Core 1, endregion 1, Fields 1, Linq 1, Methods 1, region 1, System 1, x 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Mvc/Routes/RoutePublisher.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:7; KEYWORDS:  1, Core 1, Linq 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web/Nop/Admin/Infrastructure/AdminStartupTask.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, c 1, Core 1, Current 1, Linq 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/Themes/ThemeableBuildManagerViewEngine .cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, c 1, endregion 1, f 1, Methods 1, Presentation 1, region 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Infrastructure/AutoMapperInitialization.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:21; KEYWORDS:  2, Admin 1, c 1, Catalog 1, CatalogCategoryModel 1, CatalogProductModel 1, category 1, Category 1, Core 1, d 1, Empty 1, Models 1, MVC 2, Presentation 2, Services 1, Web 2, x 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Models/Catalog/CatalogCategoryModel.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:24; KEYWORDS:  2, Catalog 1, CatalogCategoryModel 2, CatalogProductModel 2, d 1, f 2, Linq 1, List 1, Models 1, MVC 2, PagingFilteringContext 1, PagingFilteringModel 1, Presentation 2, Products 2, System 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Models/PagingFilteringCommandContext.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:40; KEYWORDS:  2, Catalog 1, command 2, Constructors 1, Core 1, endregion 1, Linq 1, List 1, LoadPagedList 1, Methods 1, Models 1, Mvc 1, MVC 2, PageIndex 2, PageNumber 1, PageSize 2, PagingFilteringCommand 2, PagingFilteringModel 1, Presentation 2, PriceMax 2, PriceMin 2, ProductSorting 2, region 1, Specs 2, System 1, To 2, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Extensions/MappingExtensions.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:13; KEYWORDS:  1, Admin 1, Catalog 1, category 1, Category 1, Core 1, d 1, Extensions 1, Models 1, MVC 1, Presentation 1, To 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Models/Catalog/CatalogProductModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Catalog 1, CatalogProductModel 1, Linq 1, Models 1, MVC 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Areas/Admin/AdminAreaRegistration.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:9; KEYWORDS:  1, Admin 1, c 1, e 1, Mvc 1, MVC 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Areas/Admin/Controllers/CategoryController.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:20; KEYWORDS:  1, ActionResult 1, Admin 1, c 1, Catalog 1, Category 1, Collections 1, Content 1, Controllers 1, fd 1, Generic 1, Linq 1, List 1, Mvc 1, MVC 1, Presentation 1, RedirectToAction 1, System 1, text 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Areas/Admin/Models/CategoryModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, Admin 1, Catalog 1, Collections 1, Generic 1, Linq 1, List 1, Mvc 1, MVC 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Areas/Admin/Models/CategoryProductModel.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, Admin 1, Catalog 1, Collections 1, e 1, Generic 1, Linq 1, MVC 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Global.asax.cs; SUPPORT: 3; CONFIDENCE:0; SMIndex:24; KEYWORDS:  3, Catalog 1, Collections 1, e 3, file 1, Generic 1, Linq 1, Mvc 2, MVC 3, Presentation 3, System 2, Web 3, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Infrastructure/DependencyRegistar.cs; SUPPORT: 2; CONFIDENCE:0; SMIndex:14; KEYWORDS:  2, Catalog 1, Collections 1, e 2, Generic 1, MVC 2, Presentation 2, System 1, Web 2, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Properties/AssemblyInfo.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:5; KEYWORDS:  1, MVC 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Data/DependencyRegistar.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, d 1, 
+
+
+FILE: src/Libraries/Nop.Services/Localization/LocalizationService.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:2; KEYWORDS:  1, d 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/ViewEngines/Razor/WebViewPage.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:4; KEYWORDS:  1, d 1, Presentation 1, Web 1, 
+
+
+FILE: src/Libraries/Nop.Core/Tasks/IStartupTask.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, Collections 1, dev 1, file 1, Generic 1, Linq 1, mode 1, System 1, 
+
+
+FILE: src/Libraries/Nop.Data/StartupTasks.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:8; KEYWORDS:  1, Collections 1, dev 1, file 1, Generic 1, Linq 1, mode 1, System 1, 
+
+
+FILE: src/Presentation/Nop.Web.Framework/IoC/StructureMapDependencyResolver.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, Collections 1, dev 1, file 1, Generic 1, Linq 1, mode 1, Mvc 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Infrastructure/DIBootstrapper.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:12; KEYWORDS:  1, Collections 1, dev 1, file 1, Generic 1, Linq 1, mode 1, Mvc 1, MVC 1, Presentation 1, System 1, Web 1, 
+
+
+FILE: src/Presentation/Nop.Web.MVC/Infrastructure/DIRegistry.cs; SUPPORT: 1; CONFIDENCE:0; SMIndex:11; KEYWORDS:  1, Collections 1, dev 1, file 1, Generic 1, Linq 1, mode 1, MVC 1, Presentation 1, System 1, Web 1, 
+
+

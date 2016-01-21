@@ -1,0 +1,1549 @@
+commit 344dffbc54df221d03eaa6dbbb677b2cefd20a23 1437082437 ----sp
+7/17/2015 3:03:57 AM
+Matias Niemel„
+docs($animateCss): add missing options flag to animation example
+
+Closes #12202
+
+commit ad7200e2c25b217396083932396ca103a57448f3 1434568742 ----sp
+6/18/2015 12:49:02 AM
+St‚phane Campinas
+docs(tutorial/Tutorial): add missing word
+
+Closes #12147
+
+commit f2c94c61d1e5c8a2985b4a5dd310e1f70b8f4833 1430855099 ----sp
+5/6/2015 1:14:59 AM
+Peter Bacon Darwin
+style($http): add missing semi-colon
+
+commit feeea8a1c878145623efece10c05cae70a18ab51 1430166902 ----sp
+4/28/2015 2:05:02 AM
+Viktor Zozulyak
+docs(angular.injector): missing optional parameter mark
+
+Closes #11528
+
+commit 68323034d6c204134bad2157e135118a63dc0a47 1429223440 ----sp
+4/17/2015 4:00:40 AM
+ElRaph
+docs(ngMessages): missing quotation mark...
+
+... let the example fail. It seem to be a copy paste fail.
+
+commit fe9cd9db965b3fc12c2ca005b10b82a5d57abb62 1428764802 ----sp
+4/11/2015 8:36:42 PM
+cexbrayat
+docs(ngMessages): missing quote in sample
+
+Closes #11527
+
+commit f6b51fc0a226c23858bb561c7f8b815b02164259 1425834857 ----sp
+3/8/2015 10:44:17 PM
+Elliot Bentley
+docs(ngDisabled): Clarify "incorrect" example
+
+Add obvious label to example of incorrect usage.
+To a user scanning the docs (ie. me) it's easy to miss the fact
+that this top example doesn't actually work.
+
+Closes #11192
+
+commit 29cdaee2b6e853bc3f8882a00661698d146ecd18 1425292822 ----sp
+3/2/2015 4:10:22 PM
+Marcy Sutton
+feat(ngAria): add roles to custom inputs
+
+This change adds the missing roles: `slider`, `radio`, `checkbox`
+
+Closes #10012
+Closes #10318
+
+commit 76edec7f9b6dd35c9887d778c0f06085ba0f8c36 1424571470 ----sp
+2/22/2015 7:47:50 AM
+Igor Minar
+chore(clean-shrinkwrap): preserve git+https:// resolved property
+
+previously we thought that git:// was enough, but we also want git+https:// otherwise we can miss important info
+in clean shrinkwrap file
+
+commit bb1c379b36fbb40bfa922dbe13c648c6d96d7a29 1422568086 ----sp
+1/30/2015 3:18:06 AM
+Caitlin Potter
+docs($compile): create new error for "missing controller identifier"
+
+commit 4af7cdaf4d046ddd0f0bdef55e43f91548364db9 1421246509 ----sp
+1/14/2015 8:11:49 PM
+Jonathan Gruber
+docs(tutorial/step_10): Added missing semicolon
+
+Added a missing semicolon in definition of $scope.setImage.
+
+Closes #10752
+
+commit c66b4b6a133f7215d50c23db516986cfc1f0a985 1420199582 ----sp
+1/2/2015 5:23:02 PM
+Marc Laval
+fix(ngPluralize): generate a warning when using a not defined rule
+
+When using `ng-pluralize` and a rule is missing, then generate a warning
+
+Fix #10207
+
+commit 25623b709f7bac2c400a1f52e6a78646144d3fab 1419254667 ----sp
+12/22/2014 6:54:27 PM
+Kevin Primat
+docs(guide/location): add missing definite article
+
+The sentence was missing a definite article so was unclear. Added one to clarify.
+
+Closes #10547
+
+commit e091bb7dbbeb4aa01360e900bf854e6369b38ab0 1418740284 ----sp
+12/16/2014 8:01:24 PM
+Jack Kingsman
+docs(error/badcfg): add missing "but"
+
+Sentence meaning was unclear; added what I assumed should have been a "but"
+
+Closes #10473
+
+commit d604f941e8a703bfa8c0ec498bcc9baad194a317 1418730247 ----sp
+12/16/2014 5:14:07 PM
+Jes£s Rodr¡guez Rodr¡guez
+fix(CHANGELOG): missing version number for 1.2.28
+
+Well, the version number was missing there.
+
+commit 6bd4292c24a0020f28bf7d21d3d6db19dd54bcca 1418519874 ----sp
+12/14/2014 6:47:54 AM
+Dan Tennery-Spalding
+docs(API Reference): corrected two typos - two missing commas
+
+In the ngAnimate section, there were two commas missing from two sentences. This is inconsistent with the grammar used in the rest of the API documentation and made the document (slightly) more difficult to read. The two sentences are shown below, with the new commas added:
+
+1. "Once defined, the animation can be triggered"
+                           ^
+                    comma added
+
+2. "Once registered, the animation can be triggered"
+                              ^
+                    comma added
+
+Closes #10447
+
+commit 7a374691b9d3a249ecf8f2f878e1370c579e0364 1416696482 ----sp
+11/23/2014 4:18:02 AM
+Rado Kirov
+docs(injector): adds a missing backtick and reformat list.
+
+Closes #10189
+
+commit 7e233eb58a19b12f460423fd2718079ac3b6b0ea 1415779496 ----sp
+11/12/2014 1:34:56 PM
+PatrickJS
+docs($q): missing finally notifyCallback API
+
+finally allows for notifyCallback and is missing in the Docs
+https://github.com/angular/angular.js/blob/v1.3.2/src/ng/q.js#L288
+
+Closes #10010
+
+commit 830846f664187eb748a75f7eb874632678f93ec7 1415705070 ----sp
+11/11/2014 4:54:30 PM
+Andreas Fischer
+docs(guide/Modules): missing "a" in "a collection"
+
+Closes #10001
+
+commit ed6e91b31824b57a084b33b4fc7f869c8d5909be 1414772938 ----sp
+10/31/2014 9:58:58 PM
+Ryan Smith
+fix($animate): properly handle class resolution when element data is missing
+
+Closes #9636
+
+commit e5c53b393bddba1d716193634f705b60d3e20663 1413707419 ----sp
+10/19/2014 2:00:19 PM
+Starojitski
+docs(tutorial/step-2): add missing span elements
+
+In Lession 1 template has phone names within `span` element, while in
+lession 2 the name is directly within the wrapper `div`
+
+Closes #9670
+
+commit ab240196bf5cdbe85a18bfd7e7a6a287bf5c22f7 1412703549 ----sp
+10/7/2014 11:09:09 PM
+Ben Harold
+docs($injector): fix syntax error
+
+There was a missing parenthesis in $injector test example
+
+Closes #9469
+
+commit 8f9c4daca5e40bf91492c1c897bad4f8804ddeb1 1411163628 ----sp
+9/20/2014 3:23:48 AM
+Peter Bacon Darwin
+docs(limitTo): restore the missing * to make comment a jsdoc block
+
+commit bf2c55ea297cc55786593dd4100468b7103df0ca 1411162805 ----sp
+9/20/2014 3:10:05 AM
+Peter Bacon Darwin
+docs($aria): add basic missing docs for the $aria service
+
+The individual service methods should be documented too.
+
+cc: @arbus
+
+commit 3c53b28cc20689271f6a97a4a23af2c7b2d95330 1411080667 ----sp
+9/19/2014 4:21:07 AM
+jeffavis
+docs(guide/bootstrap): fix missing ngController in example
+
+commit f3884df0a90c35945e9137562e39506b290f5be2 1411054997 ----sp
+9/18/2014 9:13:17 PM
+Georgios Kalpakas
+docs(ngController): Fix priority value mentioned in the docs
+
+The `@priority 500` part was missing from the ngDoc comment, thus the docs mentioned a priority of 0
+(instead of the correct 500).
+
+Closes #9070
+
+commit 871f321f5029cbad57f1f89cc3b7c87639e483b1 1410394522 ----sp
+9/11/2014 5:45:22 AM
+Michael Gallagher
+chore(ngLocale): Include numberformatsymbolext.js in Closure Slurper Script
+
+Adds missing number format and symbol rules to Closure slurper script.
+
+Closes #6179
+Closes #9013
+
+commit 3471fedfbc7a30a061bed4b512d9ef8dd5620f36 1409909032 ----sp
+9/5/2014 2:53:52 PM
+Rouven Weáling
+refactor(indexOf) Remove a now unused copy of the indexOf function
+
+This was missed in 300bffc4fe1ef664576abb39d2f6671b11813986
+
+Closes #8939
+
+commit 976da56d506bb70c6168f3de759aaa00a880c8c9 1409845565 ----sp
+9/4/2014 9:16:05 PM
+Matias Niemel„
+test(ngModel): add missing tests for ngMin/ngMax for date inputs
+
+commit a4520a745d917c77f1d12cdbce48272c643f7255 1409172973 ----sp
+8/28/2014 2:26:13 AM
+Igor Minar
+fix(Angular): remove duplicate nodeName_ references
+
+I forgot to remove the variable declaration in previous nodeName_ commit.
+
+commit fe697527b4a09cdba3e741ce2be6b47a8a426aec 1409143115 ----sp
+8/27/2014 6:08:35 PM
+Richard Harrington
+docs(shallowCopy): add missing word 'are' and period.
+
+Closes #8794
+
+commit 7ef2921caee2be24102e153f22ea79d679f582cb 1409039934 ----sp
+8/26/2014 1:28:54 PM
+grsmvg
+docs(form): add dollar sign back to setSubmitted()
+
+Dollar sign was missing for setSubmitted() due to fc732564640231fb59dcd7e432093c3336083653, just
+adding it back in ?(^?^)?
+
+Closes #8772
+
+commit 2e3a7fd3e95e07ba0b9ab215a8b882cb7bb160bf 1408994913 ----sp
+8/26/2014 12:58:33 AM
+vdyckn
+docs(guide/directive) example79 ptor missing attr
+
+Closes #8257
+
+commit 36230194be8aa417b0af33d618060829a75c4c5f 1408577269 ----sp
+8/21/2014 4:57:49 AM
+Caitlin Potter
+fix(forEach): match behaviour of Array.prototype.forEach (ignore missing properties)
+
+Array.prototype.forEach will not invoke the callback function if the properety is not present in the
+object. Because of this, we have the illusion of not iterating over non-added properties in a sparse
+array.
+
+From ECMAScript:
+
+9. Repeat while k < len
+     a. Let Pk be ToString(k).
+     b. Let kPresent be HasProperty(O, Pk).
+     c. ReturnIfAbrupt(kPresent).
+     d. If kPresent is true, then
+            i. Let kValue be Get(O, Pk)
+            ... (steps for invoking the function and aborting if it throws)
+
+Closes #8510
+Closes #8522
+Closes #8525
+
+commit 56bd0378bf06f49bb5980fb882d2af37bdbefbc1 1407950427 ----sp
+8/13/2014 10:50:27 PM
+Namolovan Nicolae
+docs(guide/e2e-testing): correct link to protractor's getting started
+
+angular/protractor@fcd973b#diff-f3b56000093113bd3bfb6c9c05e7e945 splits the overview doc into
+multiple files, and removes overview.md from the repository entirely, making the current link a 404.
+
+This CL points the link to the new getting-started document rather than the overview, and avoids
+linking to a missing document.
+
+Closes #8595
+
+commit acf38b382bae92312dcbdf6125f2a1a3842e5201 1407187698 ----sp
+8/5/2014 2:58:18 AM
+Caitlin Potter
+docs(CHANGELOG.md): add missing breaking change from 1.3.0-beta.14
+
+Closes #8474
+
+commit 0107bfcab6e8b76e394229e3ff357c4d2d6d0eec 1406838403 ----sp
+8/1/2014 1:56:43 AM
+Peter Bacon Darwin
+docs(ngSubmit): add link to `form` docs to discourage double submission
+
+Closes #6017
+
+commit 46f755a0bcf435e2df915f9ae041c4f9d38837fe 1406323564 ----sp
+7/26/2014 2:56:04 AM
+Ivan Alvarez
+docs(tutorial): update step_03.ngdoc
+
+1) The original document is not clear to a new developer in where to place the code.
+2) The query.clear() statement to clear the query before the second test is missing in the original document.
+3) Refactored to use the query and phoneList variables in both tests, so its easier to read and understand.
+
+Closes #7815
+
+commit 0daaab0341ec20ddaed44e430847197bdc906668 1406322675 ----sp
+7/26/2014 2:41:15 AM
+Mitch Robb
+docs(tutorial): update step7 ngdoc to fix grammar
+
+This line was missing an 'as'
+
+Previous:
+We also have to add the modules dependencies of our app. By listing these two modules as dependencies of `phonecatApp`, ...
+
+New:
+We also have to add the modules *as* dependencies of our app.
+
+Closes #8345
+
+commit eff00ea98cf6aebc73fa95c01384ba7c4ee6cb2b 1405988205 ----sp
+7/22/2014 5:46:45 AM
+Shane Keller
+docs(guide/scope): add missing period
+
+commit 8cefb0b628553f6db1d3b626f10ead2c27c76a9d 1405557722 ----sp
+7/17/2014 6:12:02 AM
+Josh Schreuder
+docs($interval): fix missing square brackets in example
+
+Closes #8228
+
+commit 6775972461ad157a787aeab2c18a6670af6e7603 1404390325 ----sp
+7/3/2014 5:55:25 PM
+Cory Boyd
+docs($httpProvider): add missing documentation
+
+Add documentation for $httpProvider default values
+
+Closes #7782
+
+commit 1f6a5a1a9255a2db19a1ea4c04cdbcdbb2850b6c 1403613300 ----sp
+6/24/2014 6:05:00 PM
+Caitlin Potter
+fix(input): improve html5 validation support
+
+This CL improves mocking support for HTML5 validation, and ensures that it works correctly along
+with debounced commission of view values.
+
+Closes #7936
+Closes #7937
+
+commit 3cbc8e5563d0f272838a65636989544519873492 1402684527 ----sp
+6/14/2014 12:05:27 AM
+Igor Minar
+test(jqLite): add a missing test for jqLite#text
+
+commit c97c5cec2ff566d775c0f4996fa6647711c6fbab 1402004726 ----sp
+6/6/2014 3:15:26 AM
+rodyhaddad
+test(jqLite): adapt missed test to new expando name
+
+commit 3f365f5238a7f57a6088619b4dbc44b1b9a9fde0 1400823106 ----sp
+5/23/2014 11:01:46 AM
+Juan Manuel Palacios
+docs(tutorial): match html from angular-phonecat in step 7 instructions
+
+Place phoneId binding in a proper HTML node
+
+The code where the phoneId binding in the phone-detail.html template is first explained in step 7
+of the tutorial doesn't make it a child of a proper HTML node, which makes the end-to-end test
+against the view (also introduced in step 7) fail.
+
+The test acquires the binding right from the view (by.binding('phoneId')), and apparently this
+operation fails when the binding is not a child of an HTML node, and therefore the entire test also
+fails. As soon as the binding is placed inside a <span></span> tag pair, the binding is found and
+the test passes. The code on github for step 7 has it right, the binding is within the span tags,
+but in the documentation I'm patching here the span's are missing.
+
+?.?.:*ú?? MERCI ?.?.:*ú??
+
+Closes #7561
+
+commit ff16d224ca81c07f3ef744e7a461b344af98ecf4 1400703810 ----sp
+5/22/2014 1:53:30 AM
+Richard Littauer
+test(ngClass): add missing assertions
+
+commit 92f588cd15b8f20f8c7f87f1384a6957c4cf136f 1400686097 ----sp
+5/21/2014 8:58:17 PM
+Firexion
+docs(tutorial): add <span> to index.html to match phonecat step4
+
+Add missing <span> to app/index.html to match actual code on github
+
+?.?.:*ú?? Merci beaucoup! ?.?.:*ú??
+
+Closes #7520
+
+commit 055b738d4e7fa033d8e8c15ebc635362b306cada 1399463958 ----sp
+5/7/2014 5:29:18 PM
+Thomas Tuts
+docs(directive): fix misspelled HTML class for an alert
+
+Muchas gracias
+
+Closes #7381
+
+commit e1d6178457045e721872022f71227b277cb88726 1398898280 ----sp
+5/1/2014 4:21:20 AM
+Dave Smith
+fix($httpBackend): Add missing expectHEAD() method
+
+This was documented but not implemented.
+
+With accompanying unit test to ensure the $httpBackend.expect*() methods exist.
+
+Closes #7320
+
+commit 461d6990cf9462906518ef905ecb8f8565c4fcd6 1396704877 ----sp
+4/5/2014 7:04:37 PM
+Yiling Lu
+docs(tutorial): fix links to bower in Step 11
+
+Minor change: add missing bower reference link.
+
+Closes #7005
+
+commit 8e2c62ae9dedc9aef1d2926068de8f63a62a578c 1396561575 ----sp
+4/4/2014 3:16:15 AM
+Brian Ford
+chore(CHANGELOG.md): add missing 1.2.15 changelog
+
+commit cb6b976851b2114382cbd0d0ce1894eb4c49472f 1396561421 ----sp
+4/4/2014 3:13:41 AM
+Brian Ford
+chore(CHANGELOG.md): add missing changes to 1.2.16 release
+
+commit ed4cd6c3c6a30ddfead1cbcf48f2ac6adf60a802 1395139397 ----sp
+3/18/2014 4:13:17 PM
+Peter Bacon Darwin
+chore(utils): fix version number processing
+
+The changes to version-info meant that the version being injected into
+the code at build time was missing the "dot" (patch) version and the
+release code-name.
+
+commit a9a38d84b93f5c3c595d9e2b16eab1b400023919 1394753963 ----sp
+3/14/2014 5:09:23 AM
+Sagie Maoz
+docs(guide/compiler): add missing closing parenthesis
+
+commit 9aab5bfc03bfb9f39b5c18b878e14c9a60a2681a 1393605477 ----sp
+2/28/2014 10:07:57 PM
+nosideeffects
+docs(ngAnimate): add missing 'super' to addClass
+
+commit 713f9758e212179c360ed8c4a460f6e66028c0a8 1393458643 ----sp
+2/27/2014 5:20:43 AM
+pyriand3r
+docs(guide/directive): update directive restrict options
+
+- add missing 'C' restriction for class names
+
+commit 1293cc88cd3d2e72c55fa8b8d268fab246e79fed 1393025832 ----sp
+2/22/2014 5:07:12 AM
+Caitlin Potter
+chore(examples): remove final traces of examples from the tree
+
+Apparently some example files were referenced in angularFiles.js, and this was missed when
+2f4513339337bb8aa6c9dfe1191d169b4fc57999 was checked in. This cleans it up.
+
+Closes #6405
+
+commit d7a73e41eddf3b8f06b87535c5ba6cc3196cbffd 1392907292 ----sp
+2/20/2014 8:11:32 PM
+Peter Bacon Darwin
+chore(doc-gen): add formatted error messages to error pages
+
+This got missed in the doc migration: When there is an error in an
+Angular app, extra information is placed in the URL, which can be used
+by the docs application to display a more useful message.
+
+This fix adds that back in.  The error message templates are extracted
+by the minerr tool during build and put into the errors.json file. The
+errors-doc processor will load this up and attach these message templates
+to the error docs.
+
+The display of these templates was already in place, via the errorDisplay
+directive in docs/app/js/errors.js.
+
+(Also, moved the error.template.html file into the angular.js repository
+from the dgeni-packages repository as this is specific to the angular.js
+project and all the other error related stuff is in here.
+
+Finally, also, added an e2e test that checks that minerr formatted
+messages are displayed correctly.
+
+Closes #6363
+
+commit f8b11f358498c1c1056be3e98a732f297ab2d56f 1392645866 ----sp
+2/17/2014 7:34:26 PM
+St‚phane Reynaud
+docs(tutorial): add missing @step tags
+
+Since steps 9 and 11 were missing @step tags they were out of order
+
+Closes #6292
+Closes #6291
+
+commit 6483dea08c6fae937e62ce242212152d7ef27d91 1392577420 ----sp
+2/17/2014 12:33:40 AM
+Peter Bacon Darwin
+docs(bike-shed-migration): Add missing module tag
+
+The generator is able to imply the module from the containing folder for
+most files but these are in the ng module but are stored at the root folder.
+
+commit 1079105443145a85a47496591b5d249a223710f2 1392234097 ----sp
+2/13/2014 1:11:37 AM
+Caitlin Potter
+docs($interpolate): fix link to $interpolateProvider#endSymbol
+
+The markup here was missing the methods_ prefix and behaved incorrectly.
+
+Closes #5802
+
+commit d119e3630246da3169e6b89e98a48d7731fd837e 1392233981 ----sp
+2/13/2014 1:09:41 AM
+Caitlin Potter
+docs($location): fix link to $rootScope.Scope.$on
+
+Previously missing the methods_ prefix.
+
+Closes #5798
+
+commit 98b2f8ef18cd3024e566252d4537075cb3e4a24b 1392217535 ----sp
+2/12/2014 8:35:35 PM
+James Kyle
+docs(currencyFilter): added missing line break in currency doc ptor test
+
+Closes #6229
+
+commit 686b13bf60e5b2d3d904fde5c076e50faaf9bcb7 1392162136 ----sp
+2/12/2014 5:12:16 AM
+Jesse Palmer
+docs(core): add closing tag to ngApp directive example
+
+added missing closing tag to ngApp example.
+
+Closes #6066
+
+commit a68624444afcb9e3796b1a751cf3817cafd20240 1392078922 ----sp
+2/11/2014 6:05:22 AM
+James Wagoner
+docs(ngSubmit): ngSubmit also works with the `data-action`/`x-action` attributes
+
+The documentation states only the "action" attribute triggers this, which is incorrect. When using
+the attribute "data-action" (as for AJAX control, attempting to bypass the "action" attribute but
+still make it obvious what its for), Angular thinks this is also classified as "action" and
+continues with the page submission.
+
+Closes #6196
+
+commit a8c1d9c97804f7df98150456c2702fd39e3a22f0 1391646303 ----sp
+2/6/2014 5:55:03 AM
+Franziskus Domig
+docs(angular.forEach): add missing space in test
+
+Closes #6130
+
+commit c5f69e3f64514223917d74caf14d21b899474b42 1391561019 ----sp
+2/5/2014 6:13:39 AM
+Nicolas Leger
+chore(ngdoc): fix misspellling of Naturally in sortVersionsNatrually
+
+Corrects "sortVersionsNatrually" method name in `ngdoc.js` in "sortVersionsNaturally"
+
+commit e0209169bf1463465ad07484421620748a4d3908 1390420307 ----sp
+1/23/2014 1:21:47 AM
+Caitlin Potter
+fix(a): don't preventDefault on click when SVGAElement has an xlink:href attribute
+
+Before this change, an SVGAElement with an xlink:href attribute and no href or name attribute which
+was compiled by the angular HTML compiler would never be clickable, due to the htmlAnchorDirective
+calling event.preventDefault() due to the missing href attribute.
+
+This change corrects this behaviour by also testing the xlink:href attribute if the element in
+question is determined to be an SVG anchor tag (with the href property having type SVGAnimatedString)
+
+Closes #5896
+Closes #5897
+
+commit cd74f7446822189929270643ce7c4dc9eb7fa36a 1389990873 ----sp
+1/18/2014 2:04:33 AM
+???
+docs(tutorial): add missing semicolon to code snippet
+
+Lets encourage people to use semicolons in javascript :>
+
+Closes #5834
+
+commit fced1c0c1663738885033a3aa00a02dc89bf000b 1389931912 ----sp
+1/17/2014 9:41:52 AM
+Neil Rubens
+docs(tutorial): fix typo
+
+Correction misspelling: easist -> easiest
+
+Closes #5850
+
+commit c3ab915d2ef8606c298cb4ae2f5cc8a30d3b250a 1389478192 ----sp
+1/12/2014 3:39:52 AM
+Seth Stone
+docs(tutorial): add missing beforeEach(module()) to test
+
+Test snippet was missing this necessary statement that was present in the sample code.
+
+Closes #5743
+
+commit 2b344dbd20777fb1283b3a5bcf35a6ae8d09469d 1389426156 ----sp
+1/11/2014 1:12:36 PM
+Daniel Zimmermann
+fix($route): update current route upon $route instantiation
+
+This fixes cases where the first ngView is loaded in a template asynchronously (such as through ngInclude), as the service will miss the first  event otherwise.
+
+Closes #4957
+
+commit 1d2a388830d95ae1a1f9b577fd0891a2e1f31bcd 1389315107 ----sp
+1/10/2014 6:21:47 AM
+Ren‚ Wilhelm
+fix(docs): Add missing whitespace
+
+commit 1b0718bf89aff5a9686cd89cad91a7a11825e9f0 1389056787 ----sp
+1/7/2014 6:36:27 AM
+Jay Goldman
+docs(tutorial/step-12): replaced a missing apostrophe and fixed grammar errors
+
+Fixed a missing apostrophe and some grammar in the Animating 'ngClass' with JavaScript section
+
+commit 07084e1c8bd4efa28b3f02aea353640af0cf37d6 1388481881 ----sp
+12/31/2013 2:54:41 PM
+Igor Minar
+test(injector): add missing test for #5577
+
+Add a missing test for fix that was merged via #5577
+
+commit 1d5e18b062c3e33b2a8d96aa58d905ed2cd48649 1386922471 ----sp
+12/13/2013 1:44:31 PM
+Brian Atkinson
+fix(closure): add missing FormController extern definitions
+
+Closes #5303
+
+commit d0f8bd30a6c53f00c1206021f68330cb5e8eda37 1386014134 ----sp
+12/3/2013 1:25:34 AM
+Blaise Kal
+docs($animate): require ngAnimate in example, syntax fixes
+
+The example in the section "JavaScript-defined Animations" would not run without the ngAnimate dependency. Also added a missing comma and semicolons.
+
+commit 1a15c01b649d868adfd655ec0790c2b2b4a5107d 1385594409 ----sp
+11/28/2013 4:50:09 AM
+St‚phane Reynaud
+docs($compile): fix missing space
+
+commit b837a31afac0b7357759df383aadb266903f9269 1385390031 ----sp
+11/25/2013 8:03:51 PM
+Pete Bacon Darwin
+docs(CONTRIBUTING): highlight what makes a good issue submission
+
+commit 0f7c4ca671ac807c53510372bb24d5cfec0bc7f5 1385132592 ----sp
+11/22/2013 8:33:12 PM
+Caitlin Potter
+chore(style): fix missing indentation in httpBackend from a3172a2
+
+commit 043500fb27ed572f197e81b044518bd159c303e1 1384947509 ----sp
+11/20/2013 5:08:29 PM
+St‚phane Reynaud
+docs(ngPluralize): Fix missing space before parentheses
+
+There should be a space between "braces" and "(`{}`)"
+
+Closes #5026
+
+commit b1366c32d4742acd66ebc6ed1e3cb3954c50b558 1384435631 ----sp
+11/14/2013 6:57:11 PM
+rsnapp
+docs($q): add missing closing parentheses in code example
+
+Closes #4900
+
+commit ed9e570a12e01ea128a9348b1ed927d2c7ae56ae 1384434183 ----sp
+11/14/2013 6:33:03 PM
+PatrickJS
+docs(downloading): fix invalid filenames and add missing modules
+
+Closes #4846
+
+commit b89584db10b63f346cbfd03f67fb92504e5bf362 1383705936 ----sp
+11/6/2013 8:15:36 AM
+Matias Niemel„
+fix($animate): avoid hanging animations if the active CSS transition class is missing
+
+Closes #4732
+Closes #4490
+
+commit e19067c9bbac3c3bb450c80f73eb5518bd0db1a1 1383175262 ----sp
+10/31/2013 4:51:02 AM
+Brian Ford
+fix(ngIf): ngIf removes elements dynamically added to it
+
+When using ngIf with ngInclude on the same element, ngIf previously did not remove
+elements added by ngInclude. Similarly, when using ngIfStart/End, ngIf will miss
+elements added between the start/end markers added after ngIf is linked.
+
+This commit changes the behavior of ngIf to add a comment node at the end of its
+elements such that elements between the starting comment and this ending comment
+are removed when ngIf's predicate does not hold.
+
+commit 05bc53d34d8843f97dc9f561ce23829989299554 1382812396 ----sp
+10/27/2013 12:03:16 AM
+Sean Fahey
+docs(tutorial/step-11): add missing dependencies
+
+Closes #4633
+
+commit af34a4a2c081abd68ad568149561c91d58f746c8 1382810021 ----sp
+10/26/2013 11:23:41 PM
+mgechev
+docs(http): add missing brace in the 2nd interceptors example
+
+Closes #4621
+
+commit faf5b980da09da2b4c28f1feab33f87269f9f0ba 1382648055 ----sp
+10/25/2013 2:24:15 AM
+Igor Minar
+fix($compile): instantiate controlers when re-entering compilation
+
+When we re-enter compilation either due to async directive templates or element transclude directive
+we need to keep track of controllers to instantiate during linking.
+
+This piece of info was missing when re-entering compilation and that's what this commit fixes.
+
+I also reordered the properties in the previousCompileContext object.
+
+Closes #4434
+Closes #4616
+
+commit 08cdd77c28e95cb2d01d568f31873124c97ec33a 1381769612 ----sp
+10/14/2013 10:23:32 PM
+Igor Minar
+docs: add missing priority documentation for structural directives
+
+commit b76ed0b28cf77a46e8b0e76bf365462adc21d9b2 1381726026 ----sp
+10/14/2013 10:17:06 AM
+royling
+docs(tutorial/step-5): add missing formatting to examples
+
+The indenting doesn't work for code samples that are inside bullet points.
+
+Closes #4403
+
+commit cd216c4c30adfebb3ef633f18fab2d98e8c52ebc 1381621967 ----sp
+10/13/2013 5:22:47 AM
+Matias Niemel„
+fix($animate): ensure that a timeStamp is created if not provided by the browser event
+
+Firefox and (sometimes) Opera may not provide a timeStamp value in their event when passed
+to the event handler. This may cause animations not to close properly. This fix will automatically
+create a timeStamp value for the event in this situation when missing.
+
+Closes #3053
+
+commit 9bbd62f4543ad8760deec08170c674cc028772cc 1381345946 ----sp
+10/10/2013 12:42:26 AM
+Mark J. Titorenko
+fix(ngMock.$interval): should use angular.isDefined
+
+The newly introduced `$interval` mock service for ngMock calls `isDefined`
+in the global namespace which fails when used within unit tests.
+
+This change adds the missing `angular.` prefix to such `isDefined` calls.
+
+Closes #4334
+Closes #4353
+
+commit d3fce9e82c1e248231d46bf3ff6ed61b20914088 1381160725 ----sp
+10/7/2013 9:15:25 PM
+Peter Bacon Darwin
+style(angularSpec): add missing semicolon
+
+commit 28fe4464d8f40409dc05a290224cc06883aed2f6 1381094793 ----sp
+10/7/2013 2:56:33 AM
+pzajdel
+docs(tutorial/step02): fix missing brace
+
+Closes #4301
+
+commit 7645e05e4d7143316cb169b221030e74498f0a1a 1381005854 ----sp
+10/6/2013 2:14:14 AM
+Tom Elovie Spruce
+docs(filter): add missing semi-colon
+
+Closes #4273
+
+commit 6972596ce99f2a11ae07e65ebcb554cef1dd3240 1380663414 ----sp
+10/2/2013 3:06:54 AM
+Matthew Kleiman
+docs(ngRoute): add angularEvent param to $routeChangeStart event
+
+Adds missing implied first argument, `angularEvent`, to match
+the rest of the `$routeChange` event documentation.
+
+commit d206f3d2ad95179c9944792789fb9052977dbf08 1379345765 ----sp
+9/16/2013 9:06:05 PM
+Dave Peticolas
+doc(api): fix grammar in a directive description
+
+- Add missing words.
+- Simplify text.
+
+commit bd478db770f36597b7bea8382c5b5f2d5a001ac8 1379345065 ----sp
+9/16/2013 8:54:25 PM
+Dave Peticolas
+docs(api): fix grammar in ngClick description
+
+- Add missing word 'directive'.
+- Add missing word 'an'.
+
+commit 3b5fd53e2db3dafedd0f0e65ab272379aff81139 1379190856 ----sp
+9/15/2013 2:04:16 AM
+Umur Kontaci
+docs(ngRoute): add missing parameter to $routeChangeError
+
+The first parameter in $routeChangeError is the event object.
+
+Closes #3986
+
+commit f86395aadfec515899dbc49b77c2e7da61271d36 1378904216 ----sp
+9/11/2013 6:26:56 PM
+Sam Dornan
+docs(scope): clean up grammar and improve clarity
+
+Some typos fixed and grammar improved:
+- withing -> within
+- life-cycle -> life cycle
+- extraneous spaces
+- grammar mistakes
+- missing commas
+- reworded unclear statements
+
+Closes #3920
+
+commit 573d41b73cf67b59b2c9f84ace7f9491793fa179 1378902497 ----sp
+9/11/2013 5:58:17 PM
+rodyhaddad
+docs(ngChange): remove wrong @restrict and add missing @param
+
+commit 26685782b36b7d7c5eed88df76ddd39405202b43 1378897898 ----sp
+9/11/2013 4:41:38 PM
+Butch Peters
+docs(Attributes): add missing documentation for $observe method
+
+- Add proper ngdoc annotations to existing $observe documentation
+- Add link to directive guide for usage example of $observe
+- Add note about $observe function parameter signature
+
+Closes #3957
+
+commit 57c43dd3762ea665125bff7e4727bce06a225b32 1377215754 ----sp
+8/23/2013 5:25:54 AM
+Brian Ford
+docs(module): improve the installation instructions for optional modules
+
+Currently, the documentation does a bad job of explaining the distinction between the services that it provides,
+and the module itself. Furthermore, the instructions for using optional modules are inconsistent or missing.
+This commit addresses the problem by ading a new `{@installModule foo}` annotation to the docs generator that
+inlines the appropriate instructions based on the name of the module.
+
+commit 8ee9a3e902e523577f9ea331af56c7bad6b4eea9 1377128583 ----sp
+8/22/2013 5:13:03 AM
+Adam Shannon
+fix(docs): Replace missing end tilde in resource docs for minerr.
+
+commit 00af067d828e5655712d2a212ef222f0082fa151 1377067164 ----sp
+8/21/2013 12:09:24 PM
+Michal Gole?biowski
+fix(package.json): add a repository field
+
+The `npm install` command complains about the missing repository field.
+
+Closes #3674
+
+commit 3bc4e7fd20372c0cad8298bff019b32681b16026 1376607034 ----sp
+8/16/2013 4:20:34 AM
+Tom Dunstan
+fix(filter): filter on false properties
+
+Code was evaluating !expression[key] while attempting to
+see if the key was present, but this was evaluating to true for
+false values as well as missing keys.
+
+Closes #2797.
+
+commit 920a3804136d49cdaf7bc2712f5832bc50409dc9 1376516046 ----sp
+8/15/2013 3:04:06 AM
+Andy Gurden
+fix($timeout): clean deferreds immediately after callback exec/cancel
+
+Make sure $timeout callbacks are forgotten about immediately after
+execution or cancellation.
+
+Previously when passing invokeApply=false, the cleanup used $q and so
+would be pending until the next $digest was triggered. This does not
+make a large functional difference, but can be very visible when
+looking at memory consumption of an app or debugging around the
+$$asyncQueue - these callbacks can have a big retaining tree.
+
+commit 670ca75c8ab3072af289ad6b136208c6ac2e0aa7 1376501057 ----sp
+8/14/2013 10:54:17 PM
+Vojta Jina
+test(docs): add missing createMockWindow()
+
+Add missing angular.mock.createMockWindow (removed in
+0dd062231a4d495133fd907eeae95c566380c6e1), that the docs tests were
+using.
+
+commit 9fcb5c0891512ec276836a4084a8aea48df2f115 1374937658 ----sp
+7/27/2013 8:37:38 PM
+Roland
+docs(tutorial): add formatting
+
+the string literal {{query}} was missing as it was not enclosed into ``
+
+commit bea9422ebfc8e80ee28ad81afc62d2e432c85cbb 1374782435 ----sp
+7/26/2013 1:30:35 AM
+Chirayu Krishnappa
+feat($sce): new $sce service for Strict Contextual Escaping.
+
+$sce is a service that provides Strict Contextual Escaping services to AngularJS.
+
+Strict Contextual Escaping
+--------------------------
+
+Strict Contextual Escaping (SCE) is a mode in which AngularJS requires
+bindings in certain contexts to result in a value that is marked as safe
+to use for that context One example of such a context is binding
+arbitrary html controlled by the user via ng-bind-html-unsafe.  We
+refer to these contexts as privileged or SCE contexts.
+
+As of version 1.2, Angular ships with SCE enabled by default.
+
+Note:  When enabled (the default), IE8 in quirks mode is not supported.
+In this mode, IE8 allows one to execute arbitrary javascript by the use
+of the expression() syntax.  Refer
+http://blogs.msdn.com/b/ie/archive/2008/10/16/ending-expressions.aspx
+to learn more about them.  You can ensure your document is in standards
+mode and not quirks mode by adding <!doctype html> to the top of your
+HTML document.
+
+SCE assists in writing code in way that (a) is secure by default and (b)
+makes auditing for security vulnerabilities such as XSS, clickjacking,
+etc. a lot easier.
+
+Here's an example of a binding in a privileged context:
+
+  <input ng-model="userHtml">
+  <div ng-bind-html-unsafe="{{userHtml}}">
+
+Notice that ng-bind-html-unsafe is bound to {{userHtml}} controlled by
+the user.  With SCE disabled, this application allows the user to render
+arbitrary HTML into the DIV.  In a more realistic example, one may be
+rendering user comments, blog articles, etc. via bindings.  (HTML is
+just one example of a context where rendering user controlled input
+creates security vulnerabilities.)
+
+For the case of HTML, you might use a library, either on the client side, or on the server side,
+to sanitize unsafe HTML before binding to the value and rendering it in the document.
+
+How would you ensure that every place that used these types of bindings was bound to a value that
+was sanitized by your library (or returned as safe for rendering by your server?)  How can you
+ensure that you didn't accidentally delete the line that sanitized the value, or renamed some
+properties/fields and forgot to update the binding to the sanitized value?
+
+To be secure by default, you want to ensure that any such bindings are disallowed unless you can
+determine that something explicitly says it's safe to use a value for binding in that
+context.  You can then audit your code (a simple grep would do) to ensure that this is only done
+for those values that you can easily tell are safe - because they were received from your server,
+sanitized by your library, etc.  You can organize your codebase to help with this - perhaps
+allowing only the files in a specific directory to do this.  Ensuring that the internal API
+exposed by that code doesn't markup arbitrary values as safe then becomes a more manageable task.
+
+In the case of AngularJS' SCE service, one uses $sce.trustAs (and
+shorthand methods such as $sce.trustAsHtml, etc.) to obtain values that
+will be accepted by SCE / privileged contexts.
+
+In privileged contexts, directives and code will bind to the result of
+$sce.getTrusted(context, value) rather than to the value directly.
+Directives use $sce.parseAs rather than $parse to watch attribute
+bindings, which performs the $sce.getTrusted behind the scenes on
+non-constant literals.
+
+As an example, ngBindHtmlUnsafe uses $sce.parseAsHtml(binding
+expression).  Here's the actual code (slightly simplified):
+
+  var ngBindHtmlUnsafeDirective = ['$sce', function($sce) {
+    return function(scope, element, attr) {
+      scope.$watch($sce.parseAsHtml(attr.ngBindHtmlUnsafe), function(value) {
+        element.html(value || '');
+      });
+    };
+  }];
+
+Impact on loading templates
+---------------------------
+
+This applies both to the ng-include directive as well as templateUrl's
+specified by directives.
+
+By default, Angular only loads templates from the same domain and
+protocol as the application document.  This is done by calling
+$sce.getTrustedResourceUrl on the template URL.  To load templates from
+other domains and/or protocols, you may either either whitelist them or
+wrap it into a trusted value.
+
+*Please note*:
+The browser's Same Origin Policy and Cross-Origin Resource Sharing
+(CORS) policy apply in addition to this and may further restrict whether
+the template is successfully loaded.  This means that without the right
+CORS policy, loading templates from a different domain won't work on all
+browsers.  Also, loading templates from file:// URL does not work on
+some browsers.
+
+This feels like too much overhead for the developer?
+----------------------------------------------------
+
+It's important to remember that SCE only applies to interpolation expressions.
+
+If your expressions are constant literals, they're automatically trusted
+and you don't need to call $sce.trustAs on them.
+e.g.  <div ng-html-bind-unsafe="'<b>implicitly trusted</b>'"></div> just works.
+
+Additionally, a[href] and img[src] automatically sanitize their URLs and
+do not pass them through $sce.getTrusted.  SCE doesn't play a role here.
+
+The included $sceDelegate comes with sane defaults to allow you to load
+templates in ng-include from your application's domain without having to
+even know about SCE.  It blocks loading templates from other domains or
+loading templates over http from an https served document.  You can
+change these by setting your own custom whitelists and blacklists for
+matching such URLs.
+
+This significantly reduces the overhead.  It is far easier to pay the
+small overhead and have an application that's secure and can be audited
+to verify that with much more ease than bolting security onto an
+application later.
+
+commit 711a493709addc841c5dba34e483043467dacc2f 1373998684 ----sp
+7/16/2013 11:48:04 PM
+James deBoer
+test(utils): Adds a missing test for snake_case
+
+commit d7fde5fcb12ba0bcb8061ad349e22f3513cd6ec6 1373810637 ----sp
+7/14/2013 7:33:57 PM
+David
+style(ngMock): add missing whitespace
+
+commit f89ba38dcd495b9e5f835b3af489e7b92e72ccf6 1373376681 ----sp
+7/9/2013 7:01:21 PM
+Marco Vito Moscaritolo
+docs(angular.identity): fix missing 'angular' in identity function
+
+commit db8d8f9a4389c0de122d75ab42f0d75a1e558493 1371589528 ----sp
+6/19/2013 2:35:28 AM
+gdi2290
+docs(tutorial): add missing 'node' command and <code> tags
+
+commit 041f118b01933fa07098f1333be8e2cf1a28f248 1369334695 ----sp
+5/24/2013 12:14:55 AM
+David Bennett
+docs(input): add missing ngChange directive for email type
+
+All other input types already have it.
+
+commit 18f14117dec12271229e16fe6fba8d032fe934e8 1369259476 ----sp
+5/23/2013 3:21:16 AM
+Eddie Monge
+style(docs/template): add in missing semicolons
+
+Add semicolons where they were missing in the docs section per Google
+code styling guide.
+
+Closes #2736
+
+commit 59eb50204a046599e02a7af0bc31d83a95b81f15 1369168412 ----sp
+5/22/2013 2:03:32 AM
+Joakim Blomskold
+docs(Angular.js): add missing @returns to extend()
+
+commit e295eeefaa26b203cefb8b1148417e4c4f85e037 1367357894 ----sp
+5/1/2013 3:08:14 AM
+Vojta Jina
+test(controller): instantiate controller defined on window
+
+Just adding a missing spec.
+
+commit 04cc1d2890fc6bf9c4e82a4c7cacd5a652ccbdc9 1364596237 ----sp
+3/30/2013 4:00:37 AM
+Felipe Lahti
+docs(guide): add missing closing div tag
+
+commit ace54ff08c4593195b49eadb04d258e6409d969e 1360881835 ----sp
+2/15/2013 4:13:55 AM
+Rosina Bignall
+feat(filter): Add comparison function to filter
+
+Add optional comparator function argument to $filter('filter')(array,
+expression, comparator) such that the comparator function is used to
+compare the values and predicates.  When true, defaults to equality.
+When missing defaults to substring matching.
+
+commit e47f8d2b9660527d7a62eb3e56a3e4f7f1c272f1 1360871853 ----sp
+2/15/2013 1:27:33 AM
+Cedric Soulas
+docs($resource): fix missing punctuation
+
+commit 035e0130f35c4ae1636ffc2822be4762c7b2cc4b 1360649467 ----sp
+2/12/2013 11:41:07 AM
+Igor Minar
+test(angular.copy): add tests for scenarios when target is missing
+
+commit deac80a6e8024de7bc9b485fd083e20da934fccd 1359053463 ----sp
+1/25/2013 12:21:03 AM
+Igor Minar
+docs(date): add missing doc about TZ behavior
+
+commit d30845a7575154f004bef75f38cfde10960f2dc5 1358573590 ----sp
+1/19/2013 11:03:10 AM
+Will Moore
+docs(contribute): adding npm install to step-by-step
+
+npm install is listed in the dependencies section of the contribute guide but
+is missing from the step-by-step. This adds it as step 4.
+commit 37cced6296f0433d61434dad5878bb7036e6a493 1355250030 ----sp
+12/11/2012 11:50:30 PM
+Peter Evjan
+docs(README.md): add missing 'you' and a comma
+
+commit cf4ed8a14588e99f8871a1593f2825128e641c77 1354214430 ----sp
+11/30/2012 12:10:30 AM
+Johannes Hansen
+fix(docs): add missing </div> tag to sourceEdit directive template
+
+commit 8a7f752a802bc68ad01869e500c54cc2566b04e3 1353192308 ----sp
+11/18/2012 4:15:08 AM
+Uri Goldshtein
+docs($q): fix missing bracket in the example
+
+commit cf78fb5661218b453fb81e1f6ca01a2cba277893 1350663245 ----sp
+10/19/2012 9:44:05 PM
+Igor Minar
+docs(contribute): add CLA note to code submission section
+
+commit 9398040a41d0041f949d5b5219eaaf1074cd5699 1346364911 ----sp
+8/31/2012 3:45:11 AM
+Igor Minar
+test(ngApp): add missing test for [ng-app] bootstrap
+
+commit 20348717640c0ef405c9fdcc8fec5b566efc48b3 1344876501 ----sp
+8/13/2012 10:18:21 PM
+Igor Minar
+fix($interpolate): $interpolateProvider.endSymbol() returns startSymbol
+
+I also added missing tests.
+
+commit c0d638a94b914edc76c5532c08a47ec4e60308d4 1344629079 ----sp
+8/11/2012 1:34:39 AM
+Igor Minar
+test(jqLite): add missing test for $destroy event
+
+commit 054d40f338f9000cddcf7f0513af37328b88ef41 1344629035 ----sp
+8/11/2012 1:33:55 AM
+Igor Minar
+fix(form): prevent page reload when form destroyed
+
+this fix ensures that we prevent the default action on form submission
+(full page reload) even in cases when the form is being destroyed as
+a result of the submit event handler (e.g. when route change is
+triggered).
+
+The fix is more complicated than I'd like it to be mainly because
+we need to ensure that we don't create circular references between
+js closures and dom elements via DOM event handlers that would then
+result in a memory leak.
+
+Also the differences between IE8, IE9 and normal browsers make testing
+this ugly.
+
+Closes #1238
+
+commit b6b92bd866e1d6d066f1c9bf1937496cd3e28664 1342714192 ----sp
+7/19/2012 9:39:52 PM
+brettcannon
+fix(docs): Add a missing "the".
+
+commit f0be543614d5c2c3f492e1ed73ec964bd8a3d381 1338678128 ----sp
+6/3/2012 4:32:08 AM
+Misko Hevery
+doc(ngdoc): clean up doc generation and add missing documentation links
+
+commit 705f4bbf115d2408e33b25f56edbf1f383aabb82 1336029326 ----sp
+5/3/2012 12:45:26 PM
+Igor Minar
+fix($compile): attach scope to the directive element when templateUrl and replace=true
+
+We forgot to reattach the scope to the replacement element. This affected only
+directives that had templateUrl and replace:true properties.
+
+Reported on the mailing list:
+https://groups.google.com/forum/?fromgroups#!topic/angular/zwjLr1msS2Y
+http://jsfiddle.net/lukebayes/g9Sh9/
+
+commit 6d7e7fdea6c3d6551ff40c150aa42e1375d2cb5f 1334223363 ----sp
+4/12/2012 3:06:03 PM
+Igor Minar
+fix($location): properly rewrite urls in html5 mode with base url set
+
+previously we were doing all kinds of checks to see if we should rewrite the url or not and we
+were missing many scenarios. not any more.
+
+with this change, we rewrite the url unless:
+- the href is not set
+- link has target attribute
+- the absolute url of the link doesn't match the absolute prefix for all urls in our app
+
+This also means that ng-ext-link attribute which we previously used to distinguish external
+links from app links is not necessary any more. apps can just set target=_self to prevent
+rewriting.
+
+BREAKING CHANGE: ng-ext-link directive was removed because it's unnecessary
+
+apps that relied on ng-ext-link should simply replace it with target=_self
+
+commit c0b78478a0e64942a69aba7c1bfa4eb01c0e9a5e 1333386844 ----sp
+4/2/2012 10:44:04 PM
+Igor Minar
+fix($q): $q.reject should forward callbacks if missing
+
+$q.reject('some reason').then() should not blow up, but correctly
+forward the callbacks instead.
+
+Closes #845
+
+commit 63be222326f3badbb76371f82d49fed5ab9e3e65 1331671977 ----sp
+3/14/2012 2:22:57 AM
+Vojta Jina
+docs(input): Fix some broken links, add missing $, use ng- in examples
+commit 772ddb983b06058ecfae46700641927183820a36 1331233574 ----sp
+3/9/2012 12:36:14 AM
+Igor Minar
+docs(directive, module): add various missing docs and fix existing docs
+
+commit cae9ad4ba9c31dfa9e1aa2acc945dfc8242d1c72 1329893159 ----sp
+2/22/2012 12:15:59 PM
+Misko Hevery
+docs(decorator): add missing decorate docs
+
+commit f5343c9fd3c7cd0fefdb4d71d2b579dbae998d6a 1327221039 ----sp
+1/22/2012 2:00:39 PM
+alkis
+docs($http): fix missing quote
+commit d1e7a5394ad74e0dc024a50f77fa32b46eac1be2 1323207169 ----sp
+12/7/2011 3:02:49 AM
+Igor Minar
+docs(form): add docs about form submission
+
+commit c9f2b1eec5e8a9eaf10faae8a8accf0b771096e0 1323205646 ----sp
+12/7/2011 2:37:26 AM
+Vojta Jina
+feat(form): do not prevent submission if action attribute present
+
+commit dbd880cc0a9521bd5b9c96ca3f052450c3def336 1322682575 ----sp
+12/1/2011 1:19:35 AM
+Igor Minar
+feat($http): add promise support
+
+quite messy, some tests are missing, contains an experimental jasmine DI support)
+
+commit b656552d68c7116ee5f7b7c217de6ce116fb3448 1322682575 ----sp
+12/1/2011 1:19:35 AM
+Igor Minar
+fix(angular-boostrap): add missing jQuery/jqLite binding
+
+commit ac73e8877e557e191f09e2f86cd3a118cc8a5d8e 1321331479 ----sp
+11/15/2011 10:01:19 AM
+Misko Hevery
+add(doc): added missing angular.module.ng namespace
+
+commit 1d966f8a65a968d6549f70ff59ac280f50b4ce24 1320182092 ----sp
+11/2/2011 2:44:52 AM
+Vojta Jina
+style(angularFiles): just missing semi-colon and extra comma
+commit 7d0c256ecd0fc22126090c4aeb18fd2c9fff2baa 1320039063 ----sp
+10/31/2011 11:01:03 AM
+Vojta Jina
+docs(jqlite): add missing methods
+
+commit 07926ff1ef2912a6fb8f361ae9b3c98bc3da1dc8 1318983910 ----sp
+10/19/2011 5:55:10 AM
+Igor Minar
+chore(version.yaml): add missing snapshot version suffix
+
+commit e14ac2c3b0c08df381618e92145eadd125aad03f 1315868543 ----sp
+9/13/2011 4:32:23 AM
+Di Peng
+style(bootstrap): fix some missing spaces
+
+commit 4b4292edb86d34067a2babb9f572a3641dd1d2a7 1315515659 ----sp
+9/9/2011 2:30:59 AM
+Vojta Jina
+style: fix some missing semi-colons and spaces, typos
+
+commit fc2f188d4d8f06aab31979b293d95580e19cbdf1 1315497592 ----sp
+9/8/2011 9:29:52 PM
+Vojta Jina
+style(filter): Couple of missing spaces, semi-colons, add empty lines
+
+commit dbf8afcba0cfc0e341e3ebd2dadeba627c083f0a 1314198033 ----sp
+8/24/2011 8:30:33 PM
+Di Peng
+fix(AngularPublic): expose missing angular public methods
+
+- expose lowercase, uppercase and isDate to angular public api
+- remove unnecessary extention of jqLite at an early stage
+
+commit 8bc7beacd80814102a6b08b83283ccf8614e44d4 1313169568 ----sp
+8/12/2011 10:49:28 PM
+Misko Hevery
+fix(bootstrap): missing var failed strict mode boot
+
+commit 15efbbdc1fe42f914e6442b32ffc032a4cc8e792 1312304496 ----sp
+8/2/2011 10:31:36 PM
+Vojta Jina
+fix($xhr.error): fix docs and add missed breaking change
+
+$xhr.error's first argument (request) has no callback property anymore,
+it's called success now...
+
+This breaking change was introduced by b5594a773a6f07dcba914aa385f92d3305285b24
+
+commit f39420e7d7aca2a97eaa01853991facf65dcbd6e 1311798247 ----sp
+7/28/2011 1:54:07 AM
+Vojta Jina
+style(): fix couple of missing semi-colons
+
+commit 66fec10dc309730ff6aa78a42c94f6c2a2b33b2a 1311698429 ----sp
+7/26/2011 10:10:29 PM
+Misko Hevery
+style(warnings): added missing semi colons
+
+commit 86a6cc7152d3743f8c071f7706905c8874963d4f 1310633970 ----sp
+7/14/2011 2:29:30 PM
+Vojta Jina
+chore(configs): Add missing files to jstd config
+
+Add jstd-scenario-adapter files into jstd configs (jquery, coverage).
+
+Remove angular.prefix, sufifix from exclude, as they don't have to be there.
+They are not included, because of *.js mask.
+
+commit d3fb5b411e979d0a4815c663c3489652fc5350f9 1309239709 ----sp
+6/28/2011 11:11:49 AM
+Igor Minar
+fix:tests: replace angular.annotate with annotate
+
+forgot to fix tests in 6aee2938a71c99fdd35639725c6900347999f658
+
+commit fee3717892498c63c24821104e99efab7c9ac177 1308666228 ----sp
+6/21/2011 7:53:48 PM
+Vojta Jina
+Update fixed docs content (guide)
+
+Couple of typos fixed:
+
+* indentation
+* batchLogbatchLog -> batchLog
+* start periodic checking
+* missing brace
+
+commit ec6d106d4af0885d9df3498183bbbbcc7971d55a 1307566151 ----sp
+6/9/2011 2:19:11 AM
+Misko Hevery
+code cleanup: missing ; and indentation
+
+commit d6e4636618b6f1dfb65d9cff9e5083950ad4acd9 1307488261 ----sp
+6/8/2011 4:41:01 AM
+Vojta Jina
+Couple of missing semi-colons
+
+commit 76df0db598730eeaab19599f9ee441c421423660 1307425920 ----sp
+6/7/2011 11:22:00 AM
+Vojta Jina
+Fixed docs search input with
+
+And couple of missing semi-colons...
+
+commit f85c82acd623e63f23a4f3ebba239280f14e380b 1303744637 ----sp
+4/25/2011 8:47:17 PM
+Vojta Jina
+Fix some typos, missing semi-colons, etc...
+
+This is a combination of 4 commits:
+* Fix some small typos, missing semi-colons, etc.
+* Fix comment for angular.scenario.SpecRunner.run method
+* Fixed some missing semi-colons in cookbook
+* Fixed missing semi-colon in nodeserver/server.js
+
+commit 56c00800c78d3d896fa6cb97ab97b974805152c4 1301559454 ----sp
+3/31/2011 1:47:34 PM
+Igor Minar
+fix jqLite#parent to be compatible with jQuery
+
+our original implementation doesn't work with
+document fragments on IE
+
+- tests were added to cover missing cases
+
+commit 9312bed4728e9f550fea131040cae199b3ab0c22 1301378688 ----sp
+3/29/2011 11:34:48 AM
+Vojta Jina
+Added missing semi-colons
+
+So that my eclipse stops complaining...
+
+commit 6f8940c5d04bdedbb1d5415ea30f058fffa41010 1298098933 ----sp
+2/19/2011 12:32:13 PM
+Igor Minar
+add missing example files for temp.html
+
+commit 037f30a0c9f819aedf47f0da782e8d1fec0d6489 1297835301 ----sp
+2/16/2011 11:18:21 AM
+Misko Hevery
+added missing semicolons
+
+commit 0f19cd3625ca0fddb7ecb20f4f4c6fda7d01e2e4 1297311094 ----sp
+2/10/2011 9:41:34 AM
+Misko Hevery
+corrected missbehaved example
+
+commit 3f0a37f380e262fa86689f06c0801ae54d8a0983 1296101543 ----sp
+1/27/2011 9:42:23 AM
+Igor Minar
+add missing test/mocks.js
+
+commit 5340d1e0b1c29103e187a1cdc33bbee48d98a74d 1295906622 ----sp
+1/25/2011 3:33:42 AM
+Igor Minar
+fix for infinite loop in retrieveScope with jQuery + specs
+
+- retrieveScope run into infinite loop if called on DOM tree
+  that doesn't contain scope reference (happens only with jQuery)
+- added missing specs for retrieveScope function
+
+commit 99004b0aedeac77663db08873975d4273eef19bf 1294730927 ----sp
+1/11/2011 12:58:47 PM
+Igor Minar
+fixing missing  dependency
+
+commit 97b1371199e4c514a23edad4546536616e0f9004 1290645123 ----sp
+11/25/2010 6:02:03 AM
+Igor Minar
+adding Note section to angular.Array.* where it was missing
+
+commit 72b7a1c531963de8715fab567f75a90ba9d56ce6 1288136699 ----sp
+10/27/2010 5:14:59 AM
+Igor Minar
+adding missing angular-mocksSpec.js file
+
+commit 7530eea7035e26a0bcc358c8ef94c79debabddf4 1287611315 ----sp
+10/21/2010 3:18:35 AM
+Igor Minar
+add missing spec for angularJsConfig
+
+commit 732bcd8a368d50995c796373e37be5a4d3b2bc8c 1287292201 ----sp
+10/17/2010 10:40:01 AM
+Vojta Jina
+Add missing tests for toKeyValue() function
+
+commit 7ed2191b07f2a89ff17ee906848bd9432216ee96 1286920139 ----sp
+10/13/2010 3:18:59 AM
+Igor Minar
+fixing missing semicolon
+
+commit 70ff7a2639fc55936854ad04a6242a700ae71a02 1286915866 ----sp
+10/13/2010 2:07:46 AM
+Igor Minar
+fix memory leak caused by leftbehind $invalidWidgets references
+
+- ng:switch should not clean up $invalidWidgets
+- $invalidWidgets should be clean up after each eval
+- add missing docs
+
+commit 328ff6c9265a16ae51cb01a8779445819f4118a1 1286207604 ----sp
+10/4/2010 9:23:24 PM
+Igor Minar
+adding missing spec for 'A' widget
+
+commit f6664ed7f6f6dd1f4f9756f57611a316089149cb 1269062319 ----sp
+3/20/2010 10:48:39 AM
+Misko Hevery
+tests fixed, still missing widgets
+
+commit bf838aab5d65a1019a4867b496e971c488589512 1267218743 ----sp
+2/27/2010 2:42:23 AM
+Misko Hevery
+forgot to compile
+
+commit 9d566fe98c3fa0091efef4adb0178f063da74f7c 1265756364 ----sp
+2/10/2010 4:29:24 AM
+Misko Hevery
+missing test
+
+----------Done----------

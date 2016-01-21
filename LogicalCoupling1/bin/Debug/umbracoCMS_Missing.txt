@@ -1,0 +1,1366 @@
+commit 5ab036e9d3239909eb711b453702419e0ea5e722 1437757088 ----sp
+7/24/2015 10:28:08 PM
+Shannon
+missing column creation in migration script.
+
+commit 89c3c712519916257cf1942465f9d85294d7c947 1435742028 ----sp
+7/1/2015 2:43:48 PM
+Shannon Deminick
+Merge pull request #732 from SoerenDeger/U4-6759
+
+Added missing language areas/keys to de lang file
+commit 671026cfc98f38f7a9031eb8e10e10d2f91a612c 1435559413 ----sp
+6/29/2015 12:00:13 PM
+Jesse
+Edited swedish translations
+
+Added a few missing and removed unused translations.
+
+commit 30979f92cce358884aeb119702c16fc4e94d4c50 1435322937 ----sp
+6/26/2015 6:18:57 PM
+S”ren Deger
+Added missing language areas/keys to de lang file
+
+Added missing language areas and keys to the german language file, i.e.
+area with alias: changeDocType, media, placeholders, grid and a lot of
+more.
+
+commit 40c35e585152ec2a05d890790c6679ee46262cf5 1435049636 ----sp
+6/23/2015 2:23:56 PM
+Shannon
+Fixes: U4-6582 RTE  "Link To File" missing rel="nodeId" attribute
+
+commit 08ff284121286c71ef5bf674f1076fe661e4eb3f 1434613456 ----sp
+6/18/2015 1:14:16 PM
+Shannon
+adds test to ensure the service level can remove a scheduled publish date, obsoletes method: GetHasPermission
+
+commit 4fcadc7e949350b6abf4ec74dfe21bf92ffb0b8c 1434536507 ----sp
+6/17/2015 3:51:47 PM
+Shannon
+fixes: U4-5591 Error Change premissions on many nodes. 500 - The server supports a maximum of 2100 parameters
+
+commit ee0297bb69e86a499fe75aa9ee2a6305d18e3b68 1434382613 ----sp
+6/15/2015 9:06:53 PM
+Stephan
+U4-6631 - throw on missing physical template file
+
+commit 2c809857af68e479117169ecc401b5d8866367bf 1431521967 ----sp
+5/13/2015 6:29:27 PM
+Sebastian Claesson Hoffback
+Swedish translation for the grid-editor
+
+Swedish translation was completly missing for the grid-editor
+
+commit be065b2fa32cf52a3531b355b52f7e30f727027b 1430483246 ----sp
+5/1/2015 5:57:26 PM
+Sebastiaan Janssen
+Generate symbols nupkg (apparently you can create it from an existing NuSpec file, very cool)
+
+Making sure that all pdbs ARE actually generated in Release mode (the AllBinaries file was missing loads of files)
+Generate all and include all xml doc files too
+Corrects WebPI zip, also shouldn't include dotLess.Core.dll
+
+commit f0dfd0dce2f308cb17fb3f5dcd206210fafad5fb 1430316924 ----sp
+4/29/2015 7:45:24 PM
+Sebastiaan Janssen
+U4-6568 NuGet 7.2.4 missing Microsoft.Threading.Tasks.dll and Microsoft.Threading.Tasks.Extensions.dll
+
+#U4-6568 Fixed Due in version 7.2.5
+
+commit 3a9ad91f8ff8d60f29d7579ca04c0acf403caf7a 1426675522 ----sp
+3/18/2015 4:15:22 PM
+Per Ploug
+Adds better error handling to missing grid editors
+
+commit 0932c980e90ea66a083e3346577217bdf4cf1674 1425618109 ----sp
+3/6/2015 10:31:49 AM
+Shannon
+Fixes: U4-6307 Incorrect culture assigned to user (missing region code)
+
+commit 74d0ec949d67327a08b3f803f06a0d30dbfaaeca 1425408199 ----sp
+3/4/2015 12:13:19 AM
+Sebastiaan Janssen
+Delete bower_components folder before build else missing packages will sometimes not be downloaded
+
+commit 9a042fbbdf5c785356572c1a239f4c4cc63007c3 1425372037 ----sp
+3/3/2015 2:10:37 PM
+Shannon
+Removes the assignment of the DefaultPermissions property since this is auto assigned in the ctor (and should be assignable)
+
+commit b73c7fbb16b60ca8999e35430a546faeaf27427c 1424342083 ----sp
+2/19/2015 4:04:43 PM
+Shannon
+Fixes: U4-6284 UmbracoCms.7.2.2-build.26 - missing feedback when file is too large
+
+commit 778d8e0afaaeb3de2d76c6009437a67a22ebf9e5 1421222412 ----sp
+1/14/2015 1:30:12 PM
+Asbjorn Riis-Knudsen
+Added missing apostrophes
+commit 2f74dfe5cb0877667759741d36b13fc74e0b6c40 1419400901 ----sp
+12/24/2014 11:31:41 AM
+Shannon
+fixes missing using statement
+
+commit 2e2ea57ba6d38d6130db3616b4046b14e6170247 1419001893 ----sp
+12/19/2014 8:41:33 PM
+per ploug
+Fixes grid editor always rending 12 columns
+
+When a user change grid cols, the editor keeps rendering 12 column
+layouts - this fixes the 12 cols issue and falls back to 12 in case of
+invalid/missing information
+
+commit 4520c0645490ee84ed11918b01d22e0070494a9b 1416939670 ----sp
+11/25/2014 11:51:10 PM
+Sebastiaan Janssen
+Fixes missing filename in the log
+
+commit 9834352de29a0ea3a7acdbe205c95e4326840a09 1416713418 ----sp
+11/23/2014 9:00:18 AM
+Chris Houston
+- Added all the missing Key's to the Spanish file
+- Updated the help documentation URL's
+- Updated the Community Contributor URL's
+
+commit df3d427c0b1cf7fb95f20183118814862da45527 1416473502 ----sp
+11/20/2014 2:21:42 PM
+Shannon
+WIP - Updates templates service and repo with some extra methods, creates new template tree, updates template model with some more properties, still need to finish the template tree, it's missing some menu actions.
+
+commit bfd79277fd58a5f3e29e51e979bfe646b7f718a8 1413459663 ----sp
+10/16/2014 5:11:03 PM
+Sebastiaan Janssen
+Adds two more required transform files and updates web.config with forgotten key
+
+commit da64215bc581f112267235df4304889b29be7e01 1413445730 ----sp
+10/16/2014 1:18:50 PM
+arknu
+forgot to update the datepicker format string in a couple of places
+
+commit 7df39efa7bc37687bffa2c2e92c097323774902d 1413425739 ----sp
+10/16/2014 7:45:39 AM
+Shannon
+Ensures missing indexes are added that are required for the other constraints, even though these are now added for 6.0, if the version is detected as greater than 6.2 they still need to be added. (U4-4133)
+
+commit 9dd803fb73c4a5a43813bfc4a7d8257b59733e1a 1411454834 ----sp
+9/23/2014 12:17:14 PM
+per ploug
+Fixes up missing .less merge
+
+commit 185e5d9b7f97151c49242769bc79283d9f878f1f 1410159129 ----sp
+9/8/2014 12:22:09 PM
+Stephan
+Create missing ITemplate TemplateMapper
+
+commit 7261162d8a686f97d6124a89194bf8e0a8e4fabd 1407196219 ----sp
+8/5/2014 5:20:19 AM
+Shannon
+Fixes some of U4-2633 Bundle all cache refresher transmissions into a single call per request for much better performance. See last note on issue.
+
+commit aceef2b318193707ace03e67a457d6d1eac39430 1406887945 ----sp
+8/1/2014 3:42:25 PM
+Sebastiaan Janssen
+Add missing grid view files.
+
+commit 99973841e31e9df49b8c764b1c56a3ebfc4aee4a 1406217422 ----sp
+7/24/2014 9:27:02 PM
+Shannon
+Fixes up packaging service - problem with setting property values properly on import due to a wip portion of getting tag values set correctly, though this was solved at the repo level and i unfortunately forgot to re-update this code.
+
+commit 966a29954c8a04db94fd93eb6f74dece8b3f4db3 1403879157 ----sp
+6/27/2014 7:55:57 PM
+Sebastiaan Janssen
+#U4-5010 fixed
+
+Package editing view missing in distribution
+
+commit d0cb27d1c1e1a0fb193b0c96dfcd2bc3ad4fd5a2 1402224560 ----sp
+6/8/2014 4:19:20 PM
+Shannon
+Completes: U4-2633 Bundle all cache refresher transmissions into a single call per request for much better performance
+
+commit d631039c0dcdfcf3e9f4fa71c7ef43dcd578ca83 1401120440 ----sp
+5/26/2014 9:37:20 PM
+Stephan
+U4-4928 - issue with missing media content properties
+
+commit b1e879bf68a60711bfd7e9fa45b0291d2784737f 1401112768 ----sp
+5/26/2014 7:29:28 PM
+Stephan
+U4-4928 - issue with missing media content properties
+
+commit 95b9a46b88d1afd56c1ec9b6cf17af7e78c40a78 1401109325 ----sp
+5/26/2014 6:32:05 PM
+Stephan
+U4-4928 - issue with missing media content properties
+
+commit 67bebd0d2d7fdb62a0f69d8180d40c8ce92e316c 1400085565 ----sp
+5/14/2014 10:09:25 PM
+antoine
+index.html missing
+
+commit c9961b51929780b3abc02f9e53c81e6bb49ac8ea 1399987476 ----sp
+5/13/2014 6:54:36 PM
+Stephan
+Fix Umbraco.Core project (missing files, would not build)
+
+commit a6cd2b9e1865fa03f4b36a2345f97596df2ddfe0 1399436830 ----sp
+5/7/2014 9:57:10 AM
+Shannon
+Fixes: U4-4420 TagQuery / TagService missing method to get content with tag.
+
+commit cfd21bc924e67339b6ffbb7489448fc4601d8db1 1399367089 ----sp
+5/6/2014 2:34:49 PM
+Shannon
+Got this working: U4-4420 TagQuery / TagService missing method to get content with tag - just need to add some unit tests.
+
+commit 4745be47652d92bc66dd4ffa91c03a01380868a6 1396948022 ----sp
+4/8/2014 2:37:02 PM
+perploug
+Fixes missing listview icons
+
+commit d9c66cd4b3c679b87e68cd6e5c77b949c3908984 1396431719 ----sp
+4/2/2014 3:11:59 PM
+Sebastiaan Janssen
+Adds AddRelation and missing events in RelationService from v7 into v6
+
+commit 1e01c2669f6622b438d0b11dc673e36915ed4af3 1395793428 ----sp
+3/26/2014 5:53:48 AM
+Shannon
+fixes missing semi-colon
+
+commit 6ccce4d914b323e7279e30a0ed0ae70cc67778ee 1395673307 ----sp
+3/24/2014 8:31:47 PM
+Sebastiaan Janssen
+U4-4515 GenericProperty.ascx.cs references non-existent lblAlias control, causing YSOD of death when editing certain document types
+
+Whoops, missed some references
+
+commit bf2efd30e91c843c47bf73e561aba2b9841d0bd2 1395650087 ----sp
+3/24/2014 2:04:47 PM
+Sebastiaan Janssen
+U4-4073 Audit Trail is missing from action menu
+
+Removed the icons for now as they are missing and should be new style icons anyway
+
+commit 672672d0aa9fc6635bc473212d16a6b47f1aa4d2 1395373824 ----sp
+3/21/2014 9:20:24 AM
+Shannon
+Completes: U4-2633 Bundle all cache refresher transmissions into a single call per request for much better performance
+
+commit 83f4c0262e88cd7d203f8a415908f53b4d05f337 1395279499 ----sp
+3/20/2014 7:08:19 AM
+Shannon
+Fixes: U4-4475 Creating new member doesn't put it in examine. Fixes up some cache refreshers to ensure they are calling the base method so that events fire consistently.
+
+Conflicts:
+	src/Umbraco.Web/Cache/UserPermissionsCacheRefresher.cs
+
+commit 154652c896df6decd3e0e68ad973f9cf4801b3ed 1395023989 ----sp
+3/17/2014 8:09:49 AM
+Shannon
+Merge remote-tracking branch 'origin/6.2.0' into 7.1.0
+
+Conflicts:
+	src/Umbraco.Core/Persistence/Migrations/MigrationRunner.cs
+	src/Umbraco.Core/Persistence/Migrations/Upgrades/TargetVersionSixTwoZero/AddChangeDocumentTypePermission.cs
+	src/Umbraco.Core/Persistence/Migrations/Upgrades/TargetVersionSixTwoZero/AdditionalIndexesAndKeys.cs
+	src/Umbraco.Core/Persistence/Migrations/Upgrades/TargetVersionSixTwoZero/AssignMissingPrimaryForMySqlKeys.cs
+	src/Umbraco.Core/Persistence/Migrations/Upgrades/TargetVersionSixTwoZero/UpdateToNewMemberPropertyAliases.cs
+	src/Umbraco.Core/Umbraco.Core.csproj
+	src/Umbraco.Tests/Umbraco.Tests.csproj
+	src/umbraco.controls/TreePicker/SimpleContentPicker.cs
+
+commit bbe6194b06166584db00def4a4e5ec1fcc4f4afb 1394762660 ----sp
+3/14/2014 7:34:20 AM
+Shannon
+Exception is thrown if trying to run mysql in med trust. Migrations arranged to execute schema migrations first and then data migrations. If a schema migration fails it will attempt to run the downgrade scripts of the migrations if running mysql since schema changes aren't supported in transactions. Updated all sql syntax providers to try to return only the column indexes, not key indexes. Updates the db version checker to include errors for all missing columns, indexes and constraints in the db and vice versa in the schema.
+
+commit 0a959b5b84de3e2f96a76d6f0da646eb0d4f6fe6 1394555951 ----sp
+3/11/2014 10:09:11 PM
+Sebastiaan Janssen
+Thought I'd moved the version up a already but looks like I forgot to commit. Also made it
+
+have a bit more contrast with it's background.
+
+commit 46461c7c5d49d7b33fee2e91c12b75bb5d2a59dc 1394183888 ----sp
+3/7/2014 2:48:08 PM
+perploug
+Fixes installer breaks with missing app_data/temp/installer folder
+
+commit 000b2b639f390330d4a83f5ac6fc3e4df45aa283 1393892452 ----sp
+3/4/2014 5:50:52 AM
+Shannon
+Merge branch '7.1.0-installer' of https://github.com/umbraco/Umbraco-CMS into 7.1.0-installer
+
+Conflicts:
+	src/Umbraco.Web/Install/Controllers/InstallApiController.cs
+	src/Umbraco.Web/Install/InstallSteps/DatabaseConfigureStep.cs
+	src/Umbraco.Web/Install/InstallSteps/DatabaseInstallStep.cs
+	src/Umbraco.Web/Install/InstallSteps/DatabaseUpgradeStep.cs
+	src/Umbraco.Web/Install/InstallSteps/FilePermissionsStep.cs
+	src/Umbraco.Web/Install/InstallSteps/SetUmbracoVersionStep.cs
+	src/Umbraco.Web/Install/InstallSteps/StarterKitCleanupStep.cs
+	src/Umbraco.Web/Install/InstallSteps/StarterKitDownloadStep.cs
+	src/Umbraco.Web/Install/InstallSteps/StarterKitInstallStep.cs
+	src/Umbraco.Web/Install/InstallSteps/UserStep.cs
+	src/Umbraco.Web/Install/Models/InstallSetupStep.cs
+	src/Umbraco.Web/Install/Models/InstallSetupStepAttribute.cs
+
+commit a5637af2d8ee511508416053684b8b2f2d28a83e 1393090346 ----sp
+2/22/2014 11:02:26 PM
+Sebastiaan Janssen
+Adding missing CreateMember method that also as a convenience allows you to pass in the member type alias instead of a whole membertype
+
+commit a556b4ed216d3ad568c2867671421509537b662e 1392706382 ----sp
+2/18/2014 12:23:02 PM
+Shannon
+Logs warnings if accessing built-in properties on the member model but the underlying property type is missing.
+
+commit b73c39b4e93cd1cf533d8b4ede85833567afe02b 1392619696 ----sp
+2/17/2014 12:18:16 PM
+Shannon
+Merge remote-tracking branch 'origin/6.2.0' into 7.1.0
+
+Conflicts:
+	src/Umbraco.Core/Persistence/Repositories/ContentRepository.cs
+	src/Umbraco.Core/Persistence/Repositories/Interfaces/IUserRepository.cs
+	src/Umbraco.Core/Persistence/Repositories/PermissionRepository.cs
+	src/Umbraco.Core/Services/UserService.cs
+	src/Umbraco.Tests/Services/PerformanceTests.cs
+	src/Umbraco.Web/Cache/CacheRefresherEventHandler.cs
+
+commit a1603c3cbdf64485c1b9cee6beb64c3629b0dbb8 1392613008 ----sp
+2/17/2014 10:26:48 AM
+Shannon
+Merge remote-tracking branch 'origin/6.2.0' into 7.1.0
+
+Conflicts:
+	src/Umbraco.Core/Models/Membership/EntityPermission.cs
+	src/Umbraco.Core/Persistence/Repositories/ContentRepository.cs
+	src/Umbraco.Core/Persistence/Repositories/PermissionRepository.cs
+	src/Umbraco.Core/PluginManager.cs
+	src/Umbraco.Web.UI/config/trees.config
+	src/Umbraco.Web/Search/ExamineEvents.cs
+	src/Umbraco.Web/umbraco.presentation/umbraco/Trees/TreeDefinitionCollection.cs
+
+commit deeaf724bd3e04f986c3bf6d933dd5c2ddd303a7 1391457851 ----sp
+2/4/2014 1:34:11 AM
+Per Ploug Krogslund
+Fixes missing dependencies
+
+commit 06cbdc37b478ede7a4c095dd4e15a6a9153c4c78 1390920314 ----sp
+1/28/2014 8:15:14 PM
+perploug
+Fixes: U4-4143 In rich text editor, non ASCII characters in source code window are encoded
+
+Also at the same time fixes missing config import from serverside config
+
+commit 585b42af483093b292043dd15c5a1fd6e232575c 1390454009 ----sp
+1/23/2014 10:43:29 AM
+Shannon
+More Save()'s missing and removes the extra calls to XmlGenerate - should save some processing time.
+
+commit ba2fa2bff4bd3a60160ec11231bf772de47dcd92 1389706391 ----sp
+1/14/2014 7:03:11 PM
+perploug
+Legacy dialogs missing conversion, language + partial view
+
+commit df7691ada3df00350793099e5ab1022ffdcd1b8b 1389604470 ----sp
+1/13/2014 2:44:30 PM
+perploug
+Adds missing mocks
+
+commit d97a0f5b6c161a180779b04c46707913fd4b142c 1389349315 ----sp
+1/10/2014 3:51:55 PM
+perploug
+Adds missing PluginController Attribute to updatecheckercontroller
+
+commit 6b760dcfe880ca22d066dbb4c17c92ac32e2d4b8 1389156473 ----sp
+1/8/2014 10:17:53 AM
+Shannon
+Merge remote-tracking branch 'origin/6.2.0' into 7.0.2
+
+Conflicts:
+	src/Umbraco.Core/Models/Membership/EntityPermission.cs
+	src/Umbraco.Core/Persistence/Factories/UserFactory.cs
+	src/Umbraco.Core/Persistence/Repositories/ContentRepository.cs
+	src/Umbraco.Core/Persistence/Repositories/Interfaces/IUserRepository.cs
+	src/Umbraco.Core/Persistence/Repositories/PermissionRepository.cs
+	src/Umbraco.Core/Services/ContentService.cs
+	src/Umbraco.Core/Umbraco.Core.csproj
+	src/Umbraco.Tests/Services/UserServiceTests.cs
+
+commit 1408e4f64eda7a35158a612339e7b490ad8ebdbf 1389107759 ----sp
+1/7/2014 8:45:59 PM
+Lars-Erik Aabech
+DictionaryRepository now excludes translations with missing language. Should've committed a test to prove that TabsAndPropertiesResolver.TranslateTab uncommented fails, but can't find a nice existing fixture, so just debugging to see if it works now.
+
+commit d71c686aeae1c686bcc8362cadd6a0c97be1f27e 1389097383 ----sp
+1/7/2014 5:53:03 PM
+Morten Christensen
+Typo or missing update in legacy User class
+
+commit 904cbbb906a754eace5ed7e78420177cff9de0eb 1387413686 ----sp
+12/19/2013 6:11:26 AM
+Shannon
+missing proj file update
+
+commit 137d859532fa11f3e5fc252abd6046bf1e6e8a8b 1387257218 ----sp
+12/17/2013 10:43:38 AM
+Shannon
+backports missing logic and tests from 7 that I overlooked.
+
+commit d343340f562fc36bc849c3822151dd010a8471a0 1386847705 ----sp
+12/12/2013 4:58:25 PM
+perploug
+Adds missing language keys
+
+commit 791c3f52084b039b809f991718e31005684f4b6f 1386712267 ----sp
+12/11/2013 3:21:07 AM
+Shannon
+added missing view file
+
+commit 976531fe7e54838563c0a96f5e0d1f8d2e549b98 1386673693 ----sp
+12/10/2013 4:38:13 PM
+perploug
+Removes missing file from web.ui.csproj
+
+commit bdc0ae7e2f68e53b1afa65086e33764b280786f4 1386158123 ----sp
+12/4/2013 5:25:23 PM
+perploug
+fixes: U4-3707 Change password under users is not translated
+
+translated, and added missing danish keys
+
+commit 7baa81c2dfc129d96ef4a1d498de5bba4d2cce68 1385722803 ----sp
+11/29/2013 4:30:03 PM
+perploug
+missing en translation for login dialog
+
+commit 4c932f013a58d941ef397b9484e42515e33b8aea 1384989308 ----sp
+11/21/2013 4:45:08 AM
+perploug
+fixes delete dialog missing spacing
+
+commit 12c982f1707c465243fe2c38ef4eff2736dedfeb 1384955667 ----sp
+11/20/2013 7:24:27 PM
+perploug
+ups, forgot an alert()
+
+commit 56e9d0a60208f6bf0f96bdbd00afe6bf8434c511 1384894595 ----sp
+11/20/2013 2:26:35 AM
+perploug
+Adds documentation for missing resource methods
+
+commit daa4ff28e72b3087be45b248c98e3c56b5ba2c2e 1384889859 ----sp
+11/20/2013 1:07:39 AM
+perploug
+Fixes missing section state indicator
+
+commit e3ec0c101962d7d2ea9f23bc8bbdd3ded1e2d94c 1384768126 ----sp
+11/18/2013 3:18:46 PM
+perploug
+fixes missing tinymce buttons
+
+commit a9dd33908c05e12e01e4ee1f7f510338bf993d94 1384768113 ----sp
+11/18/2013 3:18:33 PM
+perploug
+Fixes missing header validation
+
+commit 2784e2a22da1825bc55a94f0fa17ee2892f5807c 1384497026 ----sp
+11/15/2013 12:00:26 PM
+Shannon
+removes ref to missing file
+
+commit b9d22b2577b947e50b68aa9456f384823972ddc5 1384333054 ----sp
+11/13/2013 2:27:34 PM
+Shannon
+Fixes: U4-3506 Linkpicker in RTE doesn't expand tree to last selected link - missing GetPath parameter - which lead to lots of other cleanup, removes auth listening on the section and tree directives since that doesn't belong there, now the navigation controller determines what to render depending on authorization. Removes the path parameter on the umbTree and umbTreeItem since this didn't work and syncTree should be used instead. Fixed up some more tree sync logic as well.
+
+commit 2aaf3d06faa6abfb3934065125bbf1ff6d27163f 1384320325 ----sp
+11/13/2013 10:55:25 AM
+Shannon
+missing adding touchDevice to the local scope
+
+commit 0ab2b740040a7bd91e6a489123e00f0263076dad 1384246999 ----sp
+11/12/2013 2:33:19 PM
+perploug
+fixes missing legacy icons in IE
+
+commit 57e98fda977bd99a943e05aca1810f800bfc0e33 1384152882 ----sp
+11/11/2013 12:24:42 PM
+Shannon
+Fixes setting the 'section' on a tree node, fixes the editors syncTree call to not force reload when routing to the editor - this will still load in the data for the tree if it is missing, just won't force reload the individual tree node loading.
+
+commit 7664cec0d33630012981fc58c4adfc0e6af3257b 1383871684 ----sp
+11/8/2013 6:18:04 AM
+Shannon
+Fixes: U4-3442 tree sync doesn't work for nodes that are not loaded - tree sync is now working properly and loads in any nodes that are missing. Have removed the dependency on navigationService from umbTree directive since it should not have that dependency. navigationService now sets it's global current node after treeSync based on an event. Moved the treeSync logic to the treeService so it can be unit tested (now to write the unit tests). Added another method to treeService to reload a single node - this is now used by treeSync when the current node is being synced - much nicer than reloading all the children.  Updates the treeService to always add the current section to each tree node, this will make it much easier to know the treenode section - and in theory should mean we might be able to remove the ui global currentSection var.
+
+commit 3ba50e7bae4fd6a5a5897efa8a437265e4405e00 1383824493 ----sp
+11/7/2013 5:11:33 PM
+Morten Christensen
+Merge pull request #176 from pynej/add-stylesheet-ids
+
+Fix for missing Id's on FileService.GetStylesheets() call.  This is need...
+commit 01eb7157bdddd7af1ec82147bbdf0b665f3d9dfe 1383805201 ----sp
+11/7/2013 11:50:01 AM
+Shannon
+Adds missing moveNode from the legacy tree api
+
+commit 45d339928ab5979b91e23785cc8161b2ab1dd8cc 1383472662 ----sp
+11/3/2013 3:27:42 PM
+Sebastiaan Janssen
+Include missing System.Net.Http/System.Net.Http.WebRequest
+
+commit 7e7d93c8156945857bae4300bf1ff724dfe93c53 1383305257 ----sp
+11/1/2013 4:57:37 PM
+perploug
+Adds missing clientmngr methods
+
+commit 34f0576a909c9f962845c8c12c7501da132a7858 1383295344 ----sp
+11/1/2013 2:12:24 PM
+perploug
+Fixes: missign web-service reference in installer
+
+commit d8a85565983af95dc1503e6add39105ee88ea19e 1383081056 ----sp
+10/30/2013 2:40:56 AM
+perploug
+Fixes an issue with missing _key in member search
+
+commit ff7116ac5778c3d575cb6bd4b24a983ae1e328a2 1383031312 ----sp
+10/29/2013 12:51:52 PM
+Shannon
+couple missing semi colons
+
+commit dc336728b5483cabef10b161f742be6b0c273e2d 1382985138 ----sp
+10/29/2013 12:02:18 AM
+Jeremy Pyne
+Fix for missing Id's on FileService.GetStylesheets() call.  This is needed as sytlesheets can only be loaded in the editor via their Id so listing stylesheets needs to list there Id as well for custom plugins to render the build in editor.
+
+commit 92c7b4446b21558017767b50f5a155139da51afe 1382056052 ----sp
+10/18/2013 5:57:32 AM
+Shannon
+Merge remote-tracking branch 'origin/6.2.0' into 7.0.0
+
+Conflicts:
+	src/Umbraco.Core/Persistence/Migrations/Upgrades/TargetVersionSixTwoZero/AddChangeDocumentTypePermission.cs
+	src/Umbraco.Core/Persistence/Migrations/Upgrades/TargetVersionSixTwoZero/AdditionalIndexesAndKeys.cs
+	src/Umbraco.Core/Services/ContentService.cs
+	src/Umbraco.Tests/Umbraco.Tests.csproj
+	src/Umbraco.Web.UI/umbraco/dialogs/ChangeDocType.aspx.cs
+
+commit ac6aaedf3e5e9bfbf8ba46f3dc449ea4363af743 1382045677 ----sp
+10/18/2013 3:04:37 AM
+Shannon
+missing csproj commit to fix build
+
+commit d28cdf3bdc3a3c66b8eeb55974dfb4e900c8bdb3 1381969701 ----sp
+10/17/2013 5:58:21 AM
+Shannon
+Updates the formHelper and streamlines the way form submission is handled, updates the member and user controller to use the new change password functionality in the Security object which uses all of the correct logic to update a password based on the membership provider. Gets the user's change password form working correctly with server validation. now just need to get the user membership provider to actually work.
+
+commit c6c07b3861e2181275914193470ffefd45c3ba37 1381404822 ----sp
+10/10/2013 5:03:42 PM
+perploug
+missing char
+
+commit 0d4ee6e5d1189b1c3b0f14e962b4624df19859d0 1381401828 ----sp
+10/10/2013 4:13:48 PM
+perploug
+fix missing data annotations reference
+
+commit a5848a17c52c2e96a5f5269283e5f2bf4ac701e8 1381224153 ----sp
+10/8/2013 2:52:33 PM
+Stephan
+Commit missing files after merge
+
+commit dd4827493b99da4ebe3f6a4ec919724c4110a642 1381217490 ----sp
+10/8/2013 1:01:30 PM
+perploug
+missing files in sln
+
+commit f676ce6ac2951f6b76861a3b57647dbdc2ecc08e 1381133328 ----sp
+10/7/2013 1:38:48 PM
+perploug
+Remove missing file to unbreak build
+
+commit 418a29cbbf4273b9fa797e8d0d48b6239dc5bbb9 1380878337 ----sp
+10/4/2013 2:48:57 PM
+perploug
+Odd, missing config files crashed the site
+
+commit 4d8a3f44533632bea6ba7b063f013882e0409733 1380852935 ----sp
+10/4/2013 7:45:35 AM
+Shannon
+Updated the proj file to create the appSettings, connectionString config files if they are missing, then we also ignore these files and remove them from the repo - just like the web.config
+
+commit bb1a47aa810d34a2e4e5b205f9e02465c3f51eba 1380734574 ----sp
+10/2/2013 10:52:54 PM
+perploug
+Permissions dialog polish
+
+commit 60c4307f2eed328397c267d1d4b3f575cf1596b5 1380634625 ----sp
+10/1/2013 7:07:05 PM
+perploug
+Fixes: u4-3009 missing context menu in search results
+
+commit e1c0e70d0773462ddc5f6f967a35b96e67477fda 1380634602 ----sp
+10/1/2013 7:06:42 PM
+perploug
+Fixes: U4-3001 missing root node in tree selectors
+
+commit 0898638e3341e14803d33a7bb5473106afceab90 1380623547 ----sp
+10/1/2013 4:02:27 PM
+perploug
+Fixes: U4-2982 missing translation on contextmenu
+
+commit a11e947f964e76f18aa6ffb2dbefc66ba8ef8d74 1380525151 ----sp
+9/30/2013 12:42:31 PM
+Shannon
+Fixes: U4-2780 UserPermissions editor just YSODs
+
+commit 0c8a7f3466b573bacfff2b15050537afae9d4115 1380274559 ----sp
+9/27/2013 3:05:59 PM
+perploug
+Updates missing dashboard paths
+
+commit 5c8d027383951c591565da6fa20e4e90feffc4a7 1380031378 ----sp
+9/24/2013 7:32:58 PM
+perploug
+Media delete dialog, missing D attr validation
+
+commit 6e0fa9f9458eefda5e97e81271f36ecbefc00d24 1378828598 ----sp
+9/10/2013 9:26:38 PM
+Stephan
+Core.Configuration - support missing notDynamicXmlDocumentElements
+
+commit e921c670dd98be52726ef1d912eaaaae89b96690 1377852868 ----sp
+8/30/2013 2:24:28 PM
+perploug
+Another missing package file
+
+commit b86f2474d5a069f148ce63a0d03fc23ad0a869e0 1377521338 ----sp
+8/26/2013 6:18:58 PM
+Per Ploug Krogslund
+missing files
+
+commit 6c9f4c6353bed9b9f6f3c83a728ef88b15846f03 1377070370 ----sp
+8/21/2013 1:02:50 PM
+perploug
+Removes missing files from web.ui csproj
+
+commit 4bb71273e20a8752b64da0299d1f67ad80877e62 1376028009 ----sp
+8/9/2013 11:30:09 AM
+Shannon
+doh, re-publicized EntityPermissions... caused test errors.
+
+commit 61fbf2cfc66bff0c3783798056a778bf4d78cdc6 1376009544 ----sp
+8/9/2013 6:22:24 AM
+Shannon
+reverts PersistDeletedItem transaction because i forgot that the Commit() method of the UOW already takes care of the transaction.
+
+commit 82a87cbd923c88150b94891c428937e8059180c9 1375080390 ----sp
+7/29/2013 12:16:30 PM
+Shannon
+Doh, missed file
+
+commit a099af39c2323b09badbe898d0cea8372ab750cc 1374745856 ----sp
+7/25/2013 3:20:56 PM
+Sebastiaan Janssen
+xmlrpcnet was missing from nuspecs
+
+commit ae2ed170501a2e72e194970804b6cd97033468fd 1374477236 ----sp
+7/22/2013 12:43:56 PM
+Shannon
+missing files.
+
+commit 08f6f92e8c26efd5ebe964831c042ad899b2f4f8 1373416696 ----sp
+7/10/2013 6:08:16 AM
+Shannon
+Fixed JS Build issues - Mixed spaces/tab issues, missing semi-colon. Fixed grunt build to ensure that a self executing function wraps the JS build output.
+
+commit b1285fa7e35c5e46c48b1509af8c5454b79e4039 1372933870 ----sp
+7/4/2013 4:01:10 PM
+Morten Christensen
+Add missing id to unique naming overload
+
+commit a06821ffc081dbe8add6e66b97ff0d36296d4aec 1372652668 ----sp
+7/1/2013 9:54:28 AM
+Shannon
+missing files
+
+commit 96cec0b407a35392cadbc9d3ae109b7d21d64a30 1371825044 ----sp
+6/21/2013 8:00:44 PM
+Sebastiaan Janssen
+U4-2410 EditRelationType.aspx missing virtual path - 6.0.6
+
+commit 6600e9c899a14b78d4b306b3e989d85190b78219 1371118717 ----sp
+6/13/2013 3:48:37 PM
+Sebastiaan Janssen
+Merge pull request #6 from dpen2000/UserPermisionsFixIn6.1.2
+
+Fix U4-2320 - Error on saving User Permissions (for 6.1.2 release)
+commit 773500332bf365d9102f1b033b7ef46e10072d6d 1371088225 ----sp
+6/13/2013 7:20:25 AM
+david.pendray
+Fix U4-2320 - Error on saving User Permissions
+
+Nodes can be null but NodeIds property always returns a collection and this will return Ids from Nodes if _nodeIds are null and Nodes is not.
+
+commit ca4f5a39dae4b9bdc87c0b514624139408abd78c 1370904559 ----sp
+6/11/2013 4:19:19 AM
+Sebastiaan Janssen
+Add missing files
+
+commit acdcca0b91b7d3c0a5d27b953bcdebd6cf9e0838 1370904509 ----sp
+6/11/2013 4:18:29 AM
+Sebastiaan Janssen
+Add missing files
+
+commit 33ff82e76679de2a9ae2e44b280e851b990c8461 1370904464 ----sp
+6/11/2013 4:17:44 AM
+Sebastiaan Janssen
+Add missing files
+
+commit c8df4a08f9e1005bd4cbbe0aef8a639ad0fdad26 1370882909 ----sp
+6/10/2013 10:18:29 PM
+Shannon
+missing file commit
+
+commit 1f8aa65b5dd26f800fb4e8f1ca32a4da39b564b7 1370765976 ----sp
+6/9/2013 1:49:36 PM
+Shannon Deminick
+missing template to get demo working
+
+commit 8e3f075fd950847144af92622460f8d1b6c5a2c4 1370614710 ----sp
+6/7/2013 7:48:30 PM
+Shannon Deminick
+missing file
+
+commit 35ada35257381881f494307f69746d08f7ffd029 1370339420 ----sp
+6/4/2013 3:20:20 PM
+Shannon Deminick
+Updated content model mapper to re-use mappings as much as possible. Added most of the missing properties to content and inline with the expected format
+in the UI project. Added basic user model and a mapper for that too. updated tree service in UI to automatically create the 'view' for each node based on
+the section and id, the same way it updates the level for each node.
+
+commit 78bfb6a8ccc9a61d7be7bee9c89d4c49eb2b1a4d 1369916814 ----sp
+5/30/2013 5:56:54 PM
+Sebastiaan Janssen
+Fix missing Examine dashboard
+
+commit 232581664b92bc65ded045ae701e78cc4d9760e4 1369390404 ----sp
+5/24/2013 3:43:24 PM
+Morten Christensen
+Moving internal membership provider classes.
+Adding missing alias to AllowedContentTypes on ContentType.
+Adding Package export test.
+
+commit 0ff979e81436bd43f8173d4d8c2fa8e92ec80bb2 1369216396 ----sp
+5/22/2013 3:23:16 PM
+Morten Christensen
+Adding missing method for retreiving parent or child relations.
+Implements #U4-2237
+
+commit 7d1a18638b9530b33e421b59d58571510f93df20 1368428813 ----sp
+5/13/2013 12:36:53 PM
+Shannon Deminick
+missing proj checking
+
+commit f0aab6ae81083510986f8cb0332714f451eeb4a9 1366407767 ----sp
+4/20/2013 3:12:47 AM
+Shannon Deminick
+Fixes: U4-2089 - sort dialog behavior when clicking on column headers. Updated to latest version of table sorting, had to create a custom sort parser
+upgraded the sort.aspx to have the proper code behind structure and updated the page to have proper css and js files instead of inline. Fixes missing images.
+
+commit b3c3e114ad24072fe680541e0f3db4494e9b5482 1366397379 ----sp
+4/20/2013 12:19:39 AM
+Shannon Deminick
+missing images
+
+commit c12f9d027205aa5d0dfadf1e990138613ab0e77e 1366214634 ----sp
+4/17/2013 9:33:54 PM
+Thomas Skyldahl Sorensen
+Optimization for issue: U4-1187
+Url: http://issues.umbraco.org/issue/U4-1187
+
+Added assembly filtering, to stop scanning of third party assemblies
+that doesn't reference the types we are looking for.
+this limits the amount of possible missing references we encounter
+when checking against the types
+
+commit b4ce4fbdef0b6ef003ca72c47a8f6ce7a3258a92 1364288143 ----sp
+3/26/2013 2:25:43 PM
+Sebastiaan Janssen
+Logging warning when package installer can't create a property due to a missing
+datatype for that property
+
+commit a336eaa4a1d924fc15264fac81059bb90a4f9817 1363962919 ----sp
+3/22/2013 8:05:19 PM
+Sebastiaan Janssen
+Check all of the elements for null, apparently any kind of installable thing can
+be missing from the install xml file
+
+commit f5a1e415692cd4fa5db4d9f04650efb8c1fc11e3 1363876232 ----sp
+3/21/2013 8:00:32 PM
+Shannon Deminick
+missing checkin file
+
+commit 30d08bfae1f1432ec8386c98c85e1d5706f0657d 1361903648 ----sp
+2/27/2013 12:04:08 AM
+Shannon Deminick
+missing proj file update
+
+commit fd1efb29ec2e0644b2b5ae800eef298cca124f00 1361486720 ----sp
+2/22/2013 4:15:20 AM
+Shannon Deminick
+Fixes issue when saving settings to web.config, not sure how this error never came up before. Was missing a "\" between the path and "web.config".
+Using Path.Combine is much safer than just string.Concat!
+
+commit 41c952a2fa8faeb65cc5af44a36880f2956ca17a 1360787816 ----sp
+2/14/2013 2:06:56 AM
+Shannon Deminick
+missing change
+
+commit 61f2647b6222d165317038f861f0b8e7356d3dc8 1359584807 ----sp
+1/31/2013 3:56:47 AM
+Shannon Deminick
+missing file
+
+commit a2b5b1343287cedb615c07956077eeb65da338b6 1359427114 ----sp
+1/29/2013 8:08:34 AM
+Shannon Deminick
+Fixes missing 'using' reference
+
+commit 2c961887759f41ece6c6442e4ba7a7c6b8c202ea 1359059467 ----sp
+1/25/2013 2:01:07 AM
+Shannon Deminick
+Added missing MediaXmlTest
+
+commit b17dcd2b56a343894b18c6fb17aa9ca0381b5c32 1359024627 ----sp
+1/24/2013 4:20:27 PM
+Morten Christensen
+Fixes U4-1516 by ensuring that referenced templates are deleted prior to deleting the actual template.
+Removing uncommented code from the Media class as well as from the ContentExtension class.
+Added saving of Media Xml to MediaService upon saving.
+Removing referenced media test from csproj as cs file was missing.
+
+commit a421999ef8a7ca95ed03c46ac5823b8ab5175185 1357225013 ----sp
+1/3/2013 8:26:53 PM
+Sebastiaan Janssen
+Fix missing connection string during upgrades
+
+commit 3e47d38a715bd2a6ca9b9f7ecf7b63b94e0f3918 1356731468 ----sp
+12/29/2012 3:21:08 AM
+Morten Christensen
+Adding missing directory seperator in FullpathToRoot.
+Changing Umbraco.Core to use the SqlCe assemblies from the nuget package instead of those in the GAC, as that could cause problems for the build of the Umbraco.Core.dll.
+
+commit 5fa03b7f5295c371d077b61f6ad402a44e7fb760 1356017902 ----sp
+12/20/2012 9:08:22 PM
+Morten Christensen
+Adding PersistDeletedItem overload to MediaRepository to ensure that files saved in the Upload control are deleted.
+Adding missing Delete statement to MediaTypeRepository.
+
+commit 97509316ba54f35d4365cc2c12024d74ce73c1fe 1354885376 ----sp
+12/7/2012 6:32:56 PM
+Morten Christensen
+Was missing initial wire up of the Create builder's fluent syntax
+
+commit 5b0057c2582b833c6d6b67d305cc241f7ba63585 1354573742 ----sp
+12/4/2012 3:59:02 AM
+Shannon Deminick
+Added missing files.
+
+commit b40cc1879fa24588a97860a521bbf0f2cc5f9344 1354091768 ----sp
+11/28/2012 2:06:08 PM
+Stephan
+missing entry in language file
+
+commit f263b4d92bc25e69e87bb29005918624e9fcf263 1354034214 ----sp
+11/27/2012 10:06:54 PM
+Sebastiaan Janssen
+Fixes U4-1162 - In MVC mode, creating a child template doesn't set the layout
+correctly (it's missing the .cshtml extension)
+
+commit f0f7f6af55c4576fd2330a0f6d4a0306be541363 1353486195 ----sp
+11/21/2012 1:53:15 PM
+Morten Bock
+Include some missing files
+
+commit 93e2d8d822f6e9d22767d151f1ad212aaf4b4372 1353188995 ----sp
+11/18/2012 3:19:55 AM
+Shannon Deminick
+added missing file for tests.
+
+commit ac9ab759e9f83b561549dfb2e774baa7160755e9 1352403460 ----sp
+11/9/2012 1:07:40 AM
+Morten Christensen
+Adding missing reset of resolver in a two unit tests.
+
+commit 2c38f7ce7f7ada72eebcc53a242a6cd76025c7ed 1351791964 ----sp
+11/1/2012 11:16:04 PM
+Stephan
+fix BaseRest config management - would throw when missing config files
+
+commit b337f4e5e490421d4a5398e85df0fc78f166fc4f 1351905492 ----sp
+11/3/2012 6:48:12 AM
+Shannon Deminick
+Fixes issue with installing starter kits in the back office after upgrading the installer to install
+the starter kits properly. Not sure if this was actually working before 4.10 but in any case does work again
+now and installs them the correct way whilst waiting for the app pool to restart (we need to put this in place
+for the normal packages too!). Upgraded the StarterKits.aspx to have the correct code behind structure. Fixes issue
+with missing or invalid referenced images.
+
+commit 85c110bad513712e6bac008a409828afdcfa0a74 1351662362 ----sp
+10/31/2012 11:16:02 AM
+Shannon Deminick
+missing changed file
+
+commit be3f95610b21b64fa966795c6dc059d63dd59a49 1351517739 ----sp
+10/29/2012 7:05:39 PM
+Stephan
+U4-1081 - treat missing template at 404
+
+commit 3b5a1ddcdde82eb5b3e98d93d9fa652f985feeab 1351011178 ----sp
+10/23/2012 10:22:58 PM
+Sebastiaan Janssen
+Fixed the build, forgot to remove file reference from the csproj file
+
+commit a53dde8a20437302516b4c69f2eab3bdee83c38e 1350998956 ----sp
+10/23/2012 6:59:16 PM
+sitereactor
+Adding two missing properties to ContentTypeBase.
+Creating mappers for the few types that supports "db queries" through the repository U4-978
+
+commit ee96ced5956f303703956a08f476397f01f3e267 1350986941 ----sp
+10/23/2012 3:39:01 PM
+sitereactor
+Adding missing code comments/documentation
+
+commit 90aa8c3b5ae168c9a4c8541b4a2e69af656822e9 1350441008 ----sp
+10/17/2012 8:00:08 AM
+Shannon Deminick
+reverted web.config back to standard (without user defined values) and added it to .ignore so that
+user changes don't keep changing it and 'forgot' it in the source control.
+
+commit 3ddb9785c7b3a0d8ab570f4d79682fecdecb40d1 1349881451 ----sp
+10/10/2012 8:34:11 PM
+Shannon Deminick
+added missing codebehinds. updated ignore file.
+
+commit 458de6296e0e994e90396a3c7308ec79ed8668ce 1349687976 ----sp
+10/8/2012 2:49:36 PM
+PerPloug
+Wraps masterpages selector in try/catch
+to avoid exceptions if masterpage is missing for some reason
+
+commit b55ce96d85acbab1dacb394efa96e529f38d8ae2 1349687522 ----sp
+10/8/2012 2:42:02 PM
+PerPloug
+Changes to editView, editTemplate and loadTemplates
+to fix wrong create dialog, and missing master pre-selection
+in master template dropdown
+
+commit 75e11b2ba814507564a89cfc60c6252587b6bb36 1349363131 ----sp
+10/4/2012 8:35:31 PM
+Morten@Thinkpad-X220
+Updating the model where serialization attributes where missing and adding a few comments.
+Fixes U4-48
+
+commit 6326772ec54421bcd76afcd4fdf3fbca645c42e3 1349276272 ----sp
+10/3/2012 8:27:52 PM
+Morten@Thinkpad-X220
+Included web.config instead of csproj, so updates to csproj was missing.
+
+commit 840109dc58987068c76275c7385a5fd3b9764823 1348892359 ----sp
+9/29/2012 9:49:19 AM
+Shannon Deminick
+updates missing code block
+
+commit 04e0b35c7dfa80d21680b86d310069be52b37d42 1348831156 ----sp
+9/28/2012 4:49:16 PM
+PerPloug
+Method Renaming to follow standards
+Marking IOHelper methods as internal
+Removing unneeded umbraco setting
+Missing icon and missing folder in UI project
+
+commit 530e7ae44ed5b9c80d63e2dbef7580fcd9b4cdb8 1348704374 ----sp
+9/27/2012 5:36:14 AM
+Shannon Deminick
+removed ref to missing template file
+
+commit 587542ace76d951ac4b30f7b29666c66cfbeb9d8 1348649291 ----sp
+9/26/2012 2:18:11 PM
+Sebastiaan Janssen
+The build.bat file now won't exit when there's an error so you can inspect it, if there's no errors it will just exit
+Excluded missing index.cshtml file from project (was giving build error)
+
+commit 26f32bab8edb68df49db7ff230cc64035dff236e 1347626490 ----sp
+9/14/2012 6:11:30 PM
+leekelleher
+Dashboard controls: Tidied up the UI.
+Made use of ClientDependency for CSS/JS includes.
+CSS tweaks for success/notice/error messages.
+Removed from "Umbraco.Web.UI" project, master version now in "Umbraco.Web"; (confirmed with Seb)
+(MediaDashboardFolderBrowser.ascx was missing from "Umbraco.Web" - added)
+
+commit e8d6f694e75573edd2b6dfe00f558aff940682ed 1347430959 ----sp
+9/12/2012 11:52:39 AM
+sebastiaan
+Added back missing translation trees
+
+commit fe92947d72a57d25d21405d181123fbeecae02cf 1347286503 ----sp
+9/10/2012 7:45:03 PM
+sebastiaan
+TeamCity build fails on missing Views\Home.cshtml in Umbraco.Web.UI, removed it.
+
+commit b9165a8b70e291e1acf6777b30d4c54d559a7d17 1347286217 ----sp
+9/10/2012 7:40:17 PM
+sebastiaan
+TeamCity build fails on missing App_Code\TestClass.cs in Umbraco.Web.UI, removed it.
+
+commit 57f9bd28462478da149e7a27d8377eb5ca95ced6 1346754915 ----sp
+9/4/2012 4:05:15 PM
+sebastiaan
+Changes casing of /Media in FileSystemProvider.config for backwards compatibility (media protect pkg)
+Included missing images for the installer
+
+commit ace18acd7eeb14871b3466e9dc8c22647934edf1 1345669274 ----sp
+8/23/2012 2:31:14 AM
+Hartvig@UMBRACOTESLA
+Missing web.config.templates and a missing stylesheet for the codemirror
+
+commit 0bc1234a4ecfed4edb8470646c20a3026fae0e51 1345104406 ----sp
+8/16/2012 1:36:46 PM
+Matt@MBP13-PC
+Fixes issue with missing master pages
+Re-added missing build script
+
+commit 7235141f0283557413e8d2fbcb2aa75bdb5b17ce 1344039012 ----sp
+8/4/2012 5:40:12 AM
+shannon@ShandemVaio
+missing readme file content
+
+commit 170051614840aed5f39082b5e151b1ab8d0106cd 1343361944 ----sp
+7/27/2012 9:35:44 AM
+agrath
+Another NRE that I missed
+
+commit fffbd960c1dee6beed9ed2c81b2220650089219f 1343361944 ----sp
+7/27/2012 9:35:44 AM
+agrath
+Another NRE that I missed
+
+commit 9f60e49a32c6a158f9ef36b19083f10b398865b8 1343030366 ----sp
+7/23/2012 1:29:26 PM
+Matt@MBP13-PC
+Added missing project reference
+
+commit babaabbb2f227e00de449cb8067c504877157208 1342612809 ----sp
+7/18/2012 5:30:09 PM
+Matt@MBP13-PC
+Fixes JS error when editing links in TinyMCE due to missing required html element id.
+
+commit 5f08a7256d686b8821c26c069f6e15117d2559c6 1341579525 ----sp
+7/6/2012 6:28:45 PM
+Eran Meir
+added missing tinymce translations
+
+commit 51301d5aa6fe51202fddb4b64377c615fa77e045 1341497402 ----sp
+7/5/2012 7:40:02 PM
+Matt@MBP-PC.Home
+Fixed broken build due to missing using statement
+
+commit e8f1ec3a59a6c67bb78cb586a46708465c46186b 1341486518 ----sp
+7/5/2012 4:38:38 PM
+Matt@MBP-PC.Home
+Added missing uGoLive plugin files to presentation project
+
+commit ec6f5565902e38ba6e716b2a59528ece239887f5 1341483725 ----sp
+7/5/2012 3:52:05 PM
+Matt@MBP-PC.Home
+Added missing empty placeholder files to project file
+
+commit be03bbf24a79a3fc45c293a6901c525da15f11b8 1341483693 ----sp
+7/5/2012 3:51:33 PM
+Matt@MBP-PC.Home
+Added missing empty placeholder files to project file
+
+commit 93d13d76969ec654a86867377bdb507e991a21bb 1341385597 ----sp
+7/4/2012 12:36:37 PM
+Matt@MBP-PC.Home
+Added missing TinyMCE media plugin files
+
+commit a3afd818c24007c8ce6c07ece170e84220bd5358 1341302358 ----sp
+7/3/2012 1:29:18 PM
+Matt@MBP-PC.Home
+Removed missing files from project
+
+commit cb26821b752bc827ab7fbf73d8c69e0cae230a54 1340891952 ----sp
+6/28/2012 7:29:12 PM
+Matt@MBP-PC.Home
+Added missing files and fixed broken build script
+
+commit 46ca473e550f76135d7aa2311a5c3a3bb5b99921 1340784747 ----sp
+6/27/2012 1:42:27 PM
+Matt@MBP-PC.Home
+Re-added missing media classes
+
+commit 27b0b1b2ae2a196fb54db222c5d5a03dbfb76319 1340392802 ----sp
+6/23/2012 12:50:02 AM
+shannon@ShandemVaio.home
+Fixed project references with TinyMCE there were a lot  of missing files and non referenced files!
+
+commit 4221d8a53f03e4edd5f085796e840300550ab9db 1316683792 ----sp
+9/22/2011 2:59:52 PM
+agrath
+Added missing constructor overloads back onto DynamicMedia
+
+commit 40495005aced8b49349c572d4ef88d27cf2c429f 1316030751 ----sp
+9/15/2011 1:35:51 AM
+hartvig
+Adios dreaded lock screen. You'll only be missed by bankers. But they'll have the option to enable it... Work items: 30310
+
+commit 96a8b190a4a5d43aae07eba2acce11a93cc3d3b8 1312792591 ----sp
+8/8/2011 2:06:31 PM
+starfighter83
+Fixes: Create Media Button Permissions BUG
+Work Items: 30396
+
+commit 4cbd06dad97e0c76e61f0bd62a3f97e6815d8359 1311887882 ----sp
+7/29/2011 2:48:02 AM
+agrath
+Added missing .css to csscolors on the EditorType.HTML as it was throwing 404s, probably meant that embedded style in a template wasn't highlighted properly?
+
+commit 48c11f6b4515196fcfdf764db989729c2eb4b403 1310426011 ----sp
+7/12/2011 4:43:31 AM
+agrath@gmail.com
+Added TryInvoke and TryGetIndex methods to DynamicNull to prevent crashes on missing properties
+
+commit 304e7976bc4477cadcefde0e166d1a922d013b6c 1309835864 ----sp
+7/5/2011 8:47:44 AM
+agrath@gmail.com
+Detects a null reference exception which occurs when a document type is not transferred properly and cmsPropertyData is missing records and rethrow it with detail about the problem
+
+commit b59b5052baf1fb0232f1f24b0726a87e848958e4 1308733695 ----sp
+6/22/2011 2:38:15 PM
+agrath@gmail.com
+Bug fix: slightly changed behaviour of ordering code when dealing with dynamic properties (e.g. user properties not fields on DynamicNode) and missing data, thanks @Cultiv for the report
+
+commit 82547abe4032c452384a8f66efafa2b6433ae863 1308309659 ----sp
+6/17/2011 4:50:59 PM
+hartvig
+Adds missing SqlCeContextGuardian file
+
+commit 35099746beed2c09e2600d609baafb8393490806 1303284227 ----sp
+4/20/2011 12:53:47 PM
+hartvig
+Adds missing Exception file
+
+commit 76f83ddda08855b19868824dadb31020b5881a62 1301092380 ----sp
+3/26/2011 4:03:00 AM
+agrath@gmail.com
+Fixed RTE types in DynamicNode from still getting converted to DynamicXml due to missing return statement
+
+commit df9a18fb4523902e53fadba55cbf50973d39ed88 1298895002 ----sp
+2/28/2011 5:40:02 PM
+PerPloug
+missing symbol files
+
+commit aaa90bea146ca19dce6b9c559e163e03b87dfa8b 1298894150 ----sp
+2/28/2011 5:25:50 PM
+agrath@gmail.com
+More graceful handling of missing properties in .Where - TryGetMember now returns DynamicNull
+Only return DynamicNull if property truely doesn't exist - if it does exist and has no value, still return null
+
+commit 60c18bdff95ef6c00508880256b19b0a55f02428 1298890425 ----sp
+2/28/2011 4:23:45 PM
+agrath@gmail.com
+More graceful handling of missing properties in .Where - TryGetMember now returns DynamicNull (IEnumerable with fake .Where and .OrderBy) when the property/child type doesn't exist.
+Expression Tree in DynamicQueryable explictly checks for this type and forces that portion of the predicate/expression tree to return true, bypassing the missing property
+Handy when you are checking e.g. a boolean property in a .Where and that boolean doesn't exist on all nodes.
+
+commit ccf832fec5e61ad9d1fd5fece5a9ed47e3241f1b 1298558633 ----sp
+2/24/2011 8:13:53 PM
+matt
+Removed rouge zipupload files, and fixed missing DMU dashboard (didn't realize the config file was in multiple places)
+
+commit c2ff9019cf92110f6be8daedea9576666a6c4e09 1298448892 ----sp
+2/23/2011 1:44:52 PM
+Elijah
+Microsoft.Web.Infrastructure.dll is required, missed it bacause webmatrix was installed
+
+commit 64914da779056e685d5b7c4ecff4dc214f3edbda 1298286313 ----sp
+2/21/2011 4:35:13 PM
+hartvig
+Adding missing files
+
+commit 649a98daf4386c777fa73f823f35859acab28eaa 1297068787 ----sp
+2/7/2011 2:23:07 PM
+agrath@gmail.com
+Added missing DynamicQueryable and DynamicQueryableBinders class files for previous commit
+
+commit 0b4d7902b8159812e8451e9d7642d77f014cf449 1295595711 ----sp
+1/21/2011 1:11:51 PM
+PerPloug
+Adding missing SqlCE Manifests for x86 + amd64
+
+commit 8e4deca4865c5c24eec5d705f77f39dca1e89cce 1294840747 ----sp
+1/12/2011 7:29:07 PM
+hartvig
+Fixes issue with tinymce on media/members (missing commit)
+
+commit 60a3d581abdcc3564f722a30b47b6025494e03c1 1294323582 ----sp
+1/6/2011 7:49:42 PM
+Adam Shallcross
+Added missing files and updated CSS for missing styles on starter kit panel and bg in text to make it stand out a bit more from the page
+
+commit 072c3a67bf447146d5294df65677c39a37c6d7e0 1286998817 ----sp
+10/14/2010 1:10:17 AM
+hartvig
+Adds missing update to NodeFactory
+
+[TFS Changeset #78391]
+
+commit 5b6961a297511a021b2f9fdbc3c3861c0387918c 1285930462 ----sp
+10/1/2010 4:24:22 PM
+PerPloug
+missing error message css for installer
+
+[TFS Changeset #77699]
+
+commit bd6232861ca187d3530956ee691c930a5f7f04e6 1285540389 ----sp
+9/27/2010 4:03:09 AM
+slace
+fixing a limitation on the NodeDataProvider with regards to missing httpContext
+
+[TFS Changeset #77516]
+
+commit 56a2b011f665cc721079d310f525ee8c79843826 1284721928 ----sp
+9/17/2010 4:42:08 PM
+PerPloug
+yet again, missing files in /install
+
+[TFS Changeset #77248]
+
+commit cbde836c59c0cc7ea438baaace2f03d6d2d34a64 1283946773 ----sp
+9/8/2010 5:22:53 PM
+starfighter83
+WIP installer refactor, prevent missing enableSkins node from crashing package installer
+
+[TFS Changeset #76977]
+
+commit 0b76deacaf569c9171063299f9295a71977782b1 1279630813 ----sp
+7/20/2010 6:30:13 PM
+hartvig
+Marking changeset as 4.5.1.beta (still missing mysql schema updates before official distro, though)
+
+[TFS Changeset #73435]
+
+commit 4e07a17fb94013dc5bc55b76a7ebaedaa74cab49 1276762304 ----sp
+6/17/2010 1:41:44 PM
+PerPloug
+2 handlers missing 3.5 references for asp.net35 build, re-added
+
+[TFS Changeset #69355]
+
+commit 72767f9d618b18c9100a33b13f2cfc2334d71d58 1276603351 ----sp
+6/15/2010 5:32:31 PM
+PerPloug
+missing path in nant build file
+
+[TFS Changeset #68801]
+
+commit 351d45a5be3a4772ee9663d3fa0143ef50be5cf0 1276210458 ----sp
+6/11/2010 4:24:18 AM
+hartvig
+Fixes 27464, link to document missing on first publish
+
+[TFS Changeset #67821]
+
+commit 4982fdb937b931762abcc1e6c0be49379fa8c8f1 1274712947 ----sp
+5/24/2010 8:25:47 PM
+Shandem
+More unit tests.
+ClientDependency update (Fixes: 27155 medium trust issue)
+Fixes: 27156 - DLLs locked when building solution
+Fixes: 27154 - Examine requirePermission attributes for medium trust
+Fixes: 27152 - TypeFinder never creating seperate AppDomain for finding types in full trust
+
+[TFS Changeset #66282]
+
+commit 02e32614b7aa687601de80915328a8a1229a480e 1270243767 ----sp
+4/3/2010 2:59:27 AM
+codegecko
+Added requirePermission="false" to web.config for ClientDependency so WebConfigurationManager.GetSection in ClientDependency library works in Medium Trust.
+
+[TFS Changeset #65205]
+
+commit 6e56a2f8d90865ea8ec9df5cc5f2d5ea32d763d3 1269613123 ----sp
+3/26/2010 7:48:43 PM
+starfighter83
+Related to 4.0.3 merge into 4.1, some minor updates that where missed in initial merge
+
+[TFS Changeset #65017]
+
+commit 91c4d74189abc8f308dc24657eed13b1bd55c351 1268143370 ----sp
+3/9/2010 7:32:50 PM
+Shandem
+WORK IN PROGRESS, GET THE STABLE SOURCE FROM THE DOWNLOADS TAB
+Fixes 26422 - missing jquery reference on login page
+
+[TFS Changeset #64599]
+
+commit bf393d2ade6cf5fc7c16f7110c1afdf2cba4c67f 1266534468 ----sp
+2/19/2010 4:37:48 AM
+hartvig
+WORK IN PROGRESS, GET STABLE SOURCE FROM DOWNLOAD TAB
+Fixes 26257, properties tab is missing preview button
+
+[TFS Changeset #64072]
+
+commit d961dc9b505946fbee295ed319ee43ce63c70eff 1266526858 ----sp
+2/19/2010 2:30:58 AM
+PerPloug
+WORK IN PROGRESS, GET STABLE SOURCE FROM DOWNLOAD TAB
+wrong drl dialog file, turns off examine, adds missing dll for microsoft scripting
+
+[TFS Changeset #64068]
+
+commit fb60fcf4d6ae0cb132c8385df5bad730970e1c94 1265798588 ----sp
+2/10/2010 4:13:08 PM
+Shandem
+WORK IN PROGRESS, GET THE STABLE SOURCE FROM THE DOWNLOADS TAB
+Fixed merge issue with css + tree and missing config reference in webservice proj.
+
+[TFS Changeset #63882]
+
+commit 87fa04119223089010682fb7bd9d8df24ab117fc 1264683396 ----sp
+1/28/2010 6:26:36 PM
+PerPloug
+WORK IN PROGRESS, GET THE STABLE SOURCe FROM THE DOWNLOADS TAB
+missing ui.xml template file for dlr dialogs
+
+[TFS Changeset #63626]
+
+commit 375d28bf7fa82caeabf41fc3dddf853779e78f50 1249962261 ----sp
+8/11/2009 9:14:21 AM
+Shandem
+added missing DLL
+
+[TFS Changeset #57942]
+
+commit b7b8ea8d97c612e6169cf09864145736cdbf46b7 1245567238 ----sp
+6/21/2009 12:23:58 PM
+slace
+DO NOT DOWNLOAD. DOWNLOAD LATEST STABLE FROM RELEASE TAB
+Fixing missing file from VSSDK
+
+[TFS Changeset #55206]
+
+----------Done----------

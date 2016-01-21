@@ -1,0 +1,359 @@
+AndreyMaz
+Added missing style for tracking number link (shipment details page)
+
+src/Presentation/Nop.Web/Themes/DefaultClean/Content/css/styles.css
+--------------------
+AndreyMaz
+> /Content/images/ie_warning.jpg file was missing
+> The warning should be centered
+
+src/Presentation/Nop.Web/Nop.Web.csproj
+src/Presentation/Nop.Web/Themes/DefaultClean/Content/images/ie_warning.jpg
+src/Presentation/Nop.Web/Views/Shared/OldInternetExplorerWarning.cshtml
+--------------------
+AndreyMaz
+Source code. Minor typo in PermissionService.cs
+
+src/Libraries/Nop.Services/Security/PermissionService.cs
+--------------------
+AndreyMaz
+#12259 Addresses. Added "Select state" item  to "state" dropdownlist.
+
+P.S. This change is missing in admin area due to some limitations.
+
+src/Presentation/Nop.Web/Extensions/MappingExtensions.cs
+src/Presentation/Nop.Web/Validators/Common/AddressValidator.cs
+src/Presentation/Nop.Web/Views/Shared/_CreateOrUpdateAddress.cshtml
+--------------------
+andreymaz
+Further changes on custom customer attributes. Added a missing locale.
+
+src/Presentation/Nop.Web/Administration/Views/CustomerAttribute/_CreateOrUpdate.cshtml
+upgradescripts/3.20-the next version/upgrade.sql
+--------------------
+andreymaz
+Further changes on moving to the new fileuploader library (added missing locale)
+
+src/Presentation/Nop.Web/App_Data/Localization/defaultResources.public.nopres.xml
+upgradescripts/3.20-the next version/upgrade.sql
+--------------------
+andreymaz
+Updated persistence unit tests (missed a property)
+
+src/Tests/Nop.Data.Tests/Orders/CheckoutAttributePersistenceTests.cs
+--------------------
+andreymaz
+Further KendoUI changes. Display customer email on the order list page (missed when migrating)
+
+src/Presentation/Nop.Web/Administration/Views/Order/List.cshtml
+--------------------
+andreymaz
+Issue fixed. "Export orders to Excel" missed a column ("CustomValuesXml").
+
+src/Libraries/Nop.Services/ExportImport/ExportManager.cs
+--------------------
+andreymaz
+A closing tag was missing in the register.mobile.chtml file
+
+src/Presentation/Nop.Web/Views/Customer/Register.Mobile.cshtml
+--------------------
+mb
+Adding missing locale string resource "ShoppingCart.AddToCart.Update"
+Updated some other locale string resources
+
+src/Plugins/Nop.Plugin.Feed.Froogle/FroogleService.cs
+src/Plugins/Nop.Plugin.Shipping.ByWeight/ByWeightShippingComputationMethod.cs
+src/Plugins/Nop.Plugin.Shipping.UPS/UPSComputationMethod.cs
+src/Plugins/Nop.Plugin.Widgets.NivoSlider/NivoSliderPlugin.cs
+src/Presentation/Nop.Web/App_Data/Localization/defaultResources.public.nopres.xml
+upgradescripts/3.10-the next version/upgrade.sql
+--------------------
+andreymaz
+Added missing locale resource
+
+src/Presentation/Nop.Web/App_Data/Localization/defaultResources.admin.nopres.xml
+--------------------
+mb
+Fixed some typos/grammar
+Removed extra semicolon in Product/_CreateOrUpdate view
+QueuedEmailList was missing HttpPost attribute
+upgrade.sql script was missing new column: AttachmentFileName
+
+src/Presentation/Nop.Web/Administration/Controllers/QueuedEmailController.cs
+src/Presentation/Nop.Web/Administration/Views/Product/_CreateOrUpdate.cshtml
+src/Presentation/Nop.Web/App_Data/Localization/defaultResources.admin.nopres.xml
+src/Presentation/Nop.Web/App_Data/Localization/defaultResources.public.nopres.xml
+src/Presentation/Nop.Web/Views/Common/JavaScriptDisabledWarning.cshtml
+upgradescripts/3.10-the next version/upgrade.sql
+--------------------
+andreymaz
+Further changes to the previous changeset (missed "break" statement)
+
+src/Presentation/Nop.Web.Framework/Seo/GenericPathRoute.cs
+--------------------
+andreymaz
+Added missing angle brackets for ".order-details-page" CSS style
+
+src/Presentation/Nop.Web/Themes/DefaultClean/Content/styles.css
+src/Presentation/Nop.Web/Themes/DefaultClean/Content/styles.rtl.css
+--------------------
+andreymaz
+Montenegro was missing in the coutnry list
+
+src/Libraries/Nop.Services/Installation/CodeFirstInstallationService.cs
+--------------------
+andreymaz
+"OrderItemGuid" proeprty was missing when exportin ordres to XML.
+
+src/Libraries/Nop.Services/ExportImport/ExportManager.cs
+--------------------
+andreymaz
+Removed "HideAdminMenuItemsBasedOnPermissions" security setting. Let it always be enabled.
+
+src/Libraries/Nop.Core/Domain/Security/SecuritySettings.cs
+src/Libraries/Nop.Services/Installation/CodeFirstInstallationService.cs
+src/Presentation/Nop.Web.Framework/Web/AdminMenuPlugin.cs
+src/Presentation/Nop.Web/Administration/Controllers/SettingController.cs
+src/Presentation/Nop.Web/Administration/Models/Settings/GeneralCommonSettingsModel.cs
+src/Presentation/Nop.Web/Administration/Views/Setting/GeneralCommon.cshtml
+src/Presentation/Nop.Web/Administration/Views/Shared/Menu.cshtml
+src/Presentation/Nop.Web/App_Data/Localization/defaultResources.admin.nopres.xml
+upgradescripts/3.00-the next version/upgrade.sql
+--------------------
+andreymaz
+MUlti-store support. Localized missed resources.
+
+src/Libraries/Nop.Services/Localization/LanguageService.cs
+src/Presentation/Nop.Web/App_Data/Localization/defaultResources.admin.nopres.xml
+--------------------
+andreymaz
+Added a missed locale to the upgrade script
+
+--HG--
+branch : multi-store
+
+upgradescripts/2.80-the next version/upgrade.sql
+--------------------
+andreymaz
+Added a couple of missing quotes to HTML code
+
+src/Presentation/Nop.Web/Views/Topic/TopicBlock.Mobile.cshtml
+src/Presentation/Nop.Web/Views/Topic/TopicBlock.cshtml
+src/Presentation/Nop.Web/Views/Topic/TopicDetails.Mobile.cshtml
+src/Presentation/Nop.Web/Views/Topic/TopicDetails.cshtml
+--------------------
+andreymaz
+"%Order.BillingAddress1%" token was missing from List Of Allowed Tokens - MessageTokenProvider.GetListOfAllowedTokens() method
+
+src/Libraries/Nop.Services/Messages/MessageTokenProvider.cs
+--------------------
+andreymaz
+Minor issue fixed. Added a missed semicolon in /Administration/Views/ProductVariant/BulkEdit.cshtml file
+
+src/Presentation/Nop.Web/Administration/Views/ProductVariant/BulkEdit.cshtml
+--------------------
+andreymaz
+Added several missed locale resources
+
+src/Presentation/Nop.Web/App_Data/defaultResources.admin.nopres.xml
+upgradescripts/2.50-2.60(upcoming)/upgrade.sql
+--------------------
+andreymaz
+Added missed 'Plugins' locale
+
+src/Presentation/Nop.Web/Administration/Views/Shared/Menu.cshtml
+src/Presentation/Nop.Web/App_Data/defaultResources.admin.nopres.xml
+upgradescripts/2.30-2.40(upcoming)/upgrade.sql
+--------------------
+andreymaz
+Added missed locale resources (for changeset 0b17d5a1b5ea)
+
+upgradescripts/2.30-2.40(upcoming)/upgrade.sql
+--------------------
+andreymaz
+Minor HTML formatting changes. SMS providers (Clickatell aand Verizon) missed </strong> closing tag
+
+src/Plugins/Nop.Plugin.SMS.Clickatell/Description.txt
+src/Plugins/Nop.Plugin.SMS.Clickatell/Views/SmsClickatell/Configure.cshtml
+src/Plugins/Nop.Plugin.SMS.Verizon/Description.txt
+src/Plugins/Nop.Plugin.SMS.Verizon/Views/SmsVerizon/Configure.cshtml
+--------------------
+andreymaz
+Added missed locale resources
+
+src/Presentation/Nop.Web/Administration/Views/Category/ProductAddPopup.cshtml
+src/Presentation/Nop.Web/Administration/Views/Customer/_CreateOrUpdate.cshtml
+src/Presentation/Nop.Web/Administration/Views/Customer/_ReportBestCustomersByNumberOfOrders.cshtml
+src/Presentation/Nop.Web/Administration/Views/Customer/_ReportBestCustomersByOrderTotal.cshtml
+src/Presentation/Nop.Web/Administration/Views/EmailAccount/List.cshtml
+src/Presentation/Nop.Web/Administration/Views/Log/List.cshtml
+src/Presentation/Nop.Web/Administration/Views/Manufacturer/ProductAddPopup.cshtml
+src/Presentation/Nop.Web/Administration/Views/Measure/Dimensions.cshtml
+src/Presentation/Nop.Web/Administration/Views/Measure/Weights.cshtml
+src/Presentation/Nop.Web/Administration/Views/Order/BestsellersBriefReportByAmount.cshtml
+src/Presentation/Nop.Web/Administration/Views/Order/BestsellersBriefReportByQuantity.cshtml
+src/Presentation/Nop.Web/Administration/Views/Order/BestsellersReport.cshtml
+src/Presentation/Nop.Web/Administration/Views/Order/Edit.cshtml
+src/Presentation/Nop.Web/Administration/Views/Order/List.cshtml
+src/Presentation/Nop.Web/Administration/Views/Product/CrossSellProductAddPopup.cshtml
+src/Presentation/Nop.Web/Administration/Views/Product/RelatedProductAddPopup.cshtml
+src/Presentation/Nop.Web/Administration/Views/Tax/Providers.cshtml
+src/Presentation/Nop.Web/App_Data/defaultResources.admin.nopres.xml
+upgradescripts/2.30-2.40(upcoming)/upgrade.sql
+--------------------
+andreymaz
+> Issue fixed. Message tokens used in email subjects should not be HTML encoded, subjects are sent as clear text.
+> Added missed locale ('Admin.Configuration.EmailAccounts.Fields.SendTestEmailTo.Hint')
+> Minor refactoring
+
+src/Libraries/Nop.Services/Messages/CampaignService.cs
+src/Libraries/Nop.Services/Messages/ITokenizer.cs
+src/Libraries/Nop.Services/Messages/MessageTokenProvider.cs
+src/Libraries/Nop.Services/Messages/Token.cs
+src/Libraries/Nop.Services/Messages/Tokenizer.cs
+src/Libraries/Nop.Services/Messages/WorkflowMessageService.cs
+src/Presentation/Nop.Web.Framework/HtmlExtensions.cs
+src/Presentation/Nop.Web.Framework/NopResourceDisplayName.cs
+src/Presentation/Nop.Web/App_Data/defaultResources.admin.nopres.xml
+src/Presentation/Nop.Web/Controllers/BoardsController.cs
+src/Presentation/Nop.Web/Controllers/ProfileController.cs
+upgradescripts/2.20-2.30(upcoming)/upgrade.sql
+--------------------
+andreymaz
+Moved HideAdminMenuItemsBasedOnPermissions setting on UI
+
+src/Presentation/Nop.Web/Administration/Controllers/SettingController.cs
+src/Presentation/Nop.Web/Administration/Models/Settings/GeneralCommonSettingsModel.cs
+src/Presentation/Nop.Web/Administration/Views/Setting/GeneralCommon.cshtml
+src/Presentation/Nop.Web/App_Data/defaultResources.admin.nopres.xml
+upgradescripts/2.20-2.30(upcoming)/upgrade.sql
+--------------------
+andreymaz
+Minor performance optimization. Added caching to PermissionService
+
+src/Libraries/Nop.Services/Security/PermissionService.cs
+--------------------
+andreymaz
+Added missed locale resources: Admin.Orders.Fields.ShippingAddress.Hint and Admin.Orders.Fields.BillingAddress.Hint
+
+src/Presentation/Nop.Web/App_Data/defaultResources.admin.nopres.xml
+upgradescripts/2.20-2.30(upcoming)/upgrade.sql
+--------------------
+mb
+Added some missing locale string resources, updated stylesheets
+
+src/Presentation/Nop.Web/App_Data/defaultResources.admin.nopres.xml
+src/Presentation/Nop.Web/Themes/DarkOrange/Content/styles.css
+src/Presentation/Nop.Web/Themes/DarkOrange/Content/styles.rtl.css
+src/Presentation/Nop.Web/Themes/nopClassic/Content/styles.css
+upgradescripts/2.20-2.30(upcoming)/upgrade.sql
+--------------------
+andreymaz
+> Export and import classes (XML/Excel) missed a new 'ProductVariant.RequireOtherProducts' property added in version 2.10
+> 'Copy product' functionality missed a new 'ProductVariant.RequireOtherProducts' property added in version 2.10
+
+src/Libraries/Nop.Core/Domain/Catalog/ProductVariant.cs
+src/Libraries/Nop.Services/Catalog/CopyProductService.cs
+src/Libraries/Nop.Services/ExportImport/ExportManager.cs
+src/Libraries/Nop.Services/ExportImport/ImportManager.cs
+src/Presentation/Nop.Web/Administration/Models/Catalog/ProductVariantModel.cs
+--------------------
+andreymaz
+Manage Countries and States missing in ACL list
+
+src/Libraries/Nop.Services/Security/StandardPermissionProvider.cs
+src/Presentation/Nop.Web/Administration/Controllers/CountryController.cs
+upgradescripts/2.00-2.10(upcoming)/upgrade.sql
+--------------------
+mb
+Bug fixes/ changes
+> Fixed: added missing app setting (Web.config) for shared SSL "NonSharedSSLUrl"
+> Fixed PDFService: packing slip was throwing an exception for orders with product variants without an SKU
+> Updated forums: editing and creating posts now redirects to the post's anchor tag (bookmark) as in 1.90
+> Changed: forum RSS icons to be displayed the same as other RSS icons (blog, news, and new products)
+> Updated: minor stylesheet updates
+
+src/Libraries/Nop.Services/Common/PdfService.cs
+src/Presentation/Nop.Web/Administration/Content/styles.css
+src/Presentation/Nop.Web/App_Data/defaultResources.public.nopres.xml
+/dev/null
+src/Presentation/Nop.Web/Controllers/BoardsController.cs
+src/Presentation/Nop.Web/Nop.Web.csproj
+/dev/null
+src/Presentation/Nop.Web/Themes/DarkOrange/Content/styles.css
+/dev/null
+src/Presentation/Nop.Web/Themes/nopClassic/Content/styles.css
+src/Presentation/Nop.Web/Views/Boards/Forum.cshtml
+src/Presentation/Nop.Web/Views/Boards/_ActiveTopics.cshtml
+src/Presentation/Nop.Web/Views/Boards/_ForumPost.cshtml
+src/Presentation/Nop.Web/Web.config
+--------------------
+AndreyMaz
+DO NOT DOWNLOAD. DOWNLOAD LATEST STABLE FROM "DOWNLOADS" TAB
+PayPal Standard issue fixed when 'Pass product names and order totals to PayPal' option is enabled (shipping fee is missing)
+
+--HG--
+extra : convert_revision : svn%3A712752d5-f020-ad4b-8268-b7cbb332fca5/trunk%401085
+
+Payment/Nop.Payment.PayPal/PayPalStandardPaymentProcessor.cs
+--------------------
+remser
+DO NOT DOWNLOAD. DOWNLOAD LATEST STABLE FROM "DOWNLOADS" TAB
+Added missed 'ManageEmailSettings' customer action (ACL)
+
+--HG--
+extra : convert_revision : svn%3A712752d5-f020-ad4b-8268-b7cbb332fca5/trunk%401057
+
+NopCommerceStore/Documents/Upgrade.sql
+--------------------
+AndreyMaz
+DO NOT DOWNLOAD. DOWNLOAD LATEST STABLE FROM "DOWNLOADS" TAB
+Cross-sells support.
+Description: So, the customer has added items to their basket, they are on the shopping cart page about to buy their products. Great. But you could also convince them that they need more items to go with their purchase. In a box on the shopping cart page, cross-sells have the same mission as the related products ? to get more sales from the customer.
+
+--HG--
+extra : convert_revision : svn%3A712752d5-f020-ad4b-8268-b7cbb332fca5/trunk%40999
+
+Libraries/Nop.BusinessLogic/Data/NopModel.edmx
+Libraries/Nop.BusinessLogic/Data/NopObjectContext.cs
+Libraries/Nop.BusinessLogic/Nop.BusinessLogic.csproj
+Libraries/Nop.BusinessLogic/Products/CrossSellProduct.cs
+Libraries/Nop.BusinessLogic/Products/Extensions.cs
+Libraries/Nop.BusinessLogic/Products/Product.cs
+Libraries/Nop.BusinessLogic/Products/ProductManager.cs
+NopCommerceStore/Administration/CrossSellProductAdd.aspx
+NopCommerceStore/Administration/CrossSellProductAdd.aspx.cs
+NopCommerceStore/Administration/CrossSellProductAdd.aspx.designer.cs
+NopCommerceStore/Administration/Modules/CategoryProduct.ascx.cs
+NopCommerceStore/Administration/Modules/CrossSellProductAdd.ascx
+NopCommerceStore/Administration/Modules/CrossSellProductAdd.ascx.cs
+NopCommerceStore/Administration/Modules/CrossSellProductAdd.ascx.designer.cs
+NopCommerceStore/Administration/Modules/CrossSellProducts.ascx
+NopCommerceStore/Administration/Modules/CrossSellProducts.ascx.cs
+NopCommerceStore/Administration/Modules/CrossSellProducts.ascx.designer.cs
+NopCommerceStore/Administration/Modules/GlobalSettings.ascx
+NopCommerceStore/Administration/Modules/GlobalSettings.ascx.cs
+NopCommerceStore/Administration/Modules/GlobalSettings.ascx.designer.cs
+NopCommerceStore/Administration/Modules/ManufacturerProducts.ascx.cs
+NopCommerceStore/Administration/Modules/ProductAdd.ascx
+NopCommerceStore/Administration/Modules/ProductAdd.ascx.designer.cs
+NopCommerceStore/Administration/Modules/ProductDetails.ascx
+NopCommerceStore/Administration/Modules/ProductDetails.ascx.cs
+NopCommerceStore/Administration/Modules/ProductDetails.ascx.designer.cs
+NopCommerceStore/Administration/Modules/RelatedProducts.ascx.cs
+NopCommerceStore/App_Themes/darkOrange/styles.css
+NopCommerceStore/App_Themes/nopClassic/styles.css
+NopCommerceStore/Documents/LocaleStringResources.sql
+NopCommerceStore/Documents/Upgrade.sql
+NopCommerceStore/Modules/OrderSummary.ascx
+NopCommerceStore/Modules/OrderSummary.ascx.cs
+NopCommerceStore/Modules/OrderSummary.ascx.designer.cs
+NopCommerceStore/Modules/ProductBox1.ascx.cs
+NopCommerceStore/Modules/ProductBox2.ascx.cs
+NopCommerceStore/NopCommerceStore.csproj
+NopCommerceStore/Templates/Categories/ProductsInGrid.ascx
+NopCommerceStore/Templates/Categories/ProductsInLines1.ascx
+NopCommerceStore/Templates/Categories/ProductsInLines2.ascx
+NopCommerceStore/Templates/Manufacturers/ProductsInGrid.ascx
+NopCommerceStore/Templates/Manufacturers/ProductsInGrid.ascx.designer.cs
+--------------------
